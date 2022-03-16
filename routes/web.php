@@ -20,3 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+/*
+ * Blogs Routes
+ */
+Route::resource('blogs', App\Http\Controllers\BlogController::class);
