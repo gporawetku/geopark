@@ -13,6 +13,7 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+# Add New
 /public/css/*
 /public/js/*
 /public/mix-manifest.json
@@ -20,5 +21,3 @@ yarn-error.log
 /public/js/plugins/
 composer.lock
 /package-lock.json
-/images/
-/attaches/
