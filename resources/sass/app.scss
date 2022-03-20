@@ -4,7 +4,7 @@
 // Variables
 @import 'variables';
 
-// Bootstrap
+// Bootstrap 
 @import '~bootstrap/scss/bootstrap';
 
 
@@ -12,34 +12,88 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Bai Jamjuree', sans-serif;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
+
+.welcome-body {
+  background-color: #fff;
+}
+
+// Header
+.welcome-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  padding: 20px 15%;
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: inherit;
+    width: 40%;
+    .img {
+      display: flex;
+      align-items: center;
+      height: inherit;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .title {
+      padding-left: 20px;
+      font-size: 22px;
+      font-weight: 500;
+    }
+  }
+  .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    .img {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: inherit;
+      img {
+        max-width: 70%;
+        max-height: 70%;
+      }
+    }
+  }
+}
+// Sub Header
+.welcome-sub-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333333;
-  color: white;
+  padding: 5px 0px;
+  border-width: 1px 0px 1px 0px;
+  border-color: #777777;
+  border-style: solid;
+  font-size: 14px;
 }
-
-
-
-.waviy {
-  position: relative;
-}
-.waviy span {
-  position: relative;
-  display: inline-block;
-  font-size: 70px;
-  color: #fff;
-  text-transform: uppercase;
-  animation: flip 2s infinite;
-  animation-delay: calc(.3s * var(--i))
-}
-@keyframes flip {
-  0%,80% {
-    transform: rotateY(360deg)
+// Menu Bar
+.welcome-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #444444;
+  a{
+    text-decoration: none;
+    .menu-link {
+      padding: 10px 40px;
+      color: #fff;
+      transition: .4s;
+      &:hover{
+        background-color: #fff;
+        color: #444444;
+        transition: .2s;
+      }
+    }
   }
 }
