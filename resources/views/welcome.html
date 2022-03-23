@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geopark</title>
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,109 +22,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <style>
-        a {
-            text-decoration: none;
-        }
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+        integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        .mobile-icon {
-            display: inline-block;
-            cursor: pointer;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        .bar1,
-        .bar2,
-        .bar3 {
-            width: 35px;
-            height: 5px;
-            background-color: #333;
-            margin: 6px 0;
-            transition: 0.4s;
-        }
-        .active .bar1,
-        .active .bar2,
-        .active .bar3 {
-            background-color: #fff;
-        }
-        /* Rotate first bar */
-        .active .bar1 {
-            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-            transform: rotate(-45deg) translate(-9px, 6px);
-        }
-
-        /* Fade out the second bar */
-        .active .bar2 {
-            opacity: 0;
-        }
-
-        /* Rotate last bar */
-        .active .bar3 {
-            -webkit-transform: rotate(45deg) translate(-8px, -8px);
-            transform: rotate(45deg) translate(-8px, -8px);
-        }
-
-        /* Mobile Navigation Menu */
-        .mobile-menu {
-            position: absolute;
-            position: 999999;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100vw;
-            height: 100vh;
-            background: #444444;
-            margin-top: -999px;
-            transition: all .5s ease;
-        }
-        .mobile-menu.active {
-            margin-top: 0px;
-        }
-
-        .mobile-menu a {
-            color: #fff;
-            margin-bottom: 20px;
-        }
-
-        .mobile-menu .sub-link-group {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background: #eeeeee;
-            margin-bottom: 20px;
-        }
-
-        .mobile-menu .sub-link-item {
-            color: #444444;
-            margin: 10px 0px;
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- Mobile Navigation Menu -->
-    <div class="mobile-menu h3" id="accordion">
-        <a href="#" data-toggle="collapse" data-target="#collapseOne">Link 1</a>
-        <div id="collapseOne" class="collapse w-100" data-parent="#accordion">
-            <div class="sub-link-group">
-                <a href="#" class="sub-link-item">sub link</a>
-                <a href="#" class="sub-link-item">sub link</a>
-            </div>
-        </div>
-        <a href="#" data-toggle="collapse" data-target="#collapseTwo">Link 2</a>
-        <div id="collapseTwo" class="collapse" data-parent="#accordion">
-            <div class="d-flex flex-column">
-                <a href="#">sub link</a>
-            </div>
-        </div>
-        <a href="#">Link 3</a>
-        <a href="#">Link 4</a>
-        <a href="#">Link 5</a>
-        <a href="#">Link 6</a>
-        <a href="#">Link 7</a>
-    </div>
+
 
     <!-- Header -->
     <div class="d-flex justify-content-between align-items-center">
@@ -154,6 +63,112 @@
 
 
 
+
+
+    <!-- Menu bar (responsive) -->
+    <ul class="menu-bar">
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">Programme <i class="fa fa-caret-down"></i></a>
+            <ul>
+                <a href="#">
+                    <li>Schedule / Floor Plan</li>
+                </a>
+                <a href="#">
+                    <li>Special Programme</li>
+                </a>
+            </ul>
+        </li>
+
+        <li><a href="#">Registration</a></li>
+
+        <li>
+            <a href="#">Abstract <i class="fa fa-caret-down"></i></a>
+            <ul>
+                <a href="#">
+                    <li>Poster Session</li>
+                </a>
+                <a href="#">
+                    <li>Special Session Description</li>
+                </a>
+            </ul>
+        </li>
+
+        <li><a href="#">Geofair</a></li>
+
+        <li>
+            <a href="#">Board <i class="fa fa-caret-down"></i></a>
+            <ul>
+                <a href="#">
+                    <li>News</li>
+                </a>
+                <a href="#">
+                    <li>Photo Gallery</li>
+                </a>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">Information <i class="fa fa-caret-down"></i></a>
+            <ul>
+                <a href="#">
+                    <li>JEJU Island</li>
+                </a>
+                <a href="#">
+                    <li>General Information</li>
+                </a>
+                <a href="#">
+                    <li>Visa Information</li>
+                </a>
+                <a href="#">
+                    <li>Conference Venue</li>
+                </a>
+                <a href="#">
+                    <li>Geotrials on JEJU Island</li>
+                </a>
+                <a href="#">
+                    <li>Getting to JEJU</li>
+                </a>
+                <a href="#">
+                    <li>Partnership</li>
+                </a>
+            </ul>
+        </li>
+    </ul>
+
+
+
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img style="width:100%;"
+                    src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1774&q=80"
+                    alt="">
+            </div>
+            <div class="swiper-slide">
+                <img style="width:100%;"
+                    src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1574&q=80"
+                    alt="">
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -166,13 +181,30 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
         const mobileLink = document.querySelector('.mobile-icon');
-        const mobileMenu = document.querySelector('.mobile-menu');
+        const menuBar = document.querySelector('.menu-bar');
+
         mobileLink.addEventListener('click', function (e) {
             this.classList.toggle("active");
-            mobileMenu.classList.toggle("active");
-            
+            menuBar.classList.toggle("active");
+
         })
+
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 4000,
+            },
+
+        });
     </script>
+
 </body>
 
 </html>
