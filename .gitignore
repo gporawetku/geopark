@@ -18,6 +18,7 @@ yarn-error.log
 /public/js/*
 /public/mix-manifest.json
 /public/uploads
+/public/vendor
 /public/js/plugins/
 composer.lock
 /package-lock.json

@@ -241,11 +241,7 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
+
         [
             'text'        => 'pages',
             'url'         => 'admin/pages',
@@ -257,6 +253,11 @@ return [
         [
             'text' => 'profile',
             'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'blog',
+            'url'  => 'blogs',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
