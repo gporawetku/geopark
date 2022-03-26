@@ -58,7 +58,7 @@
         </div>
         <div class="col-md-4">
             @if (Request::has('action'))
-                @include('blogs.forms')
+                @include('admin.blogs.forms')
             @endif
         </div>
     </div>

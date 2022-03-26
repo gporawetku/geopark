@@ -23,7 +23,7 @@ class BlogController extends Controller
             $editableBlog = Blog::find(request('id'));
         }
 
-        return view('blogs.index', compact('blogs', 'editableBlog'));
+        return view('admin.blogs.index', compact('blogs', 'editableBlog'));
     }
 
     /**
