@@ -14,7 +14,9 @@ class SlideFactory extends Factory
     {
         return [
             'name'        => $this->faker->word,
+            'link'        => $this->faker->url,
             'description' => $this->faker->sentence,
+            'order'        => $this->faker->unique()->numberBetween(1,10),
             'creator_id'  => function () {
                 return User::factory()->create()->id;
             },

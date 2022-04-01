@@ -29,5 +29,8 @@ return [
 
     // Attributes
     'name'           => 'Slide Name',
+    'link'           => 'Slide Link',
     'description'    => 'Slide Description',
+    'order'          => 'Slide Order',
+
 ];

@@ -26,11 +26,13 @@
                 </form>
             </div>
             <table class="table table-sm table-responsive-sm table-hover">
-                <thead>
+                <thead class="text-nowrap">
                     <tr>
                         <th class="text-center">{{ __('app.table_no') }}</th>
                         <th>{{ __('slide.name') }}</th>
+                        <th>{{ __('slide.link') }}</th>
                         <th>{{ __('slide.description') }}</th>
+                        <th>{{ __('slide.order') }}</th>
                         <th class="text-center">{{ __('app.action') }}</th>
                     </tr>
                 </thead>
@@ -39,7 +41,9 @@
                     <tr>
                         <td class="text-center">{{ $slides->firstItem() + $key }}</td>
                         <td>{{ $slide->name }}</td>
+                        <td>{{ $slide->link }}</td>
                         <td>{{ $slide->description }}</td>
+                        <td>{{ $slide->order }}</td>
                         <td class="text-center">
                             @can('update', $slide)
                                 <a href="{{ route('slides.index', ['action' => 'edit', 'id' => $slide->id] + Request::only('page', 'q')) }}" id="edit-slide-{{ $slide->id }}">{{ __('app.edit') }}</a>
@@ -54,7 +58,7 @@
     </div>
     <div class="col-md-4">
         @if(Request::has('action'))
-        @include('slides.forms')
+        @include('admin.slides.forms')
         @endif
     </div>
 </div>
