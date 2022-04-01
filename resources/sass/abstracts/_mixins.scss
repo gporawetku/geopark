@@ -1,0 +1,32 @@
+// Responsive Mixin
+$breakpoints: (
+  "md": 720px,
+  "lg": 960px,
+  "xl": 1200px,
+  "xxl": 1600px,
+);
+@mixin md-screen {
+  @media (min-width: map-get($breakpoints,"md")) {
+    @content;
+  }
+}
+@mixin lg-screen {
+  @media (min-width: map-get($breakpoints,"lg")) {
+    @content;
+  }
+}
+@mixin xl-screen {
+  @media (min-width: map-get($breakpoints,"xl")) {
+    @content;
+  }
+}
+@mixin xxl-screen {
+  @media (min-width: map-get($breakpoints,"xxl")) {
+    @content;
+  }
+}
+@mixin breakpoint($bp:0) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
