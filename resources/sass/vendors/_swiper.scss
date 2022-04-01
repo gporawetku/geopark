@@ -1,0 +1,13 @@
+
+:root {
+  // --swiper-theme-color: rgba(255, 255, 255, 0.35);
+  --swiper-navigation-color: rgba(255, 255, 255, 0.3);
+  --swiper-pagination-color: rgba(255, 255, 255, 0.3);
+  --swiper-navigation-size: 26px!important;
+}
+@include md-screen {
+  :root {
+  --swiper-navigation-size: 56px!important;
+
+  }
+}
