@@ -1,0 +1,147 @@
+/* Mobile Icon (hamburger) */
+.mobile-icon {
+  display: inline-block;
+  cursor: pointer;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: $base-color;
+  margin: 6px 0;
+  border-radius: 15px;
+  transition: 0.4s;
+}
+
+.active {
+  .bar1,
+  .bar2,
+  .bar3 {
+    background-color: #333;
+  }
+
+  .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .bar2 {
+    opacity: 0;
+  }
+
+  .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+}
+
+/* Mobile Navigation Menu */
+.menu-bar-overlay {
+  position: fixed;
+  top: 0;
+  right: -9999px; //*
+  z-index: 899;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, .7);
+}
+.menu-bar {
+  position: fixed;
+  padding: 20px 0px 20px 15px;
+  top: 0;
+  right: -999px; //*
+  z-index: 900;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  height: 100vh;
+  background-color: rgba($color: $base-color, $alpha: 1.0);
+  transition: all 0.5s ease;
+}
+.active.menu-bar, .active.menu-bar-overlay {
+  right: 0px;
+}
+.menu-bar li {
+  padding: 10px 0px;
+  a {
+    font-size: 22px;
+    color: $white;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    border-left: 10px solid $white;
+    li {
+      padding: 5px 0px;
+    }
+    a {
+      font-size: 18px;
+    }
+  }
+}
+
+
+
+// Desktop Navigation Menu
+
+@include xl-screen {
+  .mobile-icon {
+    display: none;
+    overflow: hidden;
+  }
+  .menu-bar {
+    position: static;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    li {
+      padding: 0px 40px;
+      a {
+        font-size: 18px;
+      }
+      ul {
+        position: absolute;
+        display: flex;
+        z-index: 999;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        border: none;
+        width: auto;
+        padding: 0px;
+        border: 1px solid #444444;
+        background: $white;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-15px);
+        transition: all 0.3s ease;
+
+        a {
+          font-size: 16px;
+          color: #333;
+          padding: 0px 10px;
+          width: 100%;
+          display: flex;
+
+          &:hover {
+            text-decoration: none;
+            background-color: rgba($color: $base-color, $alpha: 0.15);
+            transition: all .2s ease;
+          }
+        }
+      }
+      a:focus + ul {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0px);
+      }
+    }
+  }
+}

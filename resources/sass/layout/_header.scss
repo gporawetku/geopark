@@ -1,0 +1,24 @@
+.welcome-header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: $white;
+  border-bottom: 5px solid $base-color;
+
+  .logo {
+    height: 70px;
+  }
+  .top-banners {
+    height: 50px;
+    margin-left: 100px;
+    margin-top: -25px;
+  }
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3s both;
+  animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3s both;
+}
+
+@include xl-screen {
+  .welcome-header {
+    position: relative;
+  }
+}
