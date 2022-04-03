@@ -2,6 +2,7 @@
 .mobile-icon {
   display: inline-block;
   cursor: pointer;
+  padding: 8px;
 }
 .bar1,
 .bar2,
@@ -44,7 +45,7 @@
   z-index: 899;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .menu-bar {
   position: fixed;
@@ -57,10 +58,11 @@
   flex-direction: column;
   width: 70vw;
   height: 100vh;
-  background-color: rgba($color: $base-color, $alpha: 1.0);
+  background-color: rgba($color: $base-color, $alpha: 1);
   transition: all 0.5s ease;
 }
-.active.menu-bar, .active.menu-bar-overlay {
+.active.menu-bar,
+.active.menu-bar-overlay {
   right: 0px;
 }
 .menu-bar li {
@@ -85,7 +87,61 @@
 
 
 
-// Desktop Navigation Menu
+
+
+
+
+// Responsive
+
+@include md-screen {
+  .mobile-icon {
+    padding: 0;
+  }
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 45px;
+    height: 7px;
+    margin: 8px 0;
+  }
+  .menu-bar {
+    width: 45vw;
+    li {
+      a {
+        font-size: 30px;
+      }
+      ul {
+        a {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+@include lg-screen {
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 55px;
+    height: 9px;
+    margin: 9px 0;
+  }
+  .menu-bar {
+    width: 45vw;
+    li {
+      a {
+        font-size: 34px;
+      }
+      ul {
+        a {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}
+
+// Desktop Navigation Menu & Screen Size
 
 @include xl-screen {
   .mobile-icon {
@@ -93,23 +149,25 @@
     overflow: hidden;
   }
   .menu-bar {
-    position: static;
+    position: fixed;
+    top: 100px;
     right: 0;
     width: 100%;
-    height: 50px;
+    height: 40px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 0;
+    overflow: hidden;
     li {
-      padding: 0px 40px;
+      padding: 0px 30px;
       a {
         font-size: 18px;
       }
       ul {
-        position: absolute;
+        position: fixed;
         display: flex;
-        z-index: 999;
+        z-index: 9999;
         justify-content: center;
         align-items: center;
         margin-top: 10px;
@@ -133,7 +191,7 @@
           &:hover {
             text-decoration: none;
             background-color: rgba($color: $base-color, $alpha: 0.15);
-            transition: all .2s ease;
+            transition: all 0.2s ease;
           }
         }
       }

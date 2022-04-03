@@ -28,26 +28,28 @@
 
 <body>
 
-    <div class="fade-in-welcome" style="position: absolute;z-index:9999;top:0;background-color:white; height: 100vh;width: 100vw;"></div>
+    <!-- <div class="fade-in-welcome" style="position: absolute;z-index:9999;top:0;background-color:white; height: 100vh;width: 100vw;"></div> -->
 
 
     <!-- Header -->
     <div class="welcome-header">
         <div class="d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center p-2">
-                <img class="logo" src="https://scontent.fnak4-1.fna.fbcdn.net/v/t39.30808-6/272925602_240603594904077_4660761821876637428_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=18tEdXjPqL4AX_eDmdJ&_nc_oc=AQnoCcJD-zE35kSOcuhbJfVRdM29QuZIg4p9CQV2BzWHdLC9VunZGLgO1TlXZEEkSpXXjlObODUc4VUf-0Frsj7Q&_nc_ht=scontent.fnak4-1.fna&oh=00_AT-8hdAku-m_YUfEeOo3T4lCFZ6sbEbBSyyoK4ExM_V8aA&oe=62493225" alt="">
-                <div class="pl-2">
+            <div class="d-flex align-items-center ">
+                <a href="#">
+                    <img class="logo" src="{{asset('images/logo1.png')}}" alt="">
+                </a>
+                <a class="title" href="#">
                     การประชุมทางวิชาการเครือข่ายอุทยานธรณีประเทศไทย ครั้งที่ 1
-                </div>
+                </a>
             </div>
             <!-- Mobile Navigation Icon -->
-            <div class="mobile-icon p-3">
+            <div class="mobile-icon">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
         </div>
-        <img class="top-banners" src="https://www.jejuggn2020.org/images/pages/top-banner-all.png" alt="">
+        <img class="top-banners" src="{{asset('images/top-banners.png')}}" alt="">
     </div>
 
     <!-- Line break -->
@@ -144,6 +146,21 @@
             <div class="swiper-slide">
                 <img style="width:100%;" src="{{asset('images/bg_1.png')}}" alt="">
             </div>
+            <div class="swiper-slide">
+                <img style="width:100%;" src="https://www.khoratgeopark.com/Data/sliders/2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img style="width:100%;" src="https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1280&q=80" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img style="width:100%;" src="http://www.satun-geopark.com/wp-content/uploads/2017/01/news02-11.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img style="width:100%;" src="http://www.satun-geopark.com/wp-content/uploads/2017/06/1-1-1300x560.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img style="width:100%;" src="https://www.khoratgeopark.com/Data/sliders/1.jpg" alt="">
+            </div>
 
         </div>
         <!-- <div class="swiper-pagination"></div>
@@ -154,7 +171,7 @@
                 Thailand Geoparks Network Symposium
             </div>
             <div class="description">
-                December 12-16, 2021/ Jeju Island UNESCO Global Geopark, Republic of Korea
+                April 25-26, 2022 / The 1<sup>st</sup> Thailand Geoparks Network Symposium
             </div>
             <a href="#test-content">
                 <div class="scroll-down-btn fa fa-chevron-down"></div>
@@ -203,7 +220,6 @@
         // }
 
         const swiper = new Swiper('.swiper', {
-            // loop: true,
             // pagination: {
             //     el: '.swiper-pagination',
             // },
@@ -211,9 +227,14 @@
             //     nextEl: '.swiper-button-next',
             //     prevEl: '.swiper-button-prev',
             // },
-            // autoplay: {
-            //     delay: 4000,
-            // },
+            loop: true,
+            autoplay: {
+                delay: 4500,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
 
         });
     </script>
