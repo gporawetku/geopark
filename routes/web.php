@@ -25,3 +25,13 @@ Route::resource('blogs', App\Http\Controllers\BlogController::class);
  * Slides Routes
  */
 Route::resource('slides', App\Http\Controllers\SlideController::class);
+
+/*
+ * Banners Routes
+ */
+Route::resource('banners', App\Http\Controllers\BannerController::class);
+
+/*
+ * Schedules Routes
+ */
+Route::resource('schedules', App\Http\Controllers\ScheduleController::class);

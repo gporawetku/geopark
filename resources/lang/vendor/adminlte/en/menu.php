@@ -3,8 +3,10 @@
 return [
 
     'main_navigation'               => 'MAIN NAVIGATION',
-    'blog'                          => 'Blog',
-    'slide'                         => 'Slide',
+    'blogs'                         => 'Blogs',
+    'slides'                        => 'Slides',
+    'schedules'                     => 'Schedules',
+    'banners'                       => 'Banners',
     'pages'                         => 'Pages',
     'account_settings'              => 'ACCOUNT SETTINGS',
     'home_page_settings'            => 'HOME PAGE SETTINGS',

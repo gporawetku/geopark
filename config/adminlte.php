@@ -299,13 +299,23 @@ return [
         // ],
         ['header' => 'home_page_settings'],
         [
-            'text' => 'slide',
+            'text' => 'slides',
             'url'  => 'slides',
             'icon' => 'fas fa-fw fa-images',
         ],
         [
-            'text' => 'blog',
+            'text' => 'blogs',
             'url'  => 'blogs',
+            'icon' => 'fas fa-fw fa-th-large',
+        ],
+        [
+            'text' => 'schedules',
+            'url'  => 'schedules',
+            'icon' => 'fas fa-fw fa-th-large',
+        ],
+        [
+            'text' => 'banners',
+            'url'  => 'banners',
             'icon' => 'fas fa-fw fa-th-large',
         ],
         // ['header' => 'labels'],

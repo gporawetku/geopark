@@ -24,11 +24,6 @@ class SlideController extends Controller
         if (in_array(request('action'), ['edit', 'delete']) && request('id') != null) {
             $editableSlide = Slide::find(request('id'));
         }
-        $test   = Slide::all()->keyBy('order');
-        // $sumTest = array_diff(range(1, 10), $test);
-        dd($test);
-        // $array = ["size" => "XL", "color" => "gold"];
-        // dd(array_values($array));
 
         return view('admin.slides.index', compact('slides', 'editableSlide'));
     }
