@@ -3,13 +3,24 @@
 @section('title', __('slide.list'))
 
 @section('content')
-<div class="mb-3">
-    <div class="float-right">
-        @can('create', new App\Models\Slide)
-            <a href="{{ route('slides.index', ['action' => 'create']) }}" class="btn btn-success">{{ __('slide.create') }}</a>
-        @endcan
-    </div>
-    <h1 class="page-title">{{ __('slide.list') }} <small>{{ __('app.total') }} : {{ $slides->total() }} {{ __('slide.slide') }}</small></h1>
+
+
+<div class="my-3 mx-1">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ __('slide.list') }}</li>
+        </ol>
+    </nav>
+    @if ($slides->total() < 10)
+        <div class="row">
+            <div class="col-xl-12">
+                @can('create', new App\Models\Slide)
+                    <a href="{{ route('slides.index', ['action' => 'create']) }}" class="btn btn-success">{{ __('slide.create') }}</a>
+                @endcan
+            </div>
+        </div>
+    @endif
 </div>
 
 <div class="row">
@@ -29,9 +40,9 @@
                 <thead class="text-nowrap">
                     <tr>
                         <th class="text-center">{{ __('app.table_no') }}</th>
-                        <th>{{ __('slide.name') }}</th>
+                        {{-- <th>{{ __('slide.name') }}</th> --}}
                         <th>{{ __('slide.link') }}</th>
-                        <th>{{ __('slide.description') }}</th>
+                        {{-- <th>{{ __('slide.description') }}</th> --}}
                         <th>{{ __('slide.order') }}</th>
                         <th class="text-center">{{ __('app.action') }}</th>
                     </tr>
@@ -40,9 +51,9 @@
                     @foreach($slides as $key => $slide)
                     <tr>
                         <td class="text-center">{{ $slides->firstItem() + $key }}</td>
-                        <td>{{ $slide->name }}</td>
+                        {{-- <td>{{ $slide->name }}</td> --}}
                         <td>{{ $slide->link }}</td>
-                        <td>{{ $slide->description }}</td>
+                        {{-- <td>{{ $slide->description }}</td> --}}
                         <td>{{ $slide->order }}</td>
                         <td class="text-center">
                             @can('update', $slide)

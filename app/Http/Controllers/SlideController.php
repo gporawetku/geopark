@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Slide;
+use Attribute;
+use Illuminate\Database\Eloquent\Casts\Attribute as CastsAttribute;
 use Illuminate\Http\Request;
 
 class SlideController extends Controller
@@ -22,6 +24,11 @@ class SlideController extends Controller
         if (in_array(request('action'), ['edit', 'delete']) && request('id') != null) {
             $editableSlide = Slide::find(request('id'));
         }
+        $test   = Slide::all()->keyBy('order');
+        // $sumTest = array_diff(range(1, 10), $test);
+        dd($test);
+        // $array = ["size" => "XL", "color" => "gold"];
+        // dd(array_values($array));
 
         return view('admin.slides.index', compact('slides', 'editableSlide'));
     }
@@ -39,6 +46,8 @@ class SlideController extends Controller
         $newSlide = $request->validate([
             'name'        => 'required|max:60',
             'description' => 'nullable|max:255',
+            'link'        => 'nullable',
+            'order'       => 'required',
         ]);
         $newSlide['creator_id'] = auth()->id();
 
