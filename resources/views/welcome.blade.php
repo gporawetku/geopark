@@ -143,6 +143,12 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
+            @foreach($slideList as $slide)
+            <div class="swiper-slide">
+                <img style="width:100%;" src="{{asset($slide['image'])}}" alt="">
+            </div>
+            @endforeach
+            
             <div class="swiper-slide">
                 <img style="width:100%;" src="{{asset('images/bg_1.png')}}" alt="">
             </div>
