@@ -9,6 +9,13 @@
                 <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required>
                 {!! $errors->first('name', '<span class="invalid-feedback" role="alert">:message</span>') !!}
             </div>
+
+            <div class="form-group">
+                <label for="image" class="form-label">{{ __('slide.image') }} <span class="form-required">*</span></label>
+                <input id="image" type="file" class="form-control{{ $errors->has('image') ? ' is-invalid' : '' }}" name="image" value="{{ old('image') }}" required>
+                {!! $errors->first('image', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+            </div>
+
             <div class="form-group">
                 <label for="description" class="form-label">{{ __('slide.description') }}</label>
                 <textarea id="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" rows="4">{{ old('description') }}</textarea>
@@ -22,9 +29,9 @@
             <div class="form-group">
                 <label for="order" class="form-label">{{ __('slide.order') }}</label>
                 <select id="order" class="form-control{{ $errors->has('order') ? ' is-invalid' : '' }}" name="order" required>
-                    @for ($i = 0; $i < 10; $i++)
-                    <option>{{ $i + 1 }}</option>
-                    @endfor
+                    @foreach ($orderList as $order)
+                        <option>{{ $order }}</option>
+                    @endforeach
                 </select>
                 {!! $errors->first('order', '<span class="invalid-feedback" role="alert">:message</span>') !!}
             </div>

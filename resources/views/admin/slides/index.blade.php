@@ -40,6 +40,7 @@
                 <thead class="text-nowrap">
                     <tr>
                         <th class="text-center">{{ __('app.table_no') }}</th>
+                        <th>{{ __('slide.image') }}</th>
                         {{-- <th>{{ __('slide.name') }}</th> --}}
                         <th>{{ __('slide.link') }}</th>
                         {{-- <th>{{ __('slide.description') }}</th> --}}
@@ -51,6 +52,9 @@
                     @foreach($slides as $key => $slide)
                     <tr>
                         <td class="text-center">{{ $slides->firstItem() + $key }}</td>
+                        <td width="10%">
+                            <img class="w-100" src="{{ asset($slide->image) }}" />
+                        </td>
                         {{-- <td>{{ $slide->name }}</td> --}}
                         <td>{{ $slide->link }}</td>
                         {{-- <td>{{ $slide->description }}</td> --}}

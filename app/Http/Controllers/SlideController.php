@@ -25,7 +25,12 @@ class SlideController extends Controller
             $editableSlide = Slide::find(request('id'));
         }
 
-        return view('admin.slides.index', compact('slides', 'editableSlide'));
+        // Show Oreder List
+        $orderCurrent   = Slide::pluck('order')->toArray();
+        $orderOther     = range(1, 10);
+        $orderList      = array_diff($orderOther,$orderCurrent);
+
+        return view('admin.slides.index', compact('slides', 'editableSlide','orderList'));
     }
 
     /**

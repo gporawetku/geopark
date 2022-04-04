@@ -311,12 +311,12 @@ return [
         [
             'text' => 'schedules',
             'url'  => 'schedules',
-            'icon' => 'fas fa-fw fa-th-large',
+            'icon' => 'fas fa-calendar',
         ],
         [
             'text' => 'banners',
             'url'  => 'banners',
-            'icon' => 'fas fa-fw fa-th-large',
+            'icon' => 'fas fa-clone',
         ],
         // ['header' => 'labels'],
         // [

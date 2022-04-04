@@ -2,8 +2,9 @@
 
 return [
     // Labels
-    'slide'     => 'Slide',
+    'slide'          => 'Slide',
     'list'           => 'Slide List',
+    'image'          => 'Slide Images',
     'search'         => 'Search Slide',
     'search_text'    => 'Name ...',
     'all'            => 'All Slide',
