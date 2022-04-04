@@ -5,7 +5,7 @@ use App\Models\Slide;
 
 use Illuminate\Http\Request;
 
-class welcomeController extends Controller
+class WelcomeController extends Controller
 {
     //
     public function index()
