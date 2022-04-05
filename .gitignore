@@ -20,5 +20,6 @@ yarn-error.log
 /public/uploads
 /public/vendor
 /public/js/plugins/
+/public/images/slides
 composer.lock
 /package-lock.json
