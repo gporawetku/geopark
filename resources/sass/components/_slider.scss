@@ -1,5 +1,5 @@
-/* Swiper */
-.swiper {
+/* Slider  */
+.swiper.slider {
   position: relative;
   &::after {
     // Overlay
@@ -56,7 +56,7 @@
 
 /* Responsive */
 @include md-screen {
-  .swiper {
+  .swiper.slider {
     .hero-text {
       padding: 0px 40px;
       .title {
@@ -75,7 +75,7 @@
   }
 }
 @include lg-screen {
-  .swiper {
+  .swiper.slider {
     .hero-text {
       padding: 0px 90px;
       .title {
@@ -94,7 +94,7 @@
   }
 }
 @include xl-screen {
-  .swiper {
+  .swiper.slider {
     .hero-text {
       padding: 0px 350px;
       .title {
@@ -117,7 +117,7 @@
 }
 
 @include xxl-screen {
-  .swiper {
+  .swiper.slider {
     .hero-text {
       padding: 0px 600px;
       .title {

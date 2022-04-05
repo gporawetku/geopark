@@ -139,16 +139,16 @@
 
 
     <!-- Slider main container -->
-    <div class="swiper">
+    <div class="swiper slider">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
             @foreach($slideList as $slide)
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
                 <img style="width:100%;" src="{{asset($slide['image'])}}" alt="">
-            </div>
+            </div> -->
             @endforeach
-            
+
             <div class="swiper-slide">
                 <img style="width:100%;" src="{{asset('images/bg_1.png')}}" alt="">
             </div>
@@ -183,6 +183,32 @@
                 <div class="scroll-down-btn fa fa-chevron-down"></div>
             </a>
         </div>
+    </div>
+
+
+    <div class="underhero-section">
+        <!-- Latest News -->
+        <div class="news-container">
+            <div class="news-icon">
+                <i class="fa fa-bullhorn"></i>
+            </div>
+            <div class="swiper newsSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="news-item">[12/12/2012] 1 Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="news-item">[11/12/2012] 2 Lorem ipsum dolor sit amet. Lorem, ipsum dolor.</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="news-item">[10/12/2012] 3 Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schedule -->
+
     </div>
 
     <div class="test-content" id="test-content" style="height: 900px;background-color:#333;overflow:hidden;"></div>
@@ -225,7 +251,7 @@
         //     menuBar.classList.toggle("active");
         // }
 
-        const swiper = new Swiper('.swiper', {
+        const swiper = new Swiper('.slider', {
             // pagination: {
             //     el: '.swiper-pagination',
             // },
@@ -241,7 +267,13 @@
             fadeEffect: {
                 crossFade: true,
             },
-
+        });
+        var newsSwiper = new Swiper(".newsSwiper", {
+            direction: "vertical",
+            loop: true,
+            autoplay: {
+                delay: 3000
+            }
         });
     </script>
 

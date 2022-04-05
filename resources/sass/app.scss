@@ -16,15 +16,17 @@
 @import "base/typography";
 
 @import "layout/navigation";
+@import "layout/header"; 
+@import "layout/underhero"; 
 @import "layout/grid"; // still not use
-@import "layout/header"; // still not use
 @import "layout/footer"; // still not use
 @import "layout/sidebar"; // still not use
 @import "layout/forms"; // still not use
 
 @import "components/buttons"; // still not use
 @import "components/carousel"; // still not use
-@import "components/slider"; // still not use
+@import "components/slider"; 
+@import "components/news"; 
 
 @import "pages/home"; // still not use
 @import "pages/blog"; // still not use
