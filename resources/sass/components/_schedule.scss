@@ -1,0 +1,28 @@
+.schedule-container {
+  padding: 20px 40px;
+  background-color: #eeeeee;
+  table.schedule-table {
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    border-collapse: separate;
+    border: 2px solid $base-color;
+    border-radius: 14px;
+    border-spacing: 0;
+    tr{
+      &:last-child {
+        td {
+          border-bottom: none;
+        }
+      }
+      td {
+        font-size: 14px;
+        padding: 10px;
+        border-bottom: 1px solid $base-color;
+        &:first-child {
+          border-right: 1px solid $base-color;
+        }
+      }
+    }
+  }
+}

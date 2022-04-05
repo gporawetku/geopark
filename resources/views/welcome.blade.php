@@ -179,14 +179,14 @@
             <div class="description">
                 April 25-26, 2022 / The 1<sup>st</sup> Thailand Geoparks Network Symposium
             </div>
-            <a href="#test-content">
+            <a href="#underhero-section">
                 <div class="scroll-down-btn fa fa-chevron-down"></div>
             </a>
         </div>
     </div>
 
 
-    <div class="underhero-section">
+    <div class="underhero-container" id="underhero-section">
         <!-- Latest News -->
         <div class="news-container">
             <div class="news-icon">
@@ -208,6 +208,23 @@
         </div>
 
         <!-- Schedule -->
+
+        <div class="schedule-container">
+            <table class="schedule-table">
+                <tr>
+                    <td>Conference Registration</td>
+                    <td>24 ส.ค. 65</td>
+                </tr>
+                <tr>
+                    <td>Conference Registration</td>
+                    <td>25 ส.ค. 65</td>
+                </tr>
+                <tr>
+                    <td>Conference Registration</td>
+                    <td>24 ส.ค. 65</td>
+                </tr>
+            </table>
+        </div>
 
     </div>
 
