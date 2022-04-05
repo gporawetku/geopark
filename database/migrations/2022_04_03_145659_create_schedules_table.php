@@ -17,6 +17,7 @@ class CreateSchedulesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name', 60);
             $table->string('description')->nullable();
+            $table->dateTime('plan_date_time');
             $table->unsignedBigInteger('creator_id');
             $table->timestamps();
 

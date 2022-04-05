@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Blog;
+use App\Models\Schedule;
 use App\Models\Slide;
 use Illuminate\Database\Seeder;
 
@@ -19,5 +20,6 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         Blog::factory()->count(10)->create();
         Slide::factory()->count(10)->create();
+        Schedule::factory()->count(10)->create();
     }
 }

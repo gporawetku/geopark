@@ -30,4 +30,5 @@ return [
     // Attributes
     'name'           => 'Schedule Name',
     'description'    => 'Schedule Description',
+    'plan_date_time' => 'Schedule Plan',
 ];

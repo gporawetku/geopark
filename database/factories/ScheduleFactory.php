@@ -15,6 +15,7 @@ class ScheduleFactory extends Factory
         return [
             'name'        => $this->faker->word,
             'description' => $this->faker->sentence,
+            'plan_date_time' => $this->faker->dateTimeBetween('-1 week', '+1 week'),
             'creator_id'  => function () {
                 return User::factory()->create()->id;
             },
