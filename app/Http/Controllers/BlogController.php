@@ -39,6 +39,7 @@ class BlogController extends Controller
         $newBlog = $request->validate([
             'name'        => 'required|max:60',
             'description' => 'nullable|max:255',
+            'content'     => 'nullable',
         ]);
         $newBlog['creator_id'] = auth()->id();
 
@@ -61,6 +62,7 @@ class BlogController extends Controller
         $blogData = $request->validate([
             'name'        => 'required|max:60',
             'description' => 'nullable|max:255',
+            'content'     => 'nullable',
         ]);
         $blog->update($blogData);
 

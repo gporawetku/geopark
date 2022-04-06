@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Slide;
 use App\Models\Schedule;
 
@@ -15,7 +16,14 @@ class WelcomeController extends Controller
     {
         $slideList      = Slide::get()->toArray();
         $scheduleList   = Schedule::where('plan_date_time', '>=', Carbon::now('Asia/Bangkok'))->take(3)->get()->toArray();
+        $blogList       = Blog::orderBy('created_at','desc')->take(3)->get()->toArray();
 
-        return view('welcome',compact('slideList','scheduleList'));
+        $data           = [
+            'slideList'     => $slideList ,
+            'scheduleList'  => $scheduleList ,
+            'blogList'      => $blogList
+        ];
+
+        return view('welcome',compact('data','slideList','scheduleList','blogList'));
     }
 }

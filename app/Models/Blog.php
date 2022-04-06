@@ -10,7 +10,7 @@ class Blog extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'creator_id'];
+    protected $fillable = ['name', 'description','content', 'creator_id'];
 
     public function getNameLinkAttribute()
     {

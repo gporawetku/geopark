@@ -35,3 +35,8 @@ Route::resource('banners', App\Http\Controllers\BannerController::class);
  * Schedules Routes
  */
 Route::resource('schedules', App\Http\Controllers\ScheduleController::class);
+
+/*
+ * Information Routes
+ */
+Route::resource('information', App\Http\Controllers\InformationController::class);

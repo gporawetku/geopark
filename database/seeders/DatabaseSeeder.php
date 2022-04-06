@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         $this->call(UserSeeder::class);
-        Blog::factory()->count(10)->create();
-        Slide::factory()->count(10)->create();
-        Schedule::factory()->count(10)->create();
+        Blog::factory()->count(5)->create();
+        Slide::factory()->count(5)->create();
+        Schedule::factory()->count(5)->create();
     }
 }

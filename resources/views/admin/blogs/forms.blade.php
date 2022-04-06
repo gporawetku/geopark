@@ -12,6 +12,11 @@
             <textarea id="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" rows="4">{{ old('description') }}</textarea>
             {!! $errors->first('description', '<span class="invalid-feedback" role="alert">:message</span>') !!}
         </div>
+        <div class="form-group">
+            <label for="content" class="form-label">{{ __('blog.content') }}</label>
+            <textarea id="content" class="form-control{{ $errors->has('content') ? ' is-invalid' : '' }} mytextarea" name="content" rows="4">{{ old('content') }}</textarea>
+            {!! $errors->first('content', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+        </div>
         <input type="submit" value="{{ __('blog.create') }}" class="btn btn-success">
         <a href="{{ route('blogs.index') }}" class="btn btn-link">{{ __('app.cancel') }}</a>
     </form>
@@ -30,6 +35,11 @@
             <label for="description" class="form-label">{{ __('blog.description') }}</label>
             <textarea id="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" rows="4">{{ old('description', $editableBlog->description) }}</textarea>
             {!! $errors->first('description', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+        </div>
+        <div class="form-group">
+            <label for="content" class="form-label">{{ __('blog.content') }}</label>
+            <textarea id="content" class="form-control{{ $errors->has('content') ? ' is-invalid' : '' }} mytextarea" name="content" rows="4">{{ old('content', $editableBlog->content) }}</textarea>
+            {!! $errors->first('content', '<span class="invalid-feedback" role="alert">:message</span>') !!}
         </div>
         <input name="page" value="{{ request('page') }}" type="hidden">
         <input name="q" value="{{ request('q') }}" type="hidden">
@@ -67,3 +77,5 @@
     </div>
 @endcan
 @endif
+
+

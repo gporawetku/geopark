@@ -30,4 +30,5 @@ return [
     // Attributes
     'name'           => 'Blog Name',
     'description'    => 'Blog Description',
+    'content'        => 'Blog Content',
 ];

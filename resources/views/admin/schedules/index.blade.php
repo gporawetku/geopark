@@ -56,7 +56,7 @@
     </div>
     <div class="col-md-4">
         @if(Request::has('action'))
-        @include('schedules.forms')
+        @include('admin.schedules.forms')
         @endif
     </div>
 </div>
