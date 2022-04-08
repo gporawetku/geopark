@@ -1,0 +1,19 @@
+.blog-cover-img {
+  background-color: $base-color;
+  margin-top: 110px;
+  img {
+    height: 100px;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+.blog-section {
+  background-color: #eeeeee;
+  padding: 0px 30px;
+  .blog-container {
+    background-color: #fff;
+    min-height: 70vh;
+    padding: 20px 30px;
+  }
+}

@@ -98,4 +98,9 @@ class BlogController extends Controller
         $test = 0;
         return view('blogContent',compact('test'));
     }
+    public function otherGeoparks()
+    {
+        $test = 0;
+        return view('pages/otherGeoparks',compact('test'));
+    }
 }
