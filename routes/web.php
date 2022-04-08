@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
+Route::get('/blogContent', [App\Http\Controllers\BlogController::class, 'blogContent'])->name('blogContent');
 
 
 Auth::routes();

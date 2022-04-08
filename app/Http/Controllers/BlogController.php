@@ -92,4 +92,10 @@ class BlogController extends Controller
 
         return back();
     }
+
+    public function blogContent()
+    {
+        $test = 0;
+        return view('blogContent',compact('test'));
+    }
 }
