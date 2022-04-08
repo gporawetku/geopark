@@ -24,6 +24,6 @@ class WelcomeController extends Controller
             'blogList'      => $blogList
         ];
 
-        return view('welcome',compact('data','slideList','scheduleList','blogList'));
+        return view('homepage',compact('data','slideList','scheduleList','blogList'));
     }
 }
