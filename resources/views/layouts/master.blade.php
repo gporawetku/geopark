@@ -32,10 +32,10 @@
 
 
 
-    
+
     @include('header')
 
-    
+
     @yield('body')
 
 
@@ -47,9 +47,39 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    
 
 
+    <script>
+        const mobileLink = document.querySelector('.mobile-icon');
+        const menuBar = document.querySelector('.menu-bar');
+        const menuBarOverlay = document.querySelector('.menu-bar-overlay');
+
+        function responsiveFunction(xlScreen) {
+            if (xlScreen.matches) {
+                document.querySelector('.news-container .swiper').classList.remove('newsSwiper');
+                document.querySelector('.news-container .swiper').firstElementChild.classList.remove('swiper-wrapper');
+            }
+        }
+        var xlScreen = window.matchMedia("(min-width: 1200px)");
+        responsiveFunction(xlScreen);
+        // desktopScreen.addListener(myFunction);
+
+        setTimeout(function() {
+            document.querySelector('.fade-in-welcome').style.display = "none";
+        }, 3000);
+        mobileLink.addEventListener('click', function(e) {
+            mobileLink.classList.toggle("active");
+            menuBar.classList.toggle("active");
+            menuBarOverlay.classList.toggle("active");
+
+        })
+        menuBarOverlay.addEventListener('click', function(e) {
+            mobileLink.classList.toggle("active");
+            menuBar.classList.toggle("active");
+            menuBarOverlay.classList.toggle("active");
+        })
+        
+    </script>
     @yield('js')
 
 </body>
