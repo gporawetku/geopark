@@ -1,0 +1,37 @@
+.fixed-img {
+  img {
+    height: 100px;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@include md-screen {
+  .fixed-img {
+    img {
+      height: 180px;
+    }
+  }
+}
+@include lg-screen {
+  .fixed-img {
+    img {
+      height: 240px;
+    }
+  }
+}
+@include xl-screen {
+  .fixed-img {
+    img {
+      height: 190px;
+    }
+  }
+}
+@include xxl-screen {
+  .fixed-img {
+    img {
+      height: 250px;
+    }
+  }
+}

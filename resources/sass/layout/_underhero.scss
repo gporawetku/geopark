@@ -4,6 +4,20 @@
   margin-top: -110px;
 }
 
+@include md-screen {
+  .underhero-container { 
+    // for href jump to this section
+    padding-top: 150px;
+    margin-top: -150px;
+  }
+}
+@include lg-screen {
+  .underhero-container { 
+    // for href jump to this section
+    padding-top: 175px;
+    margin-top: -175px;
+  }
+}
 
 @include xl-screen {
   .section-container {
@@ -15,11 +29,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 600px;
+    height: 540px;
     background-color: #fff;
     // for href jump to this section
-      padding-top: 200px;
-      margin-top: -140px;
+      padding-top: 180px;
+      margin-top: -130px;
     }
 }
 @include xxl-screen {

@@ -93,6 +93,10 @@
 </div>
 </div>
 
+<div class="fixed-img">
+    <img src="https://www.khoratgeopark.com/Data/sliders/1.jpg" alt="">
+</div>
+
 <div class="test-content" id="test-content" style="height: 900px;background-color:#333;overflow:hidden;"></div>
 
 
