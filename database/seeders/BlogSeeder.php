@@ -15,7 +15,15 @@ class BlogSeeder extends Seeder
     public function run()
     {
         Blog::factory()
-            ->count(10)
+            ->count(2)
             ->create();
+
+        Blog::create([
+            'name' => 'John Addison',
+            'description' => '88992299112',
+            'content' => 'Register',
+            'page_menu' => 'register',
+            'creator_id' => 1,
+        ]);
     }
 }
