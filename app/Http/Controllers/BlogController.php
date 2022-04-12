@@ -103,7 +103,7 @@ class BlogController extends Controller
 
     public function registerGeoparks()
     {
-        $blog       = Blog::where('page_menu','register')->orderBy('created_at','desc')->take(1)->get()->toArray();
+        $blog           = Blog::where('page_menu','register')->orderBy('created_at','desc')->take(1)->get()->toArray();
         $data           = [
             'blog'      => $blog
         ];

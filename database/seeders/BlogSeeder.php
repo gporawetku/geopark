@@ -14,16 +14,17 @@ class BlogSeeder extends Seeder
      */
     public function run()
     {
-        Blog::factory()
-            ->count(2)
-            ->create();
-
-        Blog::create([
-            'name' => 'John Addison',
-            'description' => '88992299112',
-            'content' => 'Register',
-            'page_menu' => 'register',
-            'creator_id' => 1,
+        // Blog::factory()
+        //     ->count(2)
+        //     ->create();
+        Blog::insert([
+            [
+                'name' => 'ก้าวแรก...อุทยานธรณีไทยร่วมใจไปด้วยกัน',
+                'description' => 'งานสัมมนาทางวิชาการ เครือข่ายอุทยานธรณีประเทศไทย #1',
+                'content' => 'images/blogs/register-2.jpg',
+                'page_menu' => 'register',
+                'creator_id' => 1,
+            ]
         ]);
     }
 }

@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call(BlogSeeder::class);
         $this->call(SlideSeeder::class);
         $this->call(GeoparkSeeder::class);
-        Schedule::factory()->count(5)->create();
+        $this->call(ScheduleSeeder::class);
     }
 }
 

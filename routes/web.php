@@ -28,13 +28,5 @@ Route::resource('slides', App\Http\Controllers\SlideController::class);
 Route::resource('banners', App\Http\Controllers\BannerController::class);
 Route::resource('schedules', App\Http\Controllers\ScheduleController::class);
 Route::resource('information', App\Http\Controllers\InformationController::class);
-
-/*
- * Geoparks Routes
- */
 Route::resource('geoparks', App\Http\Controllers\GeoparkController::class);
-
-/*
- * GeoparkImages Routes
- */
 Route::resource('geopark_images', App\Http\Controllers\GeoparkImageController::class);
