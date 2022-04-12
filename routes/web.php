@@ -14,10 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Welcome
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
-Route::get('/blogContent', [App\Http\Controllers\BlogController::class, 'blogContent'])->name('blogContent');
-Route::get('/otherGeoparks', [App\Http\Controllers\BlogController::class, 'otherGeoparks'])->name('otherGeoparks');
-Route::get('/registerGeoparks', [App\Http\Controllers\BlogController::class, 'registerGeoparks'])->name('registerGeoparks');
+// Home
+Route::get('/home', [App\Http\Controllers\WelcomeController::class, 'home'])->name('home');
+// Programme
+Route::get('/Programme', [App\Http\Controllers\WelcomeController::class, 'Programme'])->name('Programme');
+// Registration
+Route::get('/registration', [App\Http\Controllers\WelcomeController::class, 'registration'])->name('registration');
+// Abstract
+Route::get('/abstract', [App\Http\Controllers\WelcomeController::class, 'abstract'])->name('abstract');
+// Geofair
+Route::get('/geofair', [App\Http\Controllers\WelcomeController::class, 'geofair'])->name('geofair');
+// Gallery
+Route::get('/gallery', [App\Http\Controllers\WelcomeController::class, 'gallery'])->name('gallery');
+// Blog
+Route::get('/blog', [App\Http\Controllers\WelcomeController::class, 'blogList'])->name('blog.list');
+Route::get('/blog/{id}', [App\Http\Controllers\WelcomeController::class, 'blogShow'])->name('blog.show');
 
 
 //Admin

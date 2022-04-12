@@ -93,35 +93,4 @@ class BlogController extends Controller
         return back();
     }
 
-    public function blogContent()
-    {
-
-        //statusPage = 0 = ปิดปรับปรุง / 1 = เปิดใช้งาน
-        $statusPage = 0;
-        return view('blogContent',compact('statusPage'));
-    }
-
-    public function registerGeoparks()
-    {
-        $blog           = Blog::where('page_menu','register')->orderBy('created_at','desc')->take(1)->get()->toArray();
-        $data           = [
-            'blog'      => $blog
-        ];
-
-        //statusPage = 0 = ปิดปรับปรุง / 1 = เปิดใช้งาน
-        $statusPage = 0;
-        return view('pages.otherGeoparks',compact('statusPage','data'));
-    }
-
-    public function otherGeoparks()
-    {
-        $blog       = Blog::where('page_menu','other')->orderBy('created_at','desc')->take(1)->get()->toArray();
-        $data           = [
-            'blog'      => $blog
-        ];
-
-        //statusPage = 0 = ปิดปรับปรุง / 1 = เปิดใช้งาน
-        $statusPage = 0;
-        return view('pages.otherGeoparks',compact('statusPage','data'));
-    }
 }
