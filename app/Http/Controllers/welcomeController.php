@@ -50,6 +50,7 @@ class WelcomeController extends Controller
         ];
         $data               = [
             'agenda_img'    => $agenda,
+            'agenda_file'   => 'files/The_1st_TGN_conference_agenda__8_4_2022.docx',
             'statusPage'    => 0,
         ];
 
@@ -59,9 +60,21 @@ class WelcomeController extends Controller
     public function registration()
     {
         $blog               = Blog::where('page_menu','register')->orderBy('created_at','desc')->take(1)->get()->toArray();
-        $data               = [
-            'blog'          => $blog,
-            'statusPage'    => 0,
+        $register =  [
+            ['img' => 'images/register/register-1.jpg'],
+            ['img' => 'images/register/register-2.jpg'],
+        ];
+        $registerProcess =  [
+            ['name' => 'กรอกแบบฟอร์มการลงทะเบียน'],
+            ['name' => 'รับอิเมล์ยืนยันพร้อมลิงค์การเข้าร่วมกิจกรรม'],
+            ['name' => 'เข้าร่วมกิจกรรมตามลิงค์ที่แนบ'],
+        ];
+        $data                   = [
+            'blog'              => $blog,
+            'register_img'      => $register,
+            'register_link'     => 'links!!',
+            'register_process'  => $registerProcess,
+            'statusPage'        => 0,
         ];
 
         return view('pages.otherGeoparks',compact('data'));
