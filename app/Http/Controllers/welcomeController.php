@@ -14,8 +14,6 @@ class WelcomeController extends Controller
     //
     public function index()
     {
-
-        dd('test');
         $slideList          = Slide::get()->toArray();
         $scheduleList       = Schedule::where('plan_date_time', '>=', Carbon::now('Asia/Bangkok'))->take(3)->get()->toArray();
         $blogList           = Blog::orderBy('created_at','desc')->take(3)->get()->toArray();
