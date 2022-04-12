@@ -39,7 +39,17 @@ class WelcomeController extends Controller
 
     public function programme()
     {
+        $agenda =  [
+            ['img' => 'images/schedules/agenda-1.jpg'],
+            ['img' => 'images/schedules/agenda-2.jpg'],
+            ['img' => 'images/schedules/agenda-3.jpg'],
+            ['img' => 'images/schedules/agenda-4.jpg'],
+            ['img' => 'images/schedules/agenda-5.jpg'],
+            ['img' => 'images/schedules/agenda-6.jpg'],
+            ['img' => 'images/schedules/agenda-7.jpg'],
+        ];
         $data               = [
+            'agenda_img'    => $agenda,
             'statusPage'    => 0,
         ];
 

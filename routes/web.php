@@ -19,7 +19,7 @@ Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name(
 // Home
 Route::get('/home', [App\Http\Controllers\WelcomeController::class, 'home'])->name('home');
 // Programme
-Route::get('/Programme', [App\Http\Controllers\WelcomeController::class, 'Programme'])->name('Programme');
+Route::get('/programme', [App\Http\Controllers\WelcomeController::class, 'programme'])->name('programme');
 // Registration
 Route::get('/registration', [App\Http\Controllers\WelcomeController::class, 'registration'])->name('registration');
 // Abstract
