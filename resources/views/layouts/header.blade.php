@@ -25,7 +25,7 @@
     <!-- Menu bar (responsive) -->
     <div class="menu-bar-overlay"></div>
     <ul class="menu-bar">
-        <li><a href="{{route('blogContent')}}">Blog</a></li>
+        <li><a href="#">Home</a></li>
         <li>
             <a href="#">Programme <i class="fa fa-caret-down"></i></a>
             <ul>
@@ -69,7 +69,7 @@
         <li>
             <a href="#">Information <i class="fa fa-caret-down"></i></a>
             <ul>
-                <a href="{{route('otherGeoparks')}}">
+                <a href="#">
                     <li>Other Geoparks</li>
                 </a>
                 <a href="#">

@@ -8,7 +8,7 @@
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
         <!-- Slides -->
-        @foreach($slideList as $slide)
+        @foreach($data['slideList'] as $slide)
         <!-- <div class="swiper-slide">
                 <img style="width:100%;" src="{{asset($slide['image'])}}" alt="">
             </div> -->
@@ -32,11 +32,7 @@
         <div class="swiper-slide">
             <img style="width:100%;" src="https://www.khoratgeopark.com/Data/sliders/1.jpg" alt="">
         </div>
-
     </div>
-    <!-- <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div> -->
     <div class="hero-text">
         <div class="title">
             Thailand Geoparks Network Symposium
@@ -50,6 +46,7 @@
     </div>
 </div>
 
+<!-- Underhero (News, Schedule) -->
 <div class="section-container">
     <div class="underhero-container" id="underhero-section">
         <!-- Latest News -->
@@ -91,7 +88,7 @@
         </table>
     </div>
 </div>
-</div>
+
 
 <!-- Fixed Image -->
 <div class="fixed-img">
@@ -133,10 +130,12 @@
     </div>
 </div>
 
+
 <!-- Google Map -->
 <div class="map-section">
     <iframe class="map-content"  src="https://maps.google.com/maps?q=14.9874706,102.1179648&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 </div>
+
 
 <!-- Banner Group -->
 <div class="banner-group-section">
@@ -177,18 +176,6 @@
         <div class="swiper-button-prev"></div>
     </div>
 </div>
-
-<!-- Footer -->
-<div class="footer-section">
-    <div class="footer-container">
-        <div class="contact-container">
-
-        </div>
-        <div class="copyright"></div>
-    </div>
-</div>
-
-<div class="test-content" id="test-content" style="height: 300px;background-color:#fff;overflow:hidden;"></div>
 
 
 
