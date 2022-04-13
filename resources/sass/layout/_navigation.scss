@@ -174,7 +174,7 @@
         border: none;
         width: auto;
         padding: 0px;
-        border: 1px solid #444444;
+        // border: 1px solid rgba($color: $base-color, $alpha: 1);
         background: $white;
         opacity: 0;
         pointer-events: none;
@@ -183,14 +183,15 @@
 
         a {
           font-size: 16px;
-          color: #333;
+          color: #000;
           padding: 0px 10px;
           width: 100%;
           display: flex;
 
           &:hover {
+            color: #fff;
             text-decoration: none;
-            background-color: rgba($color: $base-color, $alpha: 0.15);
+            background-color: rgba($color: $base-color, $alpha: 1);
             transition: all 0.2s ease;
           }
         }

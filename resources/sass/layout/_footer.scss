@@ -1,5 +1,4 @@
 .footer-section {
-  margin-top: 30px;
   .contact-container {
     padding: 20px;
     .contact-content {
@@ -33,7 +32,6 @@
 
 @include md-screen {
   .footer-section {
-    margin-top: 40px;
     .contact-container {
       padding: 20px 80px;
       .contact-content {
@@ -59,7 +57,6 @@
 }
 @include lg-screen {
   .footer-section {
-    margin-top: 60px;
     .contact-container {
       padding: 20px 120px;
       .contact-content {
@@ -82,7 +79,6 @@
 }
 @include xl-screen {
   .footer-section {
-    margin-top: 60px;
     .contact-container {
       padding: 20px 340px;
       .contact-content {
@@ -106,7 +102,6 @@
 }
 @include xxl-screen {
   .footer-section {
-    margin-top: 90px;
     .contact-container {
       padding: 40px 500px;
       .contact-content {
