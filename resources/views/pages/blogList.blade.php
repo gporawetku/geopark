@@ -1,5 +1,5 @@
 @extends('../blogContent')
 
 @section('content')
-<h1>other geoparks content</h1>
+<h1>Blog List Content</h1>
 @stop

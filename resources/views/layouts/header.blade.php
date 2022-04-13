@@ -25,45 +25,46 @@
     <!-- Menu bar (responsive) -->
     <div class="menu-bar-overlay"></div>
     <ul class="menu-bar">
-        <li><a href="#">Home</a></li>
+        <li><a href="{{route('welcome')}}">Home</a></li>
         <li>
-            <a href="#">Programme <i class="fa fa-caret-down"></i></a>
-            <ul>
+            <a href="{{route('programme')}}">
+                Programme 
+                <!-- <i class="fa fa-caret-down"></i> -->
+            </a>
+            <!-- <ul>
                 <a href="#">
                     <li>Schedule / Floor Plan</li>
                 </a>
                 <a href="#">
                     <li>Special Programme</li>
                 </a>
-            </ul>
+            </ul> -->
         </li>
 
-        <li><a href="#">Registration</a></li>
+        <li><a href="{{route('registration')}}">Registration</a></li>
 
         <li>
-            <a href="#">Abstract <i class="fa fa-caret-down"></i></a>
-            <ul>
+            <a href="{{route('abstract')}}">
+                Abstract 
+                <!-- <i class="fa fa-caret-down"></i> -->
+            </a>
+            <!-- <ul>
                 <a href="#">
                     <li>Poster Session</li>
                 </a>
                 <a href="#">
                     <li>Special Session Description</li>
                 </a>
-            </ul>
+            </ul> -->
         </li>
 
-        <li><a href="#">Geofair</a></li>
+        <li><a href="{{route('geofair')}}">Geofair</a></li>
 
         <li>
-            <a href="#">Board <i class="fa fa-caret-down"></i></a>
-            <ul>
-                <a href="#">
-                    <li>News</li>
-                </a>
-                <a href="#">
-                    <li>Photo Gallery</li>
-                </a>
-            </ul>
+            <a href="{{route('gallery')}}">Gallery</a>
+        </li>
+        <li>
+            <a href="{{route('blog.list')}}">News</a>
         </li>
 
         <li>
