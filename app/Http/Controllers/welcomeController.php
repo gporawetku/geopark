@@ -77,7 +77,7 @@ class WelcomeController extends Controller
             'statusPage'        => 0,
         ];
 
-        return view('pages.otherGeoparks',compact('data'));
+        return view('pages.registration',compact('data'));
     }
 
     public function abstract()
@@ -97,7 +97,7 @@ class WelcomeController extends Controller
             'statusPage'    => 0,
         ];
 
-        return view('pages.otherGeoparks',compact('data'));
+        return view('pages.geofair',compact('data'));
     }
 
     public function gallery()

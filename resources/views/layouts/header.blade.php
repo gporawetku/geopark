@@ -1,99 +1,62 @@
 <!-- Header -->
 <div class="welcome-header">
-        <div class="d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center ">
-                <a href="{{route('welcome')}}">
-                    <img class="logo" src="{{asset('images/logo1.png')}}" alt="">
-                </a>
-                <a class="title" href="{{route('welcome')}}">
-                    การประชุมทางวิชาการเครือข่ายอุทยานธรณีประเทศไทย ครั้งที่ 1
-                </a>
-            </div>
-            <!-- Mobile Navigation Icon -->
-            <div class="mobile-icon">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center ">
+            <a href="{{route('welcome')}}">
+                <img class="logo" src="{{asset('images/logo1.png')}}" alt="">
+            </a>
+            <a class="title" href="{{route('welcome')}}">
+                การประชุมทางวิชาการเครือข่ายอุทยานธรณีประเทศไทย ครั้งที่ 1
+            </a>
         </div>
-        <img class="top-banners" src="{{asset('images/top-banners.png')}}" alt="">
+        <!-- Mobile Navigation Icon -->
+        <div class="mobile-icon">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
     </div>
+    <img class="top-banners" src="{{asset('images/top-banners.png')}}" alt="">
+</div>
 
-    <!-- Line break -->
-    <div class="bg-dark w-100" style="height:1px;"></div>
+<!-- Line break -->
+<div class="bg-dark w-100" style="height:1px;"></div>
 
-    <!-- Menu bar (responsive) -->
-    <div class="menu-bar-overlay"></div>
-    <ul class="menu-bar">
-        <li><a href="{{route('welcome')}}">Home</a></li>
-        <li>
-            <a href="{{route('programme')}}">
-                Programme 
-                <!-- <i class="fa fa-caret-down"></i> -->
+<!-- Menu bar (responsive) -->
+<div class="menu-bar-overlay"></div>
+<ul class="menu-bar">
+    <li>
+        <a href="#">TGN 2022 <i class="fa fa-caret-down"></i></a>
+        <ul>
+            <a href="#">
+                <li>Welcome Message</li>
             </a>
-            <!-- <ul>
-                <a href="#">
-                    <li>Schedule / Floor Plan</li>
-                </a>
-                <a href="#">
-                    <li>Special Programme</li>
-                </a>
-            </ul> -->
-        </li>
-
-        <li><a href="{{route('registration')}}">Registration</a></li>
-
-        <li>
-            <a href="{{route('abstract')}}">
-                Abstract 
-                <!-- <i class="fa fa-caret-down"></i> -->
+            <a href="#">
+                <li>Organizing Committee</li>
             </a>
-            <!-- <ul>
-                <a href="#">
-                    <li>Poster Session</li>
-                </a>
-                <a href="#">
-                    <li>Special Session Description</li>
-                </a>
-            </ul> -->
-        </li>
+        </ul>
+    </li>
+    <li>
+        <a href="{{route('programme')}}">
+            Programme
+        </a>
+    </li>
+    <li>
+        <a href="{{route('blog.list')}}">News</a>
+    </li>
 
-        <li><a href="{{route('geofair')}}">Geofair</a></li>
+    <li><a href="{{route('registration')}}">Registration</a></li>
 
-        <li>
-            <a href="{{route('gallery')}}">Gallery</a>
-        </li>
-        <li>
-            <a href="{{route('blog.list')}}">News</a>
-        </li>
+    <li>
+        <a href="{{route('abstract')}}">
+            Abstract
+        </a>
+    </li>
 
-        <li>
-            <a href="#">Information <i class="fa fa-caret-down"></i></a>
-            <ul>
-                <a href="#">
-                    <li>Other Geoparks</li>
-                </a>
-                <a href="#">
-                    <li>JEJU Island</li>
-                </a>
-                <a href="#">
-                    <li>General Information</li>
-                </a>
-                <a href="#">
-                    <li>Visa Information</li>
-                </a>
-                <a href="#">
-                    <li>Conference Venue</li>
-                </a>
-                <a href="#">
-                    <li>Geotrials on JEJU Island</li>
-                </a>
-                <a href="#">
-                    <li>Getting to JEJU</li>
-                </a>
-                <a href="#">
-                    <li>Partnership</li>
-                </a>
-            </ul>
-        </li>
-    </ul>
+    <li><a href="{{route('geofair')}}">Geofair</a></li>
+
+    <li>
+        <a href="{{route('gallery')}}">Gallery</a>
+    </li>
+    
+</ul>
