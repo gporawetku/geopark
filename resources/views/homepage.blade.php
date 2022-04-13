@@ -88,7 +88,7 @@
         </table>
     </div>
 </div>
-
+</div>
 
 <!-- Fixed Image -->
 <div class="fixed-img">
@@ -113,7 +113,7 @@
                     News Title
                 </div>
                 <div class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing 
+                    Lorem ipsum dolor sit amet consectetur adipisicing
                 </div>
             </div>
             <div class="news-item swiper-slide" style="background-image: url('http://www.satun-geopark.com/wp-content/uploads/2017/01/news02-11.jpg');">
@@ -133,7 +133,7 @@
 
 <!-- Google Map -->
 <div class="map-section">
-    <iframe class="map-content"  src="https://maps.google.com/maps?q=14.9874706,102.1179648&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    <iframe class="map-content" src="https://maps.google.com/maps?q=14.9874706,102.1179648&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 </div>
 
 
