@@ -1,0 +1,130 @@
+.footer-section {
+  margin-top: 30px;
+  .contact-container {
+    padding: 20px;
+    .contact-content {
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, .85);
+      padding: 10px;
+      .title {
+        text-align: center;
+        font-size: 13px;
+        font-weight: 600;
+        padding-bottom: 5px;
+
+      }
+      .contact-wrapper {
+        font-size: 12px;
+        padding-left: 20px;
+        span {
+          color: $base-color;
+        }
+      }
+    }
+  }
+  .copyright {
+    background-color: #444444;
+    color: #fff;
+    text-align: center;
+    font-size: 10px;
+    padding: 10px;
+  }
+}
+
+@include md-screen {
+  .footer-section {
+    margin-top: 40px;
+    .contact-container {
+      padding: 20px 80px;
+      .contact-content {
+        padding: 20px;
+        .title {
+          font-size: 18px;
+          padding-bottom: 15px;
+        }
+        .contact-wrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+          font-size: 16px;
+          padding-left: 60px;
+        }
+      }
+    }
+    .copyright {
+      font-size: 16px;
+      padding: 20px 0px;
+    }
+  }
+}
+@include lg-screen {
+  .footer-section {
+    margin-top: 60px;
+    .contact-container {
+      padding: 20px 120px;
+      .contact-content {
+        padding: 20px;
+        .title {
+          font-size: 22px;
+          padding-bottom: 20px;
+        }
+        .contact-wrapper {
+          font-size: 18px;
+          padding-left: 70px;
+        }
+      }
+    }
+    .copyright {
+      font-size: 16px;
+      padding: 20px 0px;
+    }
+  }
+}
+@include xl-screen {
+  .footer-section {
+    margin-top: 60px;
+    .contact-container {
+      padding: 20px 340px;
+      .contact-content {
+        padding: 40px 20px;
+        .title {
+          font-size: 18px;
+          padding-bottom: 20px;
+        }
+        .contact-wrapper {
+          font-size: 14px;
+          gap: 40px;
+          padding-left: 60px;
+        }
+      }
+    }
+    .copyright {
+      font-size: 14px;
+      padding: 20px 0px;
+    }
+  }
+}
+@include xxl-screen {
+  .footer-section {
+    margin-top: 90px;
+    .contact-container {
+      padding: 40px 500px;
+      .contact-content {
+        padding: 40px 20px;
+        .title {
+          font-size: 22px;
+          padding-bottom: 30px;
+        }
+        .contact-wrapper {
+          font-size: 14px;
+          gap: 40px;
+          padding-left: 80px;
+        }
+      }
+    }
+    .copyright {
+      font-size: 14px;
+      padding: 20px 0px;
+    }
+  }
+}
