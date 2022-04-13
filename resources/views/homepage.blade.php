@@ -93,11 +93,102 @@
 </div>
 </div>
 
+<!-- Fixed Image -->
 <div class="fixed-img">
-    <img src="https://www.khoratgeopark.com/Data/sliders/1.jpg" alt="">
+    <img src="https://images.unsplash.com/photo-1520961810802-7f0a32de665a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1591&q=80" alt="">
 </div>
 
-<div class="test-content" id="test-content" style="height: 900px;background-color:#333;overflow:hidden;"></div>
+
+<!-- Highligh News Section (3 Box) -->
+<div class="highlight-news-section">
+    <div class="highlight-news-container swiper highlightNewsSwiper">
+        <div class="news-group swiper-wrapper">
+            <div class="news-item swiper-slide" style="background-image: url('https://www.khoratgeopark.com/Data/sliders/1.jpg');">
+                <div class="title">
+                    News Title
+                </div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, dolorum!
+                </div>
+            </div>
+            <div class="news-item swiper-slide" style="background-image: url('http://www.satun-geopark.com/wp-content/uploads/2017/06/1-1-1300x560.jpg');">
+                <div class="title">
+                    News Title
+                </div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing 
+                </div>
+            </div>
+            <div class="news-item swiper-slide" style="background-image: url('http://www.satun-geopark.com/wp-content/uploads/2017/01/news02-11.jpg');">
+                <div class="title">
+                    News Title
+                </div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, dolorum!
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+
+<!-- Google Map -->
+<div class="map-section">
+    <iframe class="map-content"  src="https://maps.google.com/maps?q=14.9874706,102.1179648&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+</div>
+
+<!-- Banner Group -->
+<div class="banner-group-section">
+    <div class="banner-group-container swiper bannerGroupSwiper">
+        <div class="banner-group swiper-wrapper">
+            <div class="banner-item swiper-slide">
+                <img src="https://www.geoparc.cat/wp-content/uploads/2021/07/geopark_blue_eng-400x302.png" alt="">
+            </div>
+            <div class="banner-item swiper-slide">
+                <img src="https://i2.wp.com/thebamboocode.com/wp-content/uploads/2016/03/js-logo.png?fit=500%2C500" alt="">
+            </div>
+            <div class="banner-item swiper-slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="">
+            </div>
+            <div class="banner-item swiper-slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" alt="">
+            </div>
+            <div class="banner-item swiper-slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" alt="">
+            </div>
+            <div class="banner-item swiper-slide">
+                <img src="https://www.geoparc.cat/wp-content/uploads/2021/07/geopark_blue_eng-400x302.png" alt="">
+            </div>
+            <div class="banner-item swiper-slide">
+                <img src="https://i2.wp.com/thebamboocode.com/wp-content/uploads/2016/03/js-logo.png?fit=500%2C500" alt="">
+            </div>
+            <div class="banner-item swiper-slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="">
+            </div>
+            <div class="banner-item swiper-slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" alt="">
+            </div>
+            <div class="banner-item swiper-slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" alt="">
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer-section">
+    <div class="footer-container">
+        <div class="contact-container">
+
+        </div>
+        <div class="copyright"></div>
+    </div>
+</div>
+
+<div class="test-content" id="test-content" style="height: 300px;background-color:#fff;overflow:hidden;"></div>
 
 
 
@@ -121,6 +212,50 @@
         autoplay: {
             delay: 3000
         }
+    });
+    var highlightNewsSwiper = new Swiper(".highlightNewsSwiper", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                spaceBetween: 20,
+            },
+            768: {
+                spaceBetween: 20,
+            },
+            1000: {
+                slidesPerView: "3",
+                spaceBetween: 20,
+                navigation: false,
+            },
+        },
+    });
+    var bannerGroupSwiper = new Swiper(".bannerGroupSwiper", {
+        slidesPerView: "5",
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: "6",
+                navigation: false,
+            },
+            1000: {
+                slidesPerView: "8",
+            },
+        },
     });
 </script>
 @stop

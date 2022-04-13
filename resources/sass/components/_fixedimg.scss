@@ -3,7 +3,7 @@
     height: 100px;
     width: 100vw;
     object-fit: cover;
-    object-position: center;
+    object-position: bottom;
   }
 }
 
@@ -31,7 +31,7 @@
 @include xxl-screen {
   .fixed-img {
     img {
-      height: 250px;
+      height: 280px;
     }
   }
 }

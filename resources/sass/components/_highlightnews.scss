@@ -1,0 +1,112 @@
+.highlight-news-container {
+  margin-top: 30px;
+}
+.highlight-news-container {
+  background-color: #fff;
+  height: 200px;
+  padding: 0px 60px !important;
+
+  .news-group {
+    .news-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      background-size: cover;
+      padding: 10px;
+      .title {
+        color: #fff;
+        font-weight: 500;
+      }
+      .description {
+        color: #fff;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@include md-screen {
+  .highlight-news-container {
+    height: 300px;
+    margin-top: 20px;
+    padding: 0px 0px !important;
+    .news-group {
+      .news-item {
+        width: 400px;
+        padding: 10px;
+        .title {
+          font-size: 22px;
+        }
+        .description {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+@include lg-screen {
+  .highlight-news-section {
+    padding: 0px 30px;
+  }
+  .highlight-news-container {
+    height: 240px;
+
+    padding: 0px 0px !important;
+    .news-group {
+      .news-item {
+        padding: 10px;
+        .title {
+          font-size: 18px;
+        }
+        .description {
+          font-size: 14px;
+        }
+      }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+  }
+}
+@include xl-screen {
+  .highlight-news-section {
+    padding: 0px 100px;
+    margin-top: 60px;
+  }
+  .highlight-news-container {
+    height: 240px;
+    .news-group {
+      .news-item {
+        padding: 14px;
+        .title {
+          font-size: 16px;
+        }
+        .description {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+@include xxl-screen {
+  .highlight-news-section {
+    padding: 0px 300px;
+    margin-top: 80px;
+  }
+  .highlight-news-container {
+    height: 300px;
+    .news-group {
+      .news-item {
+        padding: 14px;
+        .title {
+          font-size: 18px;
+        }
+        .description {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
