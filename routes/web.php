@@ -14,28 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Welcome
 Route::get('/', [App\Http\Controllers\FontEndController::class, 'index'])->name('welcome');
-// Home
 Route::get('/home', [App\Http\Controllers\FontEndController::class, 'home'])->name('home');
-// Programme
 Route::get('/programme', [App\Http\Controllers\FontEndController::class, 'programme'])->name('programme');
-// Registration
 Route::get('/registration', [App\Http\Controllers\FontEndController::class, 'registration'])->name('registration');
-// Abstract
 Route::get('/abstract', [App\Http\Controllers\FontEndController::class, 'abstract'])->name('abstract');
-// Geofair
 Route::get('/geofair', [App\Http\Controllers\FontEndController::class, 'geofair'])->name('geofair');
-// Gallery
 Route::get('/gallery', [App\Http\Controllers\FontEndController::class, 'gallery'])->name('gallery');
-// Blog
 Route::get('/blog', [App\Http\Controllers\FontEndController::class, 'blogList'])->name('blog.list');
 Route::get('/blog/{id}', [App\Http\Controllers\FontEndController::class, 'blogShow'])->name('blog.show');
 
 
 //Admin
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');
 Route::resource('blogs', App\Http\Controllers\BlogController::class);
 Route::resource('slides', App\Http\Controllers\SlideController::class);
 Route::resource('banners', App\Http\Controllers\BannerController::class);
