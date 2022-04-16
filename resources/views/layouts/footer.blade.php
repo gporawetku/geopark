@@ -4,33 +4,34 @@
   <div class="contact-container" style="background-image: url('{{asset('images/background_images/korat1.jpg')}}');">
     <div class="contact-content">
       <div class="title">
-        Thailand Geopark Network Symposium Secretariat
+        Thailand Geoparks Network Symposium Secretariat
       </div>
       <div class="contact-wrapper">
         <div class="address">
           <span class="fas fa-map-marker-alt"></span>
-          Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+          เลขานุการเครือข่ายอุทยานธรณีประเทศไทย<br>
+          75/10 ถ.พระรามที่ 6 แขวงทุ่งพญาไท เขตราชเทวี กทม. 10400
         </div>
         <div>
           <div class="tel">
             <span class="fas fa-phone-alt"></span>
-            099-888-7777
+            02-621-9500
           </div>
 
-          <div class="fax">
+          <!-- <div class="fax">
             <span class="fas fa-fax"></span>
             02-222-2222
-          </div>
+          </div> -->
           <div class="email">
             <span class="fas fa-envelope"></span>
-            contact@geopark.com
+            tgn2022symposium@gmail.com
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="copyright">
-    Copyright © DIGITAL 9th International Conference on UNESCO Global Geoparks. All rights reserved.
+    Copyright © The 1st Thailand Geoparks Network Symposium (Webinar) . All rights reserved.
   </div>
 
 </div>

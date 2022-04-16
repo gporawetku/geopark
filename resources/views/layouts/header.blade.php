@@ -29,34 +29,24 @@
         <a href="#">TGN 2022 <i class="fa fa-caret-down"></i></a>
         <ul>
             <a href="#">
-                <li>Welcome Message</li>
+                <li>ข้อความต้อนรับ</li>
             </a>
             <a href="#">
                 <li>Organizing Committee</li>
             </a>
         </ul>
     </li>
-    <li>
-        <a href="{{route('programme')}}">
-            Programme
-        </a>
-    </li>
-    <li>
-        <a href="{{route('blog.list')}}">News</a>
-    </li>
 
-    <li><a href="{{route('registration')}}">Registration</a></li>
+    <li><a href="{{route('programme')}}">โปรแกรม</a></li>
 
-    <li>
-        <a href="{{route('abstract')}}">
-            Abstract
-        </a>
-    </li>
+    <li><a href="{{route('blog.list')}}">ข่าว</a></li>
 
-    <li><a href="{{route('geofair')}}">Geofair</a></li>
+    <li><a href="{{route('registration')}}">ลงทะเบียน</a></li>
 
-    <li>
-        <a href="{{route('gallery')}}">Gallery</a>
-    </li>
+    <li><a href="{{route('abstract')}}">บทความวิชาการ</a></li>
+
+    <li><a href="{{route('geofair')}}">จีโอพาร์คในไทย</a></li>
+
+    <li><a href="{{route('gallery')}}">ห้องภาพ</a></li>
     
 </ul>

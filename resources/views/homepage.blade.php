@@ -55,7 +55,7 @@
                 <span class="news-icon">
                     <i class="fa fa-bullhorn"></i>
                 </span>
-                Latest News
+                ข่าวสาร
             </div>
             <div class="news-mobile-icon">
                 <i class="fa fa-bullhorn"></i>
@@ -77,14 +77,21 @@
             <span class="schedule-icon">
                 <i class="fa fa-calendar"></i>
             </span>
-            Schedule
+            กำหนดการ
         </div>
         <table class="schedule-table">
-            @for($i=0; $i<3; $i++) <tr>
-                <td>Conference Registration</td>
-                <td>24 ส.ค. 65</td>
-                </tr>
-                @endfor
+            <tr>
+                <td>ลงทะเบียน</td>
+                <td>10 - 24 เมษายน 2565</td>
+            </tr>
+            <tr>
+                <td>ส่งบทความวิชาการ</td>
+                <td>1 - 18 เมษายน 2565</td>
+            </tr>
+            <tr>
+                <td>ประกวดคลิป ภาพถ่ายเรียงความ</td>
+                <td>20 - 25 เมษายน 2565</td>
+            </tr>
         </table>
     </div>
 </div>
