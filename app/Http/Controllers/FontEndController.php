@@ -9,7 +9,7 @@ use App\Models\Schedule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
-class WelcomeController extends Controller
+class FontEndController extends Controller
 {
     //
     public function index()

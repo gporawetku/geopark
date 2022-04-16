@@ -15,22 +15,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Welcome
-Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
+Route::get('/', [App\Http\Controllers\FontEndController::class, 'index'])->name('welcome');
 // Home
-Route::get('/home', [App\Http\Controllers\WelcomeController::class, 'home'])->name('home');
+Route::get('/home', [App\Http\Controllers\FontEndController::class, 'home'])->name('home');
 // Programme
-Route::get('/programme', [App\Http\Controllers\WelcomeController::class, 'programme'])->name('programme');
+Route::get('/programme', [App\Http\Controllers\FontEndController::class, 'programme'])->name('programme');
 // Registration
-Route::get('/registration', [App\Http\Controllers\WelcomeController::class, 'registration'])->name('registration');
+Route::get('/registration', [App\Http\Controllers\FontEndController::class, 'registration'])->name('registration');
 // Abstract
-Route::get('/abstract', [App\Http\Controllers\WelcomeController::class, 'abstract'])->name('abstract');
+Route::get('/abstract', [App\Http\Controllers\FontEndController::class, 'abstract'])->name('abstract');
 // Geofair
-Route::get('/geofair', [App\Http\Controllers\WelcomeController::class, 'geofair'])->name('geofair');
+Route::get('/geofair', [App\Http\Controllers\FontEndController::class, 'geofair'])->name('geofair');
 // Gallery
-Route::get('/gallery', [App\Http\Controllers\WelcomeController::class, 'gallery'])->name('gallery');
+Route::get('/gallery', [App\Http\Controllers\FontEndController::class, 'gallery'])->name('gallery');
 // Blog
-Route::get('/blog', [App\Http\Controllers\WelcomeController::class, 'blogList'])->name('blog.list');
-Route::get('/blog/{id}', [App\Http\Controllers\WelcomeController::class, 'blogShow'])->name('blog.show');
+Route::get('/blog', [App\Http\Controllers\FontEndController::class, 'blogList'])->name('blog.list');
+Route::get('/blog/{id}', [App\Http\Controllers\FontEndController::class, 'blogShow'])->name('blog.show');
 
 
 //Admin
