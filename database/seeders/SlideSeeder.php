@@ -15,11 +15,11 @@ class SlideSeeder extends Seeder
     public function run()
     {
         // $sliders = Slide::factory()->count(10)->create();
-        for ($i = 1; $i < 6; $i++){
+        for ($i = 1; $i < 8; $i++){
             Slide::create([
                 'name' => 'John Addison',
                 'link' => null,
-                'image' => 'images/slides/slide-'.$i.'.png',
+                'image' => 'images/slides/slide-'.$i.'.jpg',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, minima.',
                 'order' => $i,
                 'creator_id' => 1,
