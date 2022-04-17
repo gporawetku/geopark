@@ -1,5 +1,5 @@
 .schedule-container {
-  padding: 20px 40px;
+  padding: 20px 10px;
   background-color: #eeeeee;
   .title {
     display: none;
@@ -40,8 +40,8 @@
         }
       }
       td {
-        font-size: 14px;
-        padding: 10px;
+        font-size: 12px;
+        padding: 14px 10px;
         border-bottom: 1px solid $base-color;
         &:first-child {
           border-right: 1px solid $base-color;
@@ -98,12 +98,12 @@
     }
     table.schedule-table {
       background-color: #fff;
-      width: 350px;
+      width: 450px;
       border: 3px solid $base-color;
       tr {
         td {
           font-size: 16px;
-          padding: 14px;
+          padding: 16px;
           border-bottom: 2px solid $base-color;
           &:first-child {
             border-right: 2px solid $base-color;
@@ -116,11 +116,11 @@
 @include xxl-screen {
   .schedule-container {
     table.schedule-table {
-      width: 400px;
+      width: 500px;
       tr {
         td {
           font-size: 16px;
-          padding: 14px;
+          padding: 20px;
           border-bottom: 2px solid $base-color;
           &:first-child {
             border-right: 2px solid $base-color;
