@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center ">
             <a href="{{route('welcome')}}">
-                <img class="logo" src="{{asset('images/logo1.png')}}" alt="">
+                <img class="logo" src="{{asset('images/geofair_logo/new-logo2.png')}}" alt="">
             </a>
             <a class="title" href="{{route('welcome')}}">
                 การประชุมทางวิชาการเครือข่ายอุทยานธรณีประเทศไทย ครั้งที่ 1

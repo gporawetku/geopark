@@ -149,34 +149,49 @@
     <div class="banner-group-container swiper bannerGroupSwiper">
         <div class="banner-group swiper-wrapper">
             <div class="banner-item swiper-slide">
-                <img src="https://www.geoparc.cat/wp-content/uploads/2021/07/geopark_blue_eng-400x302.png" alt="">
+                <img src="{{asset('images/sponsor_logo/1.png')}}" alt="">
             </div>
             <div class="banner-item swiper-slide">
-                <img src="https://i2.wp.com/thebamboocode.com/wp-content/uploads/2016/03/js-logo.png?fit=500%2C500" alt="">
+                <img src="{{asset('images/sponsor_logo/2.png')}}" alt="">
             </div>
             <div class="banner-item swiper-slide">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="">
+                <img src="{{asset('images/sponsor_logo/3.png')}}" alt="">
             </div>
             <div class="banner-item swiper-slide">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" alt="">
+                <img src="{{asset('images/sponsor_logo/4.png')}}" alt="">
             </div>
             <div class="banner-item swiper-slide">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" alt="">
+                <img src="{{asset('images/sponsor_logo/5.png')}}" alt="">
             </div>
             <div class="banner-item swiper-slide">
-                <img src="https://www.geoparc.cat/wp-content/uploads/2021/07/geopark_blue_eng-400x302.png" alt="">
+                <img src="{{asset('images/sponsor_logo/6.png')}}" alt="">
             </div>
             <div class="banner-item swiper-slide">
-                <img src="https://i2.wp.com/thebamboocode.com/wp-content/uploads/2016/03/js-logo.png?fit=500%2C500" alt="">
+                <img src="{{asset('images/sponsor_logo/7.jpg')}}" alt="">
             </div>
             <div class="banner-item swiper-slide">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="">
+                <img src="{{asset('images/sponsor_logo/8.png')}}" alt="">
             </div>
             <div class="banner-item swiper-slide">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" alt="">
+                <img src="{{asset('images/sponsor_logo/9.png')}}" alt="">
             </div>
             <div class="banner-item swiper-slide">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" alt="">
+                <img src="{{asset('images/sponsor_logo/10.jpg')}}" alt="">
+            </div>
+            <div class="banner-item swiper-slide">
+                <img src="{{asset('images/sponsor_logo/11.jpeg')}}" alt="">
+            </div>
+            <div class="banner-item swiper-slide">
+                <img src="{{asset('images/sponsor_logo/12.png')}}" alt="">
+            </div>
+            <div class="banner-item swiper-slide">
+                <img src="{{asset('images/sponsor_logo/13.png')}}" alt="">
+            </div>
+            <div class="banner-item swiper-slide">
+                <img src="{{asset('images/sponsor_logo/14.jpg')}}" alt="">
+            </div>
+            <div class="banner-item swiper-slide">
+                <img src="{{asset('images/sponsor_logo/15.jpg')}}" alt="">
             </div>
         </div>
         <div class="swiper-button-next"></div>
@@ -231,7 +246,7 @@
     });
     var bannerGroupSwiper = new Swiper(".bannerGroupSwiper", {
         slidesPerView: "5",
-        spaceBetween: 20,
+        spaceBetween: 60,
         centeredSlides: true,
         loop: true,
         autoplay: {
@@ -247,7 +262,7 @@
                 navigation: false,
             },
             1000: {
-                slidesPerView: "8",
+                slidesPerView: "9",
             },
         },
     });
