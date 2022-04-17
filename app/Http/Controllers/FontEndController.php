@@ -17,11 +17,13 @@ class FontEndController extends Controller
         $slideList          = Slide::get()->toArray();
         $scheduleList       = Schedule::where('plan_date_time', '>=', Carbon::now('Asia/Bangkok'))->take(3)->get()->toArray();
         $blogList           = Blog::orderBy('created_at','desc')->take(3)->get()->toArray();
+        $blogs              = Blog::orderBy('created_at','desc')->take(3)->get()->toArray();
 
         $data               = [
             'slideList'     => $slideList ,
             'scheduleList'  => $scheduleList ,
             'blogList'      => $blogList,
+            'blogs'         => $blogs,
             'statusPage'    => 0,
         ];
 

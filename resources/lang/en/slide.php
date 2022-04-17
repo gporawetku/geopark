@@ -4,7 +4,6 @@ return [
     // Labels
     'slide'          => 'Slide',
     'list'           => 'Slide List',
-    'image'          => 'Slide Images',
     'search'         => 'Search Slide',
     'search_text'    => 'Name ...',
     'all'            => 'All Slide',
@@ -29,9 +28,8 @@ return [
     'undeleteable'   => 'Slide data cannot be deleted.',
 
     // Attributes
-    'name'           => 'Slide Name',
-    'link'           => 'Slide Link',
-    'description'    => 'Slide Description',
-    'order'          => 'Slide Order',
+    'name'           => 'Name',
+    'order'          => 'Order',
+    'image'          => 'Image',
 
 ];

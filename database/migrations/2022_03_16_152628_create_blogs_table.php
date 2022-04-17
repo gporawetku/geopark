@@ -18,7 +18,7 @@ class CreateBlogsTable extends Migration
             $table->text('name');
             $table->text('description')->nullable();
             $table->mediumText('content')->nullable();
-            $table->enum('page_menu',['normal','register','other']);
+            $table->string('image')->nullable();
             $table->unsignedBigInteger('creator_id');
             $table->timestamps();
 

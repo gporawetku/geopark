@@ -17,10 +17,8 @@ class SlideSeeder extends Seeder
         // $sliders = Slide::factory()->count(10)->create();
         for ($i = 1; $i < 8; $i++){
             Slide::create([
-                'name' => 'John Addison',
-                'link' => null,
+                'name' => 'slide-'.$i,
                 'image' => 'images/slides/slide-'.$i.'.jpg',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, minima.',
                 'order' => $i,
                 'creator_id' => 1,
             ]);
