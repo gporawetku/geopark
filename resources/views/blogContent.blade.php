@@ -10,3 +10,7 @@
   </div>
 </div>
 @stop
+
+@section('js')
+  @yield('js')
+@stop
