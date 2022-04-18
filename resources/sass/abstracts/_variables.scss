@@ -8,3 +8,10 @@
 $base-color: #39a0ed;
 $dark-color: #0f3c5f;
 $white: #fdfdff;
+
+.text-base-color {
+  color: $base-color;
+}
+.text-dark-color {
+  color: $dark-color;
+}
