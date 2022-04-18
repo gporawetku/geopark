@@ -38,10 +38,10 @@
     </li>
 
     <li><a href="{{route('programme')}}">โปรแกรม</a></li>
+    
+    <li><a href="{{route('registration')}}">ลงทะเบียน</a></li>
 
     <li><a href="{{route('blog.list')}}">ข่าว</a></li>
-
-    <li><a href="{{route('registration')}}">ลงทะเบียน</a></li>
 
     <li><a href="{{route('abstract')}}">บทความวิชาการ</a></li>
 
