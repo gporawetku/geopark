@@ -49,6 +49,7 @@
 <!-- Underhero (News, Schedule) -->
 <div class="section-container">
     <div class="underhero-container" id="underhero-section">
+
         <!-- Latest News -->
         <div class="news-container">
             <div class="title">
@@ -62,16 +63,19 @@
             </div>
             <div class="swiper newsSwiper">
                 <div class="swiper-wrapper">
-                    @for($i=0; $i<3; $i++) <div class="swiper-slide">
-                        <div class="news-item">[12/12/2012] 1 Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
-                </div>
-                @endfor
+                    @foreach($data['blogList'] as $newsItem)
+                    <div class="swiper-slide">
+                        <div class="news-item">
+                            [{{date('d/m/Y', strtotime($newsItem['created_at']))}}]
+                            {{$newsItem['description']}}
+                        </div>
+                    </div>
+                    @endforeach
             </div>
         </div>
     </div>
 
     <!-- Schedule -->
-
     <div class="schedule-container">
         <div class="title">
             <span class="schedule-icon">
