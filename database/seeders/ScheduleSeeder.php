@@ -16,27 +16,24 @@ class ScheduleSeeder extends Seeder
     {
         Schedule::insert([
             [
-                'name' => 'วันที่ 24 เมษายน 2565 การประชุมคณะอนุกรรมการอุทยานธรณีแห่งชาติ',
-                'description' => 'การประชุมคณะอนุกรรมการอุทยานธรณีแห่งชาติ',
-                'plan_date_time' => '2022-04-24 09:30:00',
+                "name" => "ส่งบทความวิชาการ",
+                "description" => "วันที่ 1 - 18 เมษายน 2565",
+                "start_date" => "2022-04-1 00:00:00",
+                'end_date' => '2022-04-18 23:59:59',
+                "creator_id" => 1,
+            ],
+            [
+                'name' => 'ลงทะเบียน',
+                'description' => 'วันที่ 10 - 24 เมษายน 2565',
+                'start_date' => '2022-04-10 00:00:00',
+                'end_date' => '2022-04-24 23:59:59',
                 'creator_id' => 1,
             ],
             [
-                "name" => "วันที่ 25 เมษายน 2565 พิธีเปิดและบรรยายพิเศษ/April 25, 2022 Opening Ceremony & Keynote speakers Session",
-                "description" => "พิธีเปิดและบรรยายพิเศษ/April 25, 2022 Opening Ceremony & Keynote speakers Session",
-                "plan_date_time" => "2022-04-25 08:15:00",
-                "creator_id" => 1,
-            ],
-            [
-                "name" => "วันที่ 25 เมษายน 2565/April 25, 2022  นำเสนอ/แลกเปลี่ยนเรียนรู้ทางวิชาการ/Oral presentation",
-                "description" => "นำเสนอ/แลกเปลี่ยนเรียนรู้ทางวิชาการ/Oral presentation",
-                "plan_date_time" => "2022-04-25 13:00:00",
-                "creator_id" => 1,
-            ],
-            [
-                "name" => "วันที่ 26 เมษายน 2565/April 26, 2022 นำเสนอ/แลกเปลี่ยนเรียนรู้ทางวิชาการ/ Oral presentation",
-                "description" => "นำเสนอ/แลกเปลี่ยนเรียนรู้ทางวิชาการ/Oral presentation",
-                "plan_date_time" => "2022-04-25 08:15:00",
+                "name" => "ประกวดคลิป ภาพถ่าย เรียงความ",
+                "description" => "วันที่ 20 - 25 เมษายน 2565",
+                "start_date" => "2022-04-20 00:00:00",
+                'end_date' => '2022-04-25 23:59:59',
                 "creator_id" => 1,
             ]
         ]);

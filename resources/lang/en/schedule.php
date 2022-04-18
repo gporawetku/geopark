@@ -28,7 +28,8 @@ return [
     'undeleteable'   => 'Schedule data cannot be deleted.',
 
     // Attributes
-    'name'           => 'Schedule Name',
-    'description'    => 'Schedule Description',
-    'plan_date_time' => 'Schedule Plan',
+    'name'           => 'Name',
+    'description'    => 'Description',
+    'start_date'     => 'Start Date',
+    'end_date'       => 'End Date',
 ];

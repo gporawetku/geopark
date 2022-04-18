@@ -31,7 +31,7 @@
                         <th class="text-center">{{ __('app.table_no') }}</th>
                         <th>{{ __('schedule.name') }}</th>
                         <th>{{ __('schedule.description') }}</th>
-                        <th>{{ __('schedule.plan_date_time') }}</th>
+                        <th>{{ __('schedule.start_date') }}</th>
                         <th class="text-center">{{ __('app.action') }}</th>
                     </tr>
                 </thead>
@@ -41,7 +41,7 @@
                         <td class="text-center">{{ $schedules->firstItem() + $key }}</td>
                         <td>{{ $schedule->name }}</td>
                         <td>{{ $schedule->description }}</td>
-                        <td>{{ $schedule->plan_date_time }}</td>
+                        <td>{{ $schedule->start_date }}</td>
                         <td class="text-center">
                             @can('update', $schedule)
                                 <a href="{{ route('schedules.index', ['action' => 'edit', 'id' => $schedule->id] + Request::only('page', 'q')) }}" id="edit-schedule-{{ $schedule->id }}">{{ __('app.edit') }}</a>

@@ -15,7 +15,7 @@ class FontEndController extends Controller
     public function index()
     {
         $slideList          = Slide::get()->toArray();
-        $scheduleList       = Schedule::where('plan_date_time', '>=', Carbon::now('Asia/Bangkok'))->take(3)->get()->toArray();
+        $scheduleList       = Schedule::where('end_date', '>=', Carbon::now('Asia/Bangkok'))->take(3)->get()->toArray();
         $blogList           = Blog::orderBy('created_at','desc')->take(3)->get()->toArray();
         $blogs              = Blog::orderBy('created_at','desc')->take(3)->get()->toArray();
 
@@ -61,7 +61,7 @@ class FontEndController extends Controller
 
     public function registration()
     {
-        $blog               = Blog::where('page_menu','register')->orderBy('created_at','desc')->take(1)->get()->toArray();
+        $blog               = Blog::orderBy('created_at','desc')->take(1)->get()->toArray();
         $register =  [
             ['img' => 'images/register/register-1.jpg'],
             ['img' => 'images/register/register-2.jpg'],
@@ -93,7 +93,7 @@ class FontEndController extends Controller
 
     public function geofair()
     {
-        $blog               = Blog::where('page_menu','other')->orderBy('created_at','desc')->take(1)->get()->toArray();
+        $blog               = Blog::orderBy('created_at','desc')->take(1)->get()->toArray();
         $data               = [
             'blog'          => $blog,
             'statusPage'    => 0,
