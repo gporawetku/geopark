@@ -26,6 +26,10 @@
             <span class="fas fa-envelope"></span>
             tgn2022symposium@gmail.com
           </div>
+          <div class="facebook">
+            <span class="fab fa-facebook"></span>
+            <a href="https://www.facebook.com/people/Geoparks-Thailand/100068633149621" target="_blank">Geoparks Thailand</a>
+          </div>
         </div>
       </div>
     </div>
