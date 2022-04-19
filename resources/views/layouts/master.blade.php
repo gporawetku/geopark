@@ -28,7 +28,6 @@
 
 <body>
 
-    <!-- <div class="fade-in-welcome" style="position: absolute;z-index:9999;top:0;background-color:white; height: 100vh;width: 100vw;"></div> -->
 
 
 
@@ -67,7 +66,8 @@
 
         setTimeout(function() {
             document.querySelector('.fade-in-welcome').style.display = "none";
-        }, 3000);
+        }, 2000);
+
         mobileLink.addEventListener('click', function(e) {
             mobileLink.classList.toggle("active");
             menuBar.classList.toggle("active");

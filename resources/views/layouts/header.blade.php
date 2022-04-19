@@ -26,15 +26,17 @@
 <div class="menu-bar-overlay"></div>
 <ul class="menu-bar">
     <li>
-        <a href="#">TGN 2022 <i class="fa fa-caret-down"></i></a>
-        <ul>
+        <a href="{{route('welcome')}}">TGN 2022 
+            <!-- <i class="fa fa-caret-down"></i> -->
+        </a>
+        <!-- <ul>
             <a href="#">
                 <li>ข้อความต้อนรับ</li>
             </a>
             <a href="#">
                 <li>Organizing Committee</li>
             </a>
-        </ul>
+        </ul> -->
     </li>
 
     <li><a href="{{route('programme')}}">โปรแกรม</a></li>

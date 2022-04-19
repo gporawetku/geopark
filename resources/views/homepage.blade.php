@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('body')
+<div class="fade-in-welcome" style="position: absolute;z-index:9999;top:0;background-color:white; height: 100vh;width: 100vw;"></div>
 
 
 <!-- Slider main container -->
@@ -9,29 +10,11 @@
     <div class="swiper-wrapper">
         <!-- Slides -->
         @foreach($data['slideList'] as $slide)
-        <!-- <div class="swiper-slide">
+        <div class="swiper-slide">
                 <img style="width:100%;" src="{{asset($slide['image'])}}" alt="">
-            </div> -->
+            </div>
         @endforeach
 
-        <div class="swiper-slide">
-            <img style="width:100%;" src="{{asset('images/bg_1.png')}}" alt="">
-        </div>
-        <div class="swiper-slide">
-            <img style="width:100%;" src="https://www.khoratgeopark.com/Data/sliders/2.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-            <img style="width:100%;" src="https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1280&q=80" alt="">
-        </div>
-        <div class="swiper-slide">
-            <img style="width:100%;" src="http://www.satun-geopark.com/wp-content/uploads/2017/01/news02-11.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-            <img style="width:100%;" src="http://www.satun-geopark.com/wp-content/uploads/2017/06/1-1-1300x560.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-            <img style="width:100%;" src="https://www.khoratgeopark.com/Data/sliders/1.jpg" alt="">
-        </div>
     </div>
     <div class="hero-text">
         <div class="title">
