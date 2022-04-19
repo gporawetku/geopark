@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use SebastianBergmann\Environment\Console;
 
-class FontEndController extends Controller
+class FrontEndController extends Controller
 {
     //
     public function index()
