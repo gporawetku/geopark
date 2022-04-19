@@ -94,30 +94,17 @@
 <div class="highlight-news-section">
     <div class="highlight-news-container swiper highlightNewsSwiper">
         <div class="news-group swiper-wrapper">
-            <div class="news-item swiper-slide" style="background-image: url('https://www.khoratgeopark.com/Data/sliders/1.jpg');">
+            @foreach ($data['blogs'] as $blogItem)
+            <div class="news-item swiper-slide" 
+            style="background-image: url(' {{asset($blogItem['image'])}} ');">
                 <div class="title">
-                    News Title
+                    {{$blogItem['name']}}
                 </div>
                 <div class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, dolorum!
+                    {{$blogItem['description']}}
                 </div>
             </div>
-            <div class="news-item swiper-slide" style="background-image: url('http://www.satun-geopark.com/wp-content/uploads/2017/06/1-1-1300x560.jpg');">
-                <div class="title">
-                    News Title
-                </div>
-                <div class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                </div>
-            </div>
-            <div class="news-item swiper-slide" style="background-image: url('http://www.satun-geopark.com/wp-content/uploads/2017/01/news02-11.jpg');">
-                <div class="title">
-                    News Title
-                </div>
-                <div class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, dolorum!
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
