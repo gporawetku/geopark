@@ -1,6 +1,6 @@
 @if (Request::get('action') == 'create')
     @can('create', new App\Models\Slide())
-        <div class="card card-primary">
+        <div class="card card-gray-dark">
             <div class="card-header">
                 <h3 class="card-title">Create Slide</h3>
             </div>

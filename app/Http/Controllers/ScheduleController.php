@@ -17,7 +17,7 @@ class ScheduleController extends Controller
         $editableSchedule = null;
         $scheduleQuery = Schedule::query();
         $scheduleQuery->where('name', 'like', '%'.request('q').'%');
-        $schedules = $scheduleQuery->paginate(25);
+        $schedules = $scheduleQuery->paginate(10);
 
         if (in_array(request('action'), ['edit', 'delete']) && request('id') != null) {
             $editableSchedule = Schedule::find(request('id'));
@@ -42,6 +42,7 @@ class ScheduleController extends Controller
         ]);
         $newSchedule['creator_id'] = auth()->id();
 
+        dd($request , $newSchedule);
         Schedule::create($newSchedule);
 
         return redirect()->route('schedules.index');

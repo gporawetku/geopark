@@ -2,7 +2,7 @@
 
 return [
     // Labels
-    'schedule'     => 'Schedule',
+    'schedule'       => 'Schedule',
     'list'           => 'Schedule List',
     'search'         => 'Search Schedule',
     'search_text'    => 'Name ...',
