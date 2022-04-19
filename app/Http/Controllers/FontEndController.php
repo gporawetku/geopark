@@ -8,6 +8,7 @@ use App\Models\Schedule;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use SebastianBergmann\Environment\Console;
 
 class FontEndController extends Controller
 {
@@ -16,18 +17,17 @@ class FontEndController extends Controller
     {
         $slideList          = Slide::get()->toArray();
         $scheduleList       = Schedule::where('end_date', '>=', Carbon::now('Asia/Bangkok'))->take(3)->get()->toArray();
-        $blogList           = Blog::orderBy('created_at','desc')->take(3)->get()->toArray();
-        $blogs              = Blog::orderBy('created_at','desc')->take(3)->get()->toArray();
-
+        $blogList           = Blog::orderBy('created_at', 'desc')->take(3)->get()->toArray();
+        $blogs              = Blog::whereNotNull('image')->orderBy('created_at', 'desc')->take(3)->get()->toArray();
         $data               = [
-            'slideList'     => $slideList ,
-            'scheduleList'  => $scheduleList ,
+            'slideList'     => $slideList,
+            'scheduleList'  => $scheduleList,
             'blogList'      => $blogList,
             'blogs'         => $blogs,
             'statusPage'    => 0,
         ];
 
-        return view('homepage',compact('data'));
+        return view('homepage', compact('data'));
     }
 
     public function home()
@@ -36,7 +36,7 @@ class FontEndController extends Controller
             'statusPage'    => 0,
         ];
 
-        return view('pages.home',compact('data'));
+        return view('pages.home', compact('data'));
     }
 
     public function programme()
@@ -56,12 +56,12 @@ class FontEndController extends Controller
             'statusPage'    => 0,
         ];
 
-        return view('pages.programme',compact('data'));
+        return view('pages.programme', compact('data'));
     }
 
     public function registration()
     {
-        $blog               = Blog::orderBy('created_at','desc')->take(1)->get()->toArray();
+        $blog               = Blog::orderBy('created_at', 'desc')->take(1)->get()->toArray();
         $register =  [
             ['img' => 'images/register/register-1.jpg'],
             ['img' => 'images/register/register-2.jpg'],
@@ -79,7 +79,7 @@ class FontEndController extends Controller
             'statusPage'        => 0,
         ];
 
-        return view('pages.registration',compact('data'));
+        return view('pages.registration', compact('data'));
     }
 
     public function abstract()
@@ -88,18 +88,18 @@ class FontEndController extends Controller
             'statusPage'    => 0,
         ];
 
-        return view('pages.abstract',compact('data'));
+        return view('pages.abstract', compact('data'));
     }
 
     public function geofair()
     {
-        $blog               = Blog::orderBy('created_at','desc')->take(1)->get()->toArray();
+        $blog               = Blog::orderBy('created_at', 'desc')->take(1)->get()->toArray();
         $data               = [
             'blog'          => $blog,
             'statusPage'    => 0,
         ];
 
-        return view('pages.geofair',compact('data'));
+        return view('pages.geofair', compact('data'));
     }
 
     public function gallery()
@@ -108,7 +108,7 @@ class FontEndController extends Controller
             'statusPage'    => 0,
         ];
 
-        return view('pages.gallery',compact('data'));
+        return view('pages.gallery', compact('data'));
     }
 
     public function blogList()
@@ -117,7 +117,7 @@ class FontEndController extends Controller
             'statusPage'    => 0,
         ];
 
-        return view('pages.blogList',compact('data'));
+        return view('pages.blogList', compact('data'));
     }
 
     public function blogShow($id)
@@ -126,6 +126,6 @@ class FontEndController extends Controller
             'statusPage'    => 0,
         ];
 
-        return view('pages.blogShow',compact('data'));
+        return view('pages.blogShow', compact('data'));
     }
 }
