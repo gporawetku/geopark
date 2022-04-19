@@ -14,15 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\FontEndController::class, 'index'])->name('welcome');
-Route::get('/home', [App\Http\Controllers\FontEndController::class, 'home'])->name('home');
-Route::get('/programme', [App\Http\Controllers\FontEndController::class, 'programme'])->name('programme');
-Route::get('/registration', [App\Http\Controllers\FontEndController::class, 'registration'])->name('registration');
-Route::get('/abstract', [App\Http\Controllers\FontEndController::class, 'abstract'])->name('abstract');
-Route::get('/geofair', [App\Http\Controllers\FontEndController::class, 'geofair'])->name('geofair');
-Route::get('/gallery', [App\Http\Controllers\FontEndController::class, 'gallery'])->name('gallery');
-Route::get('/blog', [App\Http\Controllers\FontEndController::class, 'blogList'])->name('blog.list');
-Route::get('/blog/{id}', [App\Http\Controllers\FontEndController::class, 'blogShow'])->name('blog.show');
+Route::get('/', [App\Http\Controllers\FrontEndController::class, 'index'])->name('welcome');
+Route::get('/home', [App\Http\Controllers\FrontEndController::class, 'home'])->name('home');
+Route::get('/programme', [App\Http\Controllers\FrontEndController::class, 'programme'])->name('programme');
+Route::get('/registration', [App\Http\Controllers\FrontEndController::class, 'registration'])->name('registration');
+Route::get('/abstract', [App\Http\Controllers\FrontEndController::class, 'abstract'])->name('abstract');
+Route::get('/geofair', [App\Http\Controllers\FrontEndController::class, 'geofair'])->name('geofair');
+Route::get('/gallery', [App\Http\Controllers\FrontEndController::class, 'gallery'])->name('gallery');
+Route::get('/blog', [App\Http\Controllers\FrontEndController::class, 'blogList'])->name('blog.list');
+Route::get('/blog/{id}', [App\Http\Controllers\FrontEndController::class, 'blogShow'])->name('blog.show');
 
 
 //Admin
