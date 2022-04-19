@@ -7,6 +7,7 @@ use App\Models\Slide;
 use App\Models\Schedule;
 
 use Illuminate\Http\Request;
+use App\Models\AbstractPoster;
 use Illuminate\Support\Carbon;
 use SebastianBergmann\Environment\Console;
 
@@ -84,7 +85,9 @@ class FrontEndController extends Controller
 
     public function abstract()
     {
+        $abstract           = AbstractPoster::orderBy('created_at', 'desc')->get()->toArray();
         $data               = [
+            'abstract'      => $abstract,
             'statusPage'    => 0,
         ];
 
