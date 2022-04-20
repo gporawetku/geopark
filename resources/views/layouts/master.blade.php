@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thailand Geoparks Network Symposium Secretariat</title>
+    <meta name="description" content="Thailand Geoparks Network Symposium Secretariat">
+    <meta name="keywords" content="Geopark">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <!-- Styles -->
