@@ -35,8 +35,4 @@ Route::resource('schedules', App\Http\Controllers\ScheduleController::class);
 Route::resource('information', App\Http\Controllers\InformationController::class);
 Route::resource('geoparks', App\Http\Controllers\GeoparkController::class);
 Route::resource('geopark_images', App\Http\Controllers\GeoparkImageController::class);
-
-/*
- * AbstractPosters Routes
- */
 Route::resource('abstract_posters', App\Http\Controllers\AbstractPosterController::class);
