@@ -19,34 +19,35 @@
     <div class="{{ $auth_type ?? 'login' }}-box">
 
         {{-- Logo --}}
-        <div class="{{ $auth_type ?? 'login' }}-logo">
+        {{-- <div class="{{ $auth_type ?? 'login' }}-logo">
             <a href="{{ $dashboard_url }}">
                 <img src="{{ asset(config('adminlte.logo_img')) }}" height="50">
                 {!! config('adminlte.logo', '<b>Admin</b>LTE') !!}
             </a>
-        </div>
+        </div> --}}
 
         {{-- Card Box --}}
         <div class="card {{ config('adminlte.classes_auth_card', 'card-outline card-primary') }}">
 
             {{-- Card Header --}}
             @hasSection('auth_header')
-                <div class="card-header {{ config('adminlte.classes_auth_header', '') }}">
+                <div class="card-header border-bottom-0 {{ config('adminlte.classes_auth_header', '') }}">
                     <h3 class="card-title float-none text-center">
-                        @yield('auth_header')
+                        <img src="{{ asset(config('adminlte.logo_img')) }}" height="75">
+                        {{-- <img src="{{ asset('images/geofair_logo/new-logo2.png') }}" height="75"> --}}
                     </h3>
                 </div>
             @endif
 
             {{-- Card Body --}}
-            <div class="card-body {{ $auth_type ?? 'login' }}-card-body {{ config('adminlte.classes_auth_body', '') }}">
+            <div class="card-body pt-0 {{ $auth_type ?? 'login' }}-card-body {{ config('adminlte.classes_auth_body', '') }}">
                 @yield('auth_body')
             </div>
 
             {{-- Card Footer --}}
             @hasSection('auth_footer')
                 <div class="card-footer {{ config('adminlte.classes_auth_footer', '') }}">
-                    @yield('auth_footer')
+                    {{-- @yield('auth_footer') --}}
                 </div>
             @endif
 

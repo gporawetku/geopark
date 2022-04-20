@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
 @section('title', __('abstract_poster.list'))
 
@@ -29,7 +29,7 @@
                 <thead>
                     <tr>
                         <th class="text-center">{{ __('app.table_no') }}</th>
-                        <th>{{ __('abstract_poster.title') }}</th>
+                        <th>{{ __('abstract_poster.name') }}</th>
                         <th>{{ __('abstract_poster.description') }}</th>
                         <th class="text-center">{{ __('app.action') }}</th>
                     </tr>
@@ -38,7 +38,7 @@
                     @foreach($abstractPosters as $key => $abstractPoster)
                     <tr>
                         <td class="text-center">{{ $abstractPosters->firstItem() + $key }}</td>
-                        <td>{{ $abstractPoster->title }}</td>
+                        <td>{{ $abstractPoster->name }}</td>
                         <td>{{ $abstractPoster->description }}</td>
                         <td class="text-center">
                             @can('update', $abstractPoster)
@@ -54,7 +54,7 @@
     </div>
     <div class="col-md-4">
         @if(Request::has('action'))
-        @include('abstract_posters.forms')
+        @include('admin.abstract_posters.forms')
         @endif
     </div>
 </div>

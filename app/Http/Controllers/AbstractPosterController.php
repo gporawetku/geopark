@@ -11,15 +11,15 @@ class AbstractPosterController extends Controller
     {
         $editableAbstractPoster = null;
         $abstractPosterQuery = AbstractPoster::query();
-        $abstractPosterQuery->where('title', 'like', '%'.$request->get('q').'%');
-        $abstractPosterQuery->orderBy('title');
+        $abstractPosterQuery->where('name', 'like', '%'.$request->get('q').'%');
+        $abstractPosterQuery->orderBy('name');
         $abstractPosters = $abstractPosterQuery->paginate(25);
 
         if (in_array(request('action'), ['edit', 'delete']) && request('id') != null) {
             $editableAbstractPoster = AbstractPoster::find(request('id'));
         }
 
-        return view('abstract_posters.index', compact('abstractPosters', 'editableAbstractPoster'));
+        return view('admin.abstract_posters.index', compact('abstractPosters', 'editableAbstractPoster'));
     }
 
     public function store(Request $request)
@@ -27,7 +27,7 @@ class AbstractPosterController extends Controller
         $this->authorize('create', new AbstractPoster);
 
         $newAbstractPoster = $request->validate([
-            'title'       => 'required|max:60',
+            'name'       => 'required|max:60',
             'description' => 'nullable|max:255',
         ]);
         $newAbstractPoster['creator_id'] = auth()->id();
@@ -42,7 +42,7 @@ class AbstractPosterController extends Controller
         $this->authorize('update', $abstractPoster);
 
         $abstractPosterData = $request->validate([
-            'title'       => 'required|max:60',
+            'name'       => 'required|max:60',
             'description' => 'nullable|max:255',
         ]);
         $abstractPoster->update($abstractPosterData);

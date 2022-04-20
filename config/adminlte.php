@@ -45,9 +45,9 @@ return [
     |
     */
 
-    'logo' => '<b>GeoPark</b>TH',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo' => '<b class="text-bold">Geopark Admin</b>',
+    'logo_img' => 'images/geofair_logo/full-logo.png',
+    'logo_img_class' => 'brand-image img-circle',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
     'logo_img_alt' => 'AdminLTE',
@@ -102,8 +102,8 @@ return [
     |
     */
 
-    'classes_auth_card' => 'card-outline card-primary',
-    'classes_auth_header' => '',
+    'classes_auth_card' => '',
+    'classes_auth_header' => 'bg-white',
     'classes_auth_body' => '',
     'classes_auth_footer' => '',
     'classes_auth_icon' => '',
@@ -188,7 +188,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -311,12 +311,17 @@ return [
         [
             'text' => 'schedules',
             'url'  => 'schedules',
-            'icon' => 'fas fa-calendar',
+            'icon' => 'fas fa-fw fa-calendar',
         ],
         [
             'text' => 'banners',
             'url'  => 'banners',
-            'icon' => 'fas fa-clone',
+            'icon' => 'fas fa-fw fa-clone',
+        ],
+        [
+            'text' => 'abstract_poster',
+            'url'  => 'abstract_posters',
+            'icon' => 'fas fa-fw fa-file-alt',
         ],
         // ['header' => 'labels'],
         // [
