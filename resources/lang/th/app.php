@@ -4,7 +4,7 @@ return [
     // Labels
     'table_no'          => '#',
     'total'             => 'Total',
-    'action'            => 'Actions',
+    'action'            => 'จัดการ',
     'show_detail_title' => 'View :name :type detail',
 
     // Actions

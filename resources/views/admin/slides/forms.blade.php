@@ -4,7 +4,7 @@
             <div class="card-header">
                 <h3 class="card-title">Create Slide</h3>
             </div>
-            <form method="POST" action="{{ route('slides.store') }}" accept-charset="UTF-8">
+            <form method="POST" action="{{ route('slides.store') }}" accept-charset="UTF-8" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="card-body">
                     <div class="form-group">
@@ -17,9 +17,9 @@
                             <div class="form-group">
                                 <label for="order" class="form-label">{{ __('slide.image') }}</label>
                                 <div class="custom-file">
-                                    <input id="image" type="file" class="custom-file-input {{ $errors->has('image') ? ' is-invalid' : '' }}" name="image" value="{{ old('image') }}" required>
-                                    <label for="image" class="custom-file-label">Choose file</label>
-                                    {!! $errors->first('image', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                                    <input id="fileImage" type="file" class="custom-file-input {{ $errors->has('fileImage') ? ' is-invalid' : '' }}" name="fileImage" value="{{ old('fileImage') }}" required>
+                                    <label for="fileImage" class="custom-file-label">Choose file</label>
+                                    {!! $errors->first('fileImage', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                                 </div>
                             </div>
                         </div>

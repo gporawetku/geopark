@@ -3,7 +3,7 @@
 return [
     // Labels
     'slide'          => 'Slide',
-    'list'           => 'Slide List',
+    'list'           => 'สไลด์',
     'search'         => 'Search Slide',
     'search_text'    => 'Name ...',
     'all'            => 'All Slide',
@@ -28,8 +28,8 @@ return [
     'undeleteable'   => 'Slide data cannot be deleted.',
 
     // Attributes
-    'name'           => 'Name',
-    'order'          => 'Order',
-    'image'          => 'Image',
+    'name'           => 'ชื่อ',
+    'order'          => 'ลำดับ',
+    'image'          => 'รูปภาพ',
 
 ];

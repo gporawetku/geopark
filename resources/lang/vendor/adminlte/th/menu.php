@@ -10,7 +10,7 @@ return [
     'abstract_poster'               => 'บทความวิชาการ',
     'pages'                         => 'Pages',
     'account_settings'              => 'ACCOUNT SETTINGS',
-    'home_page_settings'            => 'HOME PAGE SETTINGS',
+    'home_page_settings'            => 'จัดการหน้าหลัก',
     'profile'                       => 'Profile',
     'change_password'               => 'Change Password',
     'multilevel'                    => 'Multi Level',

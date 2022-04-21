@@ -18,7 +18,7 @@ class SlideController extends Controller
     {
         $editableSlide = null;
         $slideQuery = Slide::query();
-        $slideQuery->where('name', 'like', '%'.request('q').'%');
+        $slideQuery->where('name', 'like', '%' . request('q') . '%');
         $slides = $slideQuery->paginate(5);
 
         if (in_array(request('action'), ['edit', 'delete']) && request('id') != null) {
@@ -28,9 +28,9 @@ class SlideController extends Controller
         // Show Oreder List
         $orderCurrent   = Slide::pluck('order')->toArray();
         $orderOther     = range(1, 10);
-        $orderList      = array_diff($orderOther,$orderCurrent);
+        $orderList      = array_diff($orderOther, $orderCurrent);
 
-        return view('admin.slides.index', compact('slides', 'editableSlide','orderList'));
+        return view('admin.slides.index', compact('slides', 'editableSlide', 'orderList'));
     }
 
     /**
@@ -42,15 +42,19 @@ class SlideController extends Controller
     public function store(Request $request)
     {
         $this->authorize('create', new Slide);
-
         $newSlide = $request->validate([
             'name'        => 'required|max:60',
-            'description' => 'nullable|max:255',
-            'link'        => 'nullable',
+            'fileImage'   => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'order'       => 'required',
         ]);
         $newSlide['creator_id'] = auth()->id();
-
+        if ($file = $request->hasFile('fileImage')) {
+            $file = $request->file('fileImage');
+            $fileName = $file->getClientOriginalName();
+            $destinationPath = public_path() . '/images/slides';
+            $file->move($destinationPath, $fileName);
+            $newSlide['image']= 'images/slides/'.$fileName;
+        }
         Slide::create($newSlide);
 
         return redirect()->route('slides.index');

@@ -10,7 +10,7 @@ class Slide extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'link', 'description', 'order', 'creator_id'];
+    protected $fillable = ['name', 'image', 'order', 'creator_id'];
 
     public function getNameLinkAttribute()
     {

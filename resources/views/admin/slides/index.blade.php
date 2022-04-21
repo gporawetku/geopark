@@ -8,7 +8,7 @@
     <div class="my-3">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">หน้าหลัก</a></li>
                 <li class="breadcrumb-item active" aria-current="page">{{ __('slide.list') }}</li>
             </ol>
         </nav>
@@ -18,11 +18,11 @@
         <div class="col-md-6">
             <div class="card card-gray-dark">
                 <div class="card-header">
-                    <h3 class="card-title">Slide Table</h3>
+                    <h3 class="card-title">สไลด์</h3>
                     <div class="card-tools">
                         <form method="GET" action="" accept-charset="UTF-8" class="form-inline">
                             <div class="input-group input-group-sm" style="width: 150px;">
-                                <input placeholder="Search" name="q" type="text" id="q" class="form-control float-right" value="{{ request('q') }}">
+                                <input placeholder="ค้นหา" name="q" type="text" id="q" class="form-control float-right" value="{{ request('q') }}">
                                 <div class="input-group-append">
                                     <button type="submit" value="{{ __('slide.search') }}" class="btn btn-default"><i class="fas fa-search"></i></button>
                                     {{-- <a href="{{ route('slides.index') }}" class="btn btn-link">{{ __('app.reset') }}</a> --}}
