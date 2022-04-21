@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Slide;
 use Attribute;
-use Illuminate\Database\Eloquent\Casts\Attribute as CastsAttribute;
+use App\Models\Slide;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
+use Illuminate\Database\Eloquent\Casts\Attribute as CastsAttribute;
+
 
 class SlideController extends Controller
 {
@@ -51,9 +53,10 @@ class SlideController extends Controller
         if ($file = $request->hasFile('fileImage')) {
             $file = $request->file('fileImage');
             $fileName = $file->getClientOriginalName();
-            $destinationPath = public_path() . '/images/slides';
-            $file->move($destinationPath, $fileName);
-            $newSlide['image']= 'images/slides/'.$fileName;
+            $resize = Image::make($file);
+            $path = "images/slides/{$fileName}";
+            $resize->save(public_path($path),80);
+            $newSlide['image']= $path;
         }
         Slide::create($newSlide);
 
