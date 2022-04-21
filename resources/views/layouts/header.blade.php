@@ -45,7 +45,7 @@
 
     <li><a href="#">ข่าว</a></li>
 
-    <li><a href="#">บทความวิชาการ</a></li>
+    <li><a href="{{route('abstract')}}">บทความวิชาการ</a></li>
 
     <li><a href="{{route('geofair')}}">จีโอพาร์คในไทย</a></li>
 
