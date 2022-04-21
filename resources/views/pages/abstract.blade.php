@@ -24,6 +24,9 @@
         <div class="date">
           25/04/2022
         </div>
+        <div class="download-btn">
+          <i class="fa fa-download muted"></i>
+        </div>
       </div>
     </div>
   </div>

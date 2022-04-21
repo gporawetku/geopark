@@ -31,12 +31,29 @@
         .author {
           font-size: 12px;
           font-weight: 500;
-          color: rgb(155, 198, 206);
+          color: rgb(80, 170, 190);
           margin-top: 4px;
         }
         .date {
           font-size: 10px;
           color: rgb(186, 186, 186);
+        }
+        .download-btn {
+          font-size: 16px;
+          text-align: right;
+          margin-top: -24px;
+          i {
+            cursor: pointer;
+            color: $base-color;
+            transition: .25s;
+            &:hover {
+              color: #70d99a;
+            }
+            &.muted {
+              cursor: not-allowed;
+              color: #9d9d9d;
+            }
+          }
         }
       }
     }
@@ -65,6 +82,13 @@
           }
           .date {
             font-size: 14px;
+          }
+          .download-btn {
+            font-size: 20px;
+            margin-top: -30px;
+            i {
+              color: $base-color;
+            }
           }
         }
       }
@@ -109,6 +133,10 @@
           .date {
             font-size: 12px;
           }
+          .download-btn {
+            font-size: 18px;
+            margin-top: -24px;
+          }
         }
       }
     }
@@ -137,6 +165,10 @@
           }
           .date {
             font-size: 12px;
+          }
+          .download-btn {
+            font-size: 18px;
+            margin-top: -26px;
           }
         }
       }

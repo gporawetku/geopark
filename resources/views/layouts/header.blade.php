@@ -43,12 +43,12 @@
     
     <li><a href="{{route('registration')}}">ลงทะเบียน</a></li>
 
-    <li><a href="#">ข่าว</a></li>
+    <!-- <li><a href="#">ข่าว</a></li> -->
 
     <li><a href="{{route('abstract')}}">บทความวิชาการ</a></li>
 
     <li><a href="{{route('geofair')}}">จีโอพาร์คในไทย</a></li>
 
-    <li><a href="#">ห้องภาพ</a></li>
+    <!-- <li><a href="#">ห้องภาพ</a></li> -->
     
 </ul>
