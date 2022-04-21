@@ -16,7 +16,7 @@
             <div class="bar3"></div>
         </div>
     </div>
-    <img class="top-banners" src="{{asset('images/top-banners.png')}}" alt="">
+    <img class="top-banners" src="{{asset('images/top-banners.jpg')}}" alt="">
 </div>
 
 <!-- Line break -->
