@@ -29,7 +29,8 @@
         </div> -->
         @for($i=1; $i <= 9; $i++)
         <div class="swiper-slide">
-          <img src="{{asset('images/geofair/1Satun/'.$i.'.jpg')}}" alt="">
+          <img class="swiper-lazy" src="{{asset('images/geofair/1Satun/'.$i.'.jpg')}}" alt="">
+          <div class="swiper-lazy-preloader"></div>
         </div>
         @endfor
       </div>
@@ -47,12 +48,15 @@
 @section('js')
   <script>
     var swiper = new Swiper(".geofair1", {
+      preloadImages: false,
+      lazy: true,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
       pagination: {
         el: ".swiper-pagination",
+        clickable: true,
       },
       loop: true,
       effect: "fade",
