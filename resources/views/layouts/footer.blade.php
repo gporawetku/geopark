@@ -1,7 +1,8 @@
 <!-- Footer -->
 <div class="footer-section">
   <!-- Contact -->
-  <div class="contact-container" style="background-image: url('{{asset('images/background_images/korat1.jpg')}}');">
+  <div class="contact-container" 
+  style="background-image: url('{{asset('images/background_images/korat1.jpg')}}');background-size: cover;">
     <div class="contact-content">
       <div class="title">
         Thailand Geoparks Network Symposium Secretariat
