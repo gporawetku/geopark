@@ -8,7 +8,10 @@
     <li class="py-2">
       <span class="fas fa-hand-point-right text-base-color"></span>
       ขั้นตอนที่ 1. กรอกข้อมูลผู้ลงทะเบียน ผ่าน Google form ตาม
-      <a href="https://rb.gy/yq0a1z" target="_blank">ลิงค์นี้ <span class="fas fa-external-link-alt"></span></a>
+      <!-- <a href="https://rb.gy/yq0a1z" target="_blank"> -->
+      <a href="https://us02web.zoom.us/webinar/register/WN_TiBQaGINQ-KVVk3dCgPkOQ" target="_blank">
+        ลิงค์นี้ <span class="fas fa-external-link-alt"></span>
+      </a>
     </li>
     <li class="py-2">
       <span class="fas fa-hand-point-right text-base-color"></span>
@@ -22,7 +25,8 @@
     </li>
   </ul>
 </div>
-<a href="https://rb.gy/yq0a1z" target="_blank">
+<!-- <a href="https://rb.gy/yq0a1z" target="_blank"> -->
+<a href="https://us02web.zoom.us/webinar/register/WN_TiBQaGINQ-KVVk3dCgPkOQ" target="_blank">
   <img class="w-100" src="{{asset('images/register/register-2.jpg')}}" alt="">
 </a>
 <hr class="text-base-color mt-5 w-50 mx-auto">
