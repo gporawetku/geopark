@@ -8,9 +8,16 @@
   }
 }
 .blog-section {
-  background-color: #eeeeee;
+  background-color: #e5f0f9;
+  opacity: 1;
+  background-image: radial-gradient(#afe0ff 2px, #e5f0f9 2px);
+  background-size: 40px 40px;
+  
   // padding: 0px 30px;
   .blog-container {
+    box-shadow: -2px 1px 20px -3px rgba(0,0,0,0.34);
+    -webkit-box-shadow: -2px 1px 20px -3px rgba(0,0,0,0.34);
+    -moz-box-shadow: -2px 1px 20px -3px rgba(0,0,0,0.34);
     background-color: #fff;
     min-height: 70vh;
     padding: 20px 15px;
