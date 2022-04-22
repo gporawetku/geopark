@@ -20,7 +20,13 @@
     -moz-box-shadow: -2px 1px 20px -3px rgba(0,0,0,0.34);
     background-color: #fff;
     min-height: 70vh;
-    padding: 20px 15px;
+    padding: 30px 15px;
+
+    .bc {
+      float: right;
+      font-size: 12px;
+      margin-top: -25px;
+    }
   }
 }
 
@@ -36,6 +42,9 @@
     padding: 0px 60px;
     .blog-container {
       padding: 40px 60px;
+      .bc {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -64,7 +73,11 @@
     padding: 0px 250px;
     .blog-container {
       min-height: 100vh;
-      padding: 30px 40px;
+      padding: 50px 40px;
+      .bc {
+        font-size: 14px;
+        margin-top: -30px;
+      }
     }
   }
 }
@@ -79,7 +92,11 @@
     padding: 0px 400px;
     .blog-container {
       min-height: 100vh;
-      padding: 40px 50px;
+      padding: 50px 50px;
+      .bc {
+        font-size: 14px;
+        margin-top: -30px;
+      }
     }
   }
 }
