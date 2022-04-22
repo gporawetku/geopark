@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b class="text-bold">Geopark Admin</b>',
+    'logo' => '<b class="text-bold text-primary">Geopark Admin</b>',
     'logo_img' => 'images/geofair_logo/full-logo.png',
     'logo_img_class' => 'brand-image img-circle',
     'logo_img_xl' => null,
@@ -122,12 +122,12 @@ return [
     */
 
     'classes_body' => '',
-    'classes_brand' => '',
+    'classes_brand' => 'border-bottom',
     'classes_brand_text' => '',
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar' => 'sidebar-primary bg-white elevation-4',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
