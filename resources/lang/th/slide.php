@@ -15,7 +15,7 @@ return [
     'back_to_index'  => 'Back to Slide List',
 
     // Actions
-    'create'         => 'Create new Slide',
+    'create'         => 'เพิ่มรูปภาพ',
     'created'        => 'A new Slide has been created.',
     'show'           => 'View Slide Detail',
     'edit'           => 'Edit Slide',

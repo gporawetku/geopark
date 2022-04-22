@@ -21,7 +21,7 @@ class SlideController extends Controller
         $editableSlide = null;
         $slideQuery = Slide::query();
         $slideQuery->where('name', 'like', '%' . request('q') . '%');
-        $slides = $slideQuery->paginate(5);
+        $slides = $slideQuery->paginate(6);
 
         if (in_array(request('action'), ['edit', 'delete']) && request('id') != null) {
             $editableSlide = Slide::find(request('id'));

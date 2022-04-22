@@ -2,25 +2,17 @@
     @can('create', new App\Models\Slide())
         <div class="card card-gray-dark">
             <div class="card-header">
-                <h3 class="card-title">Create Slide</h3>
+                <h3 class="card-title">{{ __('slide.list') }}</h3>
             </div>
             <form method="POST" action="{{ route('slides.store') }}" accept-charset="UTF-8" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="card-body">
-                    <div class="form-group">
-                        <label for="name" class="form-label">{{ __('slide.name') }} <span class="form-required">*</span></label>
-                        <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required>
-                        {!! $errors->first('name', '<span class="invalid-feedback" role="alert">:message</span>') !!}
-                    </div>
                     <div class="row">
                         <div class="col-xl-9">
                             <div class="form-group">
-                                <label for="order" class="form-label">{{ __('slide.image') }}</label>
-                                <div class="custom-file">
-                                    <input id="fileImage" type="file" class="custom-file-input {{ $errors->has('fileImage') ? ' is-invalid' : '' }}" name="fileImage" value="{{ old('fileImage') }}" required>
-                                    <label for="fileImage" class="custom-file-label">Choose file</label>
-                                    {!! $errors->first('fileImage', '<span class="invalid-feedback" role="alert">:message</span>') !!}
-                                </div>
+                                <label for="name" class="form-label">{{ __('slide.name') }} <span class="form-required">*</span></label>
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required>
+                                {!! $errors->first('name', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                             </div>
                         </div>
                         <div class="col-xl-3">
@@ -32,6 +24,19 @@
                                     @endforeach
                                 </select>
                                 {!! $errors->first('order', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="form-group">
+                                <label for="order" class="form-label">{{ __('slide.image') }}</label>
+                                <div class="custom-file">
+                                    <input id="fileImage" type="file" class="custom-file-input {{ $errors->has('fileImage') ? ' is-invalid' : '' }}" name="fileImage" value="{{ old('fileImage') }}"
+                                        required>
+                                    <label for="fileImage" class="custom-file-label">Choose file</label>
+                                    {!! $errors->first('fileImage', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                                </div>
                             </div>
                         </div>
                     </div>

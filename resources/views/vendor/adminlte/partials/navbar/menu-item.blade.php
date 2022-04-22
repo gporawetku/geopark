@@ -3,7 +3,7 @@
 @if ($navbarItemHelper->isSearch($item))
 
     {{-- Search form --}}
-    @include('adminlte::partials.navbar.menu-item-search-form')
+    {{-- @include('adminlte::partials.navbar.menu-item-search-form') --}}
 
 @elseif ($navbarItemHelper->isNotification($item))
 
@@ -23,7 +23,7 @@
 @elseif ($navbarItemHelper->isFullscreen($item))
 
     {{-- Fullscreen toggle widget --}}
-    @include('adminlte::partials.navbar.menu-item-fullscreen-widget')
+    {{-- @include('adminlte::partials.navbar.menu-item-fullscreen-widget') --}}
 
 @elseif ($navbarItemHelper->isDarkmode($item))
 
