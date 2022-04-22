@@ -31,6 +31,29 @@
     }
 
     .geofairSlide.swiper {
+      &.geofair {
+        &1 {
+          box-shadow: 10px 10px rgba(#6063AD,.7);
+        }
+        &2 {
+          box-shadow: 10px 10px rgba(#F28D59,.7);
+        }
+        &3 {
+          box-shadow: 10px 10px rgba(#7F3F98,.7);
+        }
+        &4 {
+          box-shadow: 10px 10px rgba(#3EB9DB,.7);
+        }
+        &5 {
+          box-shadow: 10px 10px rgba(#00A651,.7);
+        }
+        &6 {
+          box-shadow: 10px 10px rgba(#EDD737,.7);
+        }
+        &7 {
+          box-shadow: 10px 10px rgba(#F4879B,.7);
+        }
+      }
       .swiper-wrapper {
         .swiper-slide {
           width: auto;
