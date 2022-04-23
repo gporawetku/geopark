@@ -79,7 +79,8 @@
 
 <!-- Fixed Image -->
 <div class="fixed-img">
-    <img src="https://images.unsplash.com/photo-1520961810802-7f0a32de665a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1591&q=80" alt="">
+    <img src="{{ asset('images/background_images/unsplash1.jpg') }}" alt="">
+    {{-- <img src="https://images.unsplash.com/photo-1520961810802-7f0a32de665a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1591&q=80" alt=""> --}}
 </div>
 
 
@@ -88,7 +89,7 @@
     <div class="highlight-news-container swiper highlightNewsSwiper">
         <div class="news-group swiper-wrapper">
             @foreach ($data['blogs'] as $blogItem)
-            <div class="news-item swiper-slide" 
+            <div class="news-item swiper-slide"
             style="background-image: url(' {{asset($blogItem['image'])}} ');">
                 <div class="title">
                     {{$blogItem['name']}}
