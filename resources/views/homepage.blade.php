@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('body')
-<div class="fade-in-welcome" style="position: absolute;z-index:9999;top:0;background-color:white; height: 100vh;width: 100vw;"></div>
 
 
 <!-- Slider main container -->
