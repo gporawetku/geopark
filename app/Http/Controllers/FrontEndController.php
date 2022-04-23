@@ -17,7 +17,8 @@ class FrontEndController extends Controller
     public function index()
     {
         $slideList          = Slide::get()->toArray();
-        $scheduleList       = Schedule::where('end_date', '>=', Carbon::now('Asia/Bangkok'))->take(3)->get()->toArray();
+        $schedule           = Schedule::orderBy('end_date', 'desc')->take(3)->get();
+        $scheduleList       = $schedule->sortBy(['id', 'asc'])->toArray();
         $blogList           = Blog::orderBy('created_at', 'desc')->take(3)->get()->toArray();
         $blogs              = Blog::whereNotNull('image')->orderBy('created_at', 'desc')->take(3)->get()->toArray();
         $data               = [
