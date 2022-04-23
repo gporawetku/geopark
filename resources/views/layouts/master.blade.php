@@ -29,15 +29,16 @@
 </head>
 
 <body>
-
-
+<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
 
 
 
     @include('layouts.header')
 
+    <div class="master-content">
 
-    @yield('body')
+        @yield('body')
+    </div>
 
 
     @include('layouts.footer')
@@ -85,6 +86,26 @@
     </script>
     @yield('js')
 
+    <script>
+        let loader = document.querySelector('.lds-ring');
+        document.querySelector('body').style.overflowY = 'hidden';
+        document.onreadystatechange = function () {
+            var state = document.readyState
+            if (state == 'interactive') {
+                document.querySelector('.master-content').style.visibility="hidden";
+            } else if (state == 'complete') {
+                console.log('content ready')
+                setTimeout(function(){
+                    document.getElementById('interactive');
+                    loader.style.opacity = '0';
+                    loader.style.visibility="hidden";
+                    document.querySelector('.master-content').style.visibility="visible";
+                    document.querySelector('body').style.overflowY = 'scroll';
+                    window.scrollTo(0, 0);
+            },1000);
+        }
+        }
+    </script>
 </body>
 
 </html>

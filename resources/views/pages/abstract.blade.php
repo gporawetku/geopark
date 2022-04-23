@@ -8,21 +8,21 @@
 
 
 <div class="abstract-grid">
-  @for($i=1; $i<=5; $i++)
+  @foreach ($data['abstract'] as $abstractItem)
   <div class="abstract-container">
     <div class="abstract-item">
       <div class="img" onclick="imgNewTab(this)">
-        <img src="{{asset('images/abstracts/abstract-1.jpg')}}" alt="">
+        <img src="{{asset($abstractItem['image'])}}" alt="">
       </div>
       <div class="text-group">
         <div class="title">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, saepe.
+          {{$abstractItem['name']}}
         </div>
         <div class="author">
-          Stephen Curry
+          {{$abstractItem['author']}}
         </div>
         <div class="date">
-          25/04/2022
+          {{$abstractItem['description']}}
         </div>
         <div class="download-btn">
           <i class="fa fa-download muted"></i>
@@ -30,7 +30,7 @@
       </div>
     </div>
   </div>
-  @endfor
+  @endforeach
 </div>
 @stop
 
