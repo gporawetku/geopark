@@ -2,8 +2,8 @@
 
 return [
     // Labels
-    'schedule'       => 'Schedule',
-    'list'           => 'Schedule List',
+    'schedule'       => 'โปรแกรม',
+    'list'           => 'โปรแกรม',
     'search'         => 'Search Schedule',
     'search_text'    => 'Name ...',
     'all'            => 'All Schedule',
@@ -15,7 +15,7 @@ return [
     'back_to_index'  => 'Back to Schedule List',
 
     // Actions
-    'create'         => 'Create new Schedule',
+    'create'         => 'เพิ่มโปรแกรม',
     'created'        => 'A new Schedule has been created.',
     'show'           => 'View Schedule Detail',
     'edit'           => 'Edit Schedule',

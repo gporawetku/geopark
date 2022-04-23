@@ -1,6 +1,6 @@
 @if (Request::get('action') == 'create')
     @can('create', new App\Models\Schedule())
-        <div class="card card-gray-dark">
+        <div class="card">
             <div class="card-header">
                 <h3 class="card-title">Create Schedule</h3>
             </div>
@@ -28,7 +28,7 @@
                             <input type="text" class="form-control float-right" name="daterange" value="01/01/2022 - 01/31/2022" />
                         </div>
                     </div>
-                    <input type="submit" value="{{ __('schedule.create') }}" class="btn btn-success">
+                    <input type="submit" value="{{ __('schedule.create') }}" class="btn btn-primary">
                     <a href="{{ route('schedules.index') }}" class="btn btn-link">{{ __('app.cancel') }}</a>
                 </div>
             </form>
