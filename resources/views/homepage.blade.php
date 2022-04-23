@@ -66,18 +66,12 @@
             กำหนดการ
         </div>
         <table class="schedule-table">
+            @foreach ($data['scheduleList'] as $scheduleItem)
             <tr>
-                <td>ลงทะเบียน</td>
-                <td>10 - 24 เมษายน 2565</td>
+                <td>{{$scheduleItem['name']}}</td>
+                <td>{{$scheduleItem['description']}}</td>
             </tr>
-            <tr>
-                <td>ส่งบทความวิชาการ</td>
-                <td>1 - 18 เมษายน 2565</td>
-            </tr>
-            <tr>
-                <td>ประกวดคลิป ภาพถ่ายเรียงความ</td>
-                <td>20 - 25 เมษายน 2565</td>
-            </tr>
+            @endforeach
         </table>
     </div>
 </div>
