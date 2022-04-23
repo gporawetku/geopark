@@ -49,9 +49,9 @@
     </div>
 
 
-    {{-- <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right"> --}}
+    <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
     {{-- User menu header --}}
-    {{-- @if (!View::hasSection('usermenu_header') && config('adminlte.usermenu_header'))
+    @if (!View::hasSection('usermenu_header') && config('adminlte.usermenu_header'))
             <li class="user-header {{ config('adminlte.usermenu_header_class', 'bg-primary') }}
                 @if (!config('adminlte.usermenu_image')) h-auto @endif">
                 @if (config('adminlte.usermenu_image'))
@@ -66,20 +66,20 @@
             </li>
         @else
             @yield('usermenu_header')
-        @endif --}}
+        @endif
 
     {{-- Configured user menu links --}}
-    {{-- @each('adminlte::partials.navbar.dropdown-item', $adminlte->menu("navbar-user"), 'item') --}}
+    @each('adminlte::partials.navbar.dropdown-item', $adminlte->menu("navbar-user"), 'item')
 
     {{-- User menu body --}}
-    {{-- @hasSection('usermenu_body')
+    @hasSection('usermenu_body')
             <li class="user-body">
                 @yield('usermenu_body')
             </li>
-        @endif --}}
+        @endif
 
     {{-- User menu footer --}}
-    {{-- <li class="user-footer">
+    <li class="user-footer">
             @if ($profile_url)
                 <a href="{{ $profile_url }}" class="btn btn-default btn-flat">
                     <i class="fa fa-fw fa-user text-lightblue"></i>
@@ -96,7 +96,7 @@
                 @endif
                 {{ csrf_field() }}
             </form>
-        </li> --}}
-    {{-- </ul> --}}
+        </li>
+    </ul>
 
 </li>
