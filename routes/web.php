@@ -19,6 +19,7 @@ Route::get('/home', [App\Http\Controllers\FrontEndController::class, 'home'])->n
 Route::get('/programme', [App\Http\Controllers\FrontEndController::class, 'programme'])->name('programme');
 Route::get('/registration', [App\Http\Controllers\FrontEndController::class, 'registration'])->name('registration');
 Route::get('/abstract', [App\Http\Controllers\FrontEndController::class, 'abstract'])->name('abstract');
+Route::get('/geotail', [App\Http\Controllers\FrontEndController::class, 'geotail'])->name('geotail');
 Route::get('/geofair', [App\Http\Controllers\FrontEndController::class, 'geofair'])->name('geofair');
 Route::get('/gallery', [App\Http\Controllers\FrontEndController::class, 'gallery'])->name('gallery');
 Route::get('/blog', [App\Http\Controllers\FrontEndController::class, 'blogList'])->name('blog.list');

@@ -1,6 +1,6 @@
 @if (Request::get('action') == 'create')
     @can('create', new App\Models\Slide())
-        <div class="card card-gray-dark">
+        <div class="card">
             <div class="card-header">
                 <h3 class="card-title">{{ __('slide.list') }}</h3>
             </div>
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <input type="submit" value="{{ __('slide.create') }}" class="btn btn-success">
+                    <input type="submit" value="{{ __('slide.create') }}" class="btn btn-primary">
                     <a href="{{ route('slides.index') }}" class="btn btn-link">{{ __('app.cancel') }}</a>
                 </div>
             </form>

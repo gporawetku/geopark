@@ -83,6 +83,15 @@ class FrontEndController extends Controller
         return view('pages.registration', compact('data'));
     }
 
+    public function geotail()
+    {
+        $data               = [
+            'statusPage'    => 0,
+        ];
+
+        return view('pages.geotail', compact('data'));
+    }
+
     public function abstract()
     {
         $abstract           = AbstractPoster::orderBy('created_at', 'desc')->get()->toArray();
