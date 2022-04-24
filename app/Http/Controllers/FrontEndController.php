@@ -84,13 +84,13 @@ class FrontEndController extends Controller
         return view('pages.registration', compact('data'));
     }
 
-    public function geotail()
+    public function geotrail()
     {
         $data               = [
             'statusPage'    => 0,
         ];
 
-        return view('pages.geotail', compact('data'));
+        return view('pages.geotrail', compact('data'));
     }
 
     public function abstract()
