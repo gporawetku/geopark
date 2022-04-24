@@ -94,6 +94,35 @@
     </div>
   </div>
 
+  <!-- Phetchabun -->
+  <div class="geofair-item">
+    <div class="text-group">
+      <div class="title">
+        <span class="fas fa-map-marker-alt"></span>
+        อุทยานธรณีเพชรบูรณ์
+      </div>
+      <div class="link-group">
+        <a href="#" target="_blank">
+          <span class="fas fa-external-link-alt"></span>
+        </a>
+      </div>
+    </div>
+    <div class="geofairSlide swiper geofair4">
+      <div class="swiper-wrapper">
+        
+        @for($i=1; $i <= 4; $i++)
+        <div class="swiper-slide">
+          <img class="swiper-lazy" src="{{asset('images/geofair/4Phetchabun/'.$i.'.jpg')}}" alt="">
+          <div class="swiper-lazy-preloader"></div>
+        </div>
+        @endfor
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
   <!-- KhonKaen -->
   <div class="geofair-item">
     <div class="text-group">
@@ -172,6 +201,35 @@
         @for($i=1; $i <= 13; $i++)
         <div class="swiper-slide">
           <img class="swiper-lazy" src="{{asset('images/geofair/7Chaiyaphum/'.$i.'.jpg')}}" alt="">
+          <div class="swiper-lazy-preloader"></div>
+        </div>
+        @endfor
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <!-- Phu Hang Nak -->
+  <div class="geofair-item">
+    <div class="text-group">
+      <div class="title">
+        <span class="fas fa-map-marker-alt"></span>
+        อุทยานธรณีพุหางนาค
+      </div>
+      <div class="link-group">
+        <a href="#" target="_blank">
+          <span class="fas fa-external-link-alt"></span>
+        </a>
+      </div>
+    </div>
+    <div class="geofairSlide swiper geofair8">
+      <div class="swiper-wrapper">
+        
+        @for($i=1; $i <= 13; $i++)
+        <div class="swiper-slide">
+          <img class="swiper-lazy" src="{{asset('images/geofair/8PhuHangNak/'.$i.'.jpg')}}" alt="">
           <div class="swiper-lazy-preloader"></div>
         </div>
         @endfor
