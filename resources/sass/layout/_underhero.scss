@@ -21,7 +21,11 @@
 
 @include xl-screen {
   .section-container {
-    background-color: #f7f7f7;
+    // background-color: #f7f7f7;
+    background-color: #e5f0f9;
+  opacity: 1;
+  background-image: radial-gradient(#afe0ff 2px, #e5f0f9 2px);
+  background-size: 40px 40px;
     padding: 0px 170px;
   }
   .underhero-container { 
