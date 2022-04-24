@@ -7,7 +7,7 @@
   <ul>
     <li class="py-2">
       <span class="fas fa-hand-point-right text-base-color"></span>
-      ขั้นตอนที่ 1. กรอกข้อมูลผู้ลงทะเบียน ผ่าน Google form ตาม
+      ขั้นตอนที่ 1. กรอกข้อมูลผู้ลงทะเบียน ตาม
       <!-- <a href="https://rb.gy/yq0a1z" target="_blank"> -->
       <a href="https://us02web.zoom.us/webinar/register/WN_TiBQaGINQ-KVVk3dCgPkOQ" target="_blank">
         ลิงค์นี้ <span class="fas fa-external-link-alt"></span>
