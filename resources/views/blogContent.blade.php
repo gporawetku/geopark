@@ -18,6 +18,8 @@
       บทความวิชาการ
       @elseif(Route::current()->getName() === 'geofair')
       จีโอพาร์คในไทย
+      @elseif(Route::current()->getName() === 'geotrail')
+      เส้นทางท่องเที่ยว
       @endif
     </div>
     @yield('content')

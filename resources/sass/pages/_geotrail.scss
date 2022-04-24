@@ -1,0 +1,54 @@
+.geotrail-tabs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .tab-item {
+    cursor: pointer;
+    background: $base-color;
+    border: 2px solid $base-color;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: .25s;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,.5);
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,.5);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,.5);
+    padding: 5px 10px;
+    margin: 5px;
+    &:hover {
+      background: #fff;
+      color: $base-color;
+    }
+  }
+}
+
+.geotrail-items {
+  position: relative;
+  border: 2px solid $base-color;
+  padding: 5px;
+  margin: 10px 0px;
+  .geotrail-item {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+@include xl-screen {
+  .geotrail-items {
+    padding: 10px;
+    margin: 20px 30px;
+  }
+}
+@include xl-screen {
+  .geotrail-tabs {
+    .tab-item {
+      font-size: 16px;
+    }
+  }
+  .geotrail-items {
+    margin: 30px 140px;
+  }
+}

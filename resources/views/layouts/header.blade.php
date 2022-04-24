@@ -48,6 +48,8 @@
     <li><a href="{{route('abstract')}}">บทความวิชาการ</a></li>
 
     <li><a href="{{route('geofair')}}">จีโอพาร์คในไทย</a></li>
+    
+    <li><a href="{{route('geotrail')}}">เส้นทางท่องเที่ยว</a></li>
 
     <!-- <li><a href="#">ห้องภาพ</a></li> -->
     
