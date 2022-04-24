@@ -13,16 +13,25 @@
       justify-content: flex-end;
       align-items: flex-start;
       background-size: cover;
-      padding: 10px;
+      .title, .description {
+        padding: 0px 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        background: rgba(0, 90, 118, .5);
+      }
       .title {
         color: #fff;
         font-weight: 500;
         text-shadow: 1px 1px 2px #000000;
+        padding-top: 2px;
       }
       .description {
         color: #fff;
         font-size: 12px;
         text-shadow: 1px 1px 2px #000000;
+        padding-bottom: 5px;
       }
     }
   }
@@ -36,12 +45,15 @@
     .news-group {
       .news-item {
         width: 400px;
-        padding: 10px;
+        .title, .description {
+          padding: 0px 14px;
+        }
         .title {
           font-size: 22px;
         }
         .description {
           font-size: 16px;
+          padding-bottom: 8px;
         }
       }
     }
@@ -57,7 +69,6 @@
     padding: 0px 0px !important;
     .news-group {
       .news-item {
-        padding: 10px;
         .title {
           font-size: 18px;
         }
@@ -81,9 +92,9 @@
     height: 240px;
     .news-group {
       .news-item {
-        padding: 14px;
         .title {
           font-size: 16px;
+          padding-top: 5px;
         }
         .description {
           font-size: 12px;
@@ -101,7 +112,6 @@
     height: 300px;
     .news-group {
       .news-item {
-        padding: 14px;
         .title {
           font-size: 18px;
         }
