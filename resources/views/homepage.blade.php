@@ -49,7 +49,7 @@
                     <div class="swiper-slide">
                         <div class="news-item">
                             [{{date('d/m/Y', strtotime($newsItem['created_at']))}}]
-                            {{$newsItem['description']}}
+                            {{$newsItem['name']}}
                         </div>
                     </div>
                     @endforeach
@@ -239,6 +239,8 @@
 
     // GSAP ANIMATION
     gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".swiper.slider .swiper-slide img", 
+        {duration: 4, scale: 1.2, delay: 1})
     gsap.timeline()
         .from(".hero-text .title", 
         {duration: 1.5, y: -100, opacity: 0, delay: 1,})
@@ -253,20 +255,51 @@
             start: "top 90%",
         }
     })  .from('.news-container .title',
-        {duration: .3, y: -50, opacity: 0,})
+        {duration: .2, y: -50, opacity: 0,})
         .from('.news-container .swiper',
-        {duration: .7, y: -50, opacity: 0,})
+        {duration: .5, y: -50, opacity: 0,})
         .from('.schedule-container .title',
         {duration: .3, y: -50, opacity: 0,})
         .from('.schedule-container .schedule-table',
         {duration: .7, y: -50, opacity: 0,})
 
+    gsap.from('.fixed-img', {
+        scrollTrigger: {
+            trigger: '.fixed-img',
+            start: "top 90%",
+        },
+        duration: 3, y: -0, opacity: 0,
+    });
+    gsap.from('.fixed-img img', {
+        scrollTrigger: {
+            trigger: '.fixed-img',
+            start: "top 90%",
+        },
+        duration: 3, scale: 1.1,
+    });
+
     gsap.from('.highlight-news-section', {
         scrollTrigger: {
             trigger: '.highlight-news-section',
-            start: "top 80%",
+            start: "top 90%",
         },
         duration: 1, y: -0, opacity: 0,
+    });
+
+    gsap.from('.map-section', {
+        scrollTrigger: {
+            trigger: '.map-section',
+            start: "top 85%",
+        },
+        duration: 2, y: -0, opacity: 0,
+    });
+
+    gsap.from('.banner-group-section', {
+        scrollTrigger: {
+            trigger: '.banner-group-section',
+            start: "top 85%",
+        },
+        duration: 2, y: -0, opacity: 0,
     });
 
 
