@@ -10,7 +10,7 @@ class Schedule extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description','start_date', 'creator_id'];
+    protected $fillable = ['name', 'description','start_date', 'end_date', 'creator_id'];
 
     public function getNameLinkAttribute()
     {

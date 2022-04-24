@@ -28,8 +28,9 @@ return [
     'undeleteable'   => 'Schedule data cannot be deleted.',
 
     // Attributes
-    'name'           => 'Name',
-    'description'    => 'Description',
-    'start_date'     => 'Start Date',
-    'end_date'       => 'End Date',
+    'name'           => 'ชื่อ',
+    'description'    => 'คำอธิบาย',
+    'start_date'     => 'วันที่เริ่ม',
+    'end_date'       => 'วันที่สิ้นสุด',
+    'se_date'        => 'ช่วงเวลา',
 ];

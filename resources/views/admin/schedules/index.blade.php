@@ -35,7 +35,6 @@
                             @can('update', $schedule)
                                 <a href="{{ route('schedules.index', ['action' => 'edit', 'id' => $schedule->id] + Request::only('page', 'q')) }}" id="edit-schedule-{{ $schedule->id }}">
                                     {{-- <div class="btn btn-primary external-schedule w-100 text-left" style="position: relative;">{{ $schedule->name }}</div> --}}
-
                                     <div class="card  w-100" style="width: 18rem;">
                                         <div class="card-header bg-primary">
                                             {{ $schedule->name }}

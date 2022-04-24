@@ -35,14 +35,15 @@ class ScheduleController extends Controller
     public function store(Request $request)
     {
         $this->authorize('create', new Schedule);
-
         $newSchedule = $request->validate([
             'name'        => 'required|max:60',
             'description' => 'nullable|max:255',
+            'startDate'   => 'required',
+            'endDate'     => 'required',
         ]);
         $newSchedule['creator_id'] = auth()->id();
-
-        dd($request , $newSchedule);
+        $newSchedule['start_date'] = $request->startDate;
+        $newSchedule['end_date']   = $request->endDate;
         Schedule::create($newSchedule);
 
         return redirect()->route('schedules.index');

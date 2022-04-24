@@ -2,7 +2,7 @@
     @can('create', new App\Models\Schedule())
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Create Schedule</h3>
+                <h3 class="card-title">เพิ่มโปรแกรม</h3>
             </div>
             <form method="POST" action="{{ route('schedules.store') }}" accept-charset="UTF-8">
                 {{ csrf_field() }}
@@ -18,15 +18,18 @@
                         {!! $errors->first('description', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
                     <div class="form-group">
-                        <label>Date range</label>
+                        <label>{{ __('schedule.se_date') }}</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">
                                     <i class="far fa-calendar-alt"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control float-right" name="daterange" value="01/01/2022 - 01/31/2022" />
+                            <input type="text" class="form-control float-right {{ $errors->has('startDate') ? ' is-invalid' : '' }}" name="daterange"/>
+                            <input type="hidden" class="form-control float-right" name="startDate"/>
+                            <input type="hidden" class="form-control float-right" name="endDate"/>
                         </div>
+                        {!! $errors->first('startDate', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
                     <input type="submit" value="{{ __('schedule.create') }}" class="btn btn-primary">
                     <a href="{{ route('schedules.index') }}" class="btn btn-link">{{ __('app.cancel') }}</a>
@@ -88,3 +91,4 @@
         </div>
     @endcan
 @endif
+
