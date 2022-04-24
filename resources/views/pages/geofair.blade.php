@@ -227,7 +227,7 @@
     <div class="geofairSlide swiper geofair8">
       <div class="swiper-wrapper">
         
-        @for($i=1; $i <= 13; $i++)
+        @for($i=1; $i <= 1; $i++)
         <div class="swiper-slide">
           <img class="swiper-lazy" src="{{asset('images/geofair/8PhuHangNak/'.$i.'.jpg')}}" alt="">
           <div class="swiper-lazy-preloader"></div>
