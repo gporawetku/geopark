@@ -20,7 +20,7 @@ class FrontEndController extends Controller
         $schedule           = Schedule::orderBy('end_date', 'desc')->take(3)->get();
         $scheduleList       = $schedule->sortBy(['id', 'asc'])->toArray();
         $blogList           = Blog::orderBy('created_at', 'desc')->take(3)->get()->toArray();
-        $blogs              = Blog::whereNotNull('image')->orderBy('created_at', 'desc')->take(3)->get()->toArray();
+        $blogs              = Blog::whereNotNull('image')->orderBy('created_at', 'desc')->take(5)->get()->toArray();
         $data               = [
             'slideList'     => $slideList,
             'scheduleList'  => $scheduleList,

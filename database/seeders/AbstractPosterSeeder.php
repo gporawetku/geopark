@@ -22,6 +22,7 @@ class AbstractPosterSeeder extends Seeder
                 'description'   => '20 เม.ย. 2022',
                 'image'         => 'images/abstracts/abstract-1.jpg',
                 'author'        => 'TGN2022',
+                'link'          => null,
                 'creator_id'    => 1,
                 'created_at'    => $date,
                 'updated_at'    => $date,

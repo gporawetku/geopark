@@ -10,7 +10,7 @@ class AbstractPoster extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'image', 'author', 'creator_id'];
+    protected $fillable = ['name', 'description', 'image', 'author', 'link', 'creator_id'];
 
     public function getTitleLinkAttribute()
     {

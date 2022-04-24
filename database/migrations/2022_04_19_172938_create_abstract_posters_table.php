@@ -11,9 +11,10 @@ class CreateAbstractPostersTable extends Migration
         Schema::create('abstract_posters', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 60);
-            $table->string('description')->nullable();
-            $table->string('image')->nullable();
-            $table->string('author', 60)->nullable();
+            $table->string('description');
+            $table->string('image');
+            $table->string('author', 60);
+            $table->string('link')->nullable();
             $table->foreignId('creator_id')->constrained('users')->onDelete('restrict');
             $table->timestamps();
         });
