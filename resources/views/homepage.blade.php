@@ -234,5 +234,39 @@
             },
         },
     });
+
+    // GSAP ANIMATION
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.timeline()
+        .from(".hero-text .title", 
+        {duration: 1.5, y: -100, opacity: 0, delay: 1,})
+        .from(".hero-text .description", 
+        {duration: .5, y: -20, opacity: 0,})
+        .from(".hero-text .scroll-down-btn", 
+        {duration: .5, y: -50, opacity: 0, rotation: 90,});
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.news-container',
+            start: "top 90%",
+        }
+    })  .from('.news-container .title',
+        {duration: .3, y: -50, opacity: 0,})
+        .from('.news-container .swiper',
+        {duration: .7, y: -50, opacity: 0,})
+        .from('.schedule-container .title',
+        {duration: .3, y: -50, opacity: 0,})
+        .from('.schedule-container .schedule-table',
+        {duration: .7, y: -50, opacity: 0,})
+
+    gsap.from('.highlight-news-section', {
+        scrollTrigger: {
+            trigger: '.highlight-news-section',
+            start: "top 80%",
+        },
+        duration: 1, y: -0, opacity: 0,
+    });
+
+
 </script>
 @stop
