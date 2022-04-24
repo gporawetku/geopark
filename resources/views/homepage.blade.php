@@ -206,6 +206,8 @@
                 spaceBetween: 20,
             },
             1000: {
+                centeredSlides: false,
+                loop: false,
                 slidesPerView: "3",
                 spaceBetween: 20,
                 navigation: false,
