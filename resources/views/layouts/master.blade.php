@@ -91,7 +91,6 @@
             if (state == 'interactive') {
                 document.querySelector('.master-content').style.visibility="hidden";
             } else if (state == 'complete') {
-                console.log('content ready')
                 setTimeout(function(){
                     document.getElementById('interactive');
                     loader.style.opacity = '0';

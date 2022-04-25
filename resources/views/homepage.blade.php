@@ -89,7 +89,7 @@
     <div class="highlight-news-container swiper highlightNewsSwiper">
         <div class="news-group swiper-wrapper">
             @foreach ($data['blogs'] as $blogItem)
-            <div class="news-item swiper-slide"
+            <div class="news-item swiper-slide news-item-i{{$loop->index+1}}"
             style="background-image: url(' {{asset($blogItem['image'])}} ');">
                 <div class="title">
                     {{$blogItem['name']}}
@@ -279,13 +279,20 @@
         }
     });
 
-    gsap.from('.highlight-news-section', {
+    gsap.timeline({
         scrollTrigger: {
             trigger: '.highlight-news-section',
             start: "top 90%",
-        },
-        duration: 1, y: -0, opacity: 0,
-    });
+        }
+    })
+    .from('.highlight-news-container .news-group .news-item-i1', 
+        {duration: .5, y: -20, opacity: 0})
+    .from('.highlight-news-container .news-group .news-item-i2', 
+        {duration: .5, y: -20, opacity: 0})
+    .from('.highlight-news-container .news-group .news-item-i3', 
+        {duration: .5, y: -20, opacity: 0});
+
+
 
     gsap.from('.map-section', {
         scrollTrigger: {
