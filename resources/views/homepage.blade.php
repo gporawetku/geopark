@@ -79,8 +79,8 @@
 
 <!-- Fixed Image -->
 <div class="fixed-img">
-    <img src="{{ asset('images/background_images/unsplash1.jpg') }}" alt="">
-    {{-- <img src="https://images.unsplash.com/photo-1520961810802-7f0a32de665a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1591&q=80" alt=""> --}}
+    <!-- <img src="{{ asset('images/background_images/unsplash1.jpg') }}" alt=""> -->
+    <div class="img" style="background-image: url({{asset('images/background_images/unsplash1.jpg')}});"></div>
 </div>
 
 
@@ -268,14 +268,15 @@
             trigger: '.fixed-img',
             start: "top 90%",
         },
-        duration: 3, y: -0, opacity: 0,
+        duration: .8, opacity: 0,
     });
-    gsap.from('.fixed-img img', {
+    gsap.to('.fixed-img .img', {
+        backgroundPosition: `50% 20%`,
+        ease: "none",
         scrollTrigger: {
             trigger: '.fixed-img',
-            start: "top 90%",
-        },
-        duration: 3, scale: 1.1,
+            scrub: true
+        }
     });
 
     gsap.from('.highlight-news-section', {
