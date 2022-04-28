@@ -24,7 +24,7 @@
     </div>
     <div class="geofairSlide swiper geofair1">
       <div class="swiper-wrapper">
-        @for($i=1; $i <= 9; $i++)
+        @for($i=1; $i <= 4; $i++)
         <div class="swiper-slide">
           <img class="swiper-lazy" src="{{asset('images/geofair/1Satun/'.$i.'.jpg')}}" alt="">
           <div class="swiper-lazy-preloader"></div>
@@ -52,7 +52,7 @@
     </div>
     <div class="geofairSlide swiper geofair2">
       <div class="swiper-wrapper">
-        @for($i=1; $i <= 9; $i++)
+        @for($i=1; $i <= 4; $i++)
         <div class="swiper-slide">
           <img class="swiper-lazy" src="{{asset('images/geofair/2Khorat/'.$i.'.jpg')}}" alt="">
           <div class="swiper-lazy-preloader"></div>
@@ -139,7 +139,7 @@
     <div class="geofairSlide swiper geofair5">
       <div class="swiper-wrapper">
         
-        @for($i=1; $i <= 10; $i++)
+        @for($i=1; $i <= 4; $i++)
         <div class="swiper-slide">
           <img class="swiper-lazy" src="{{asset('images/geofair/5KhonKaen/'.$i.'.jpg')}}" alt="">
           <div class="swiper-lazy-preloader"></div>
@@ -168,7 +168,7 @@
     <div class="geofairSlide swiper geofair6">
       <div class="swiper-wrapper">
         
-        @for($i=1; $i <= 9; $i++)
+        @for($i=1; $i <= 4; $i++)
         <div class="swiper-slide">
           <img class="swiper-lazy" src="{{asset('images/geofair/6Tak/'.$i.'.jpg')}}" alt="">
           <div class="swiper-lazy-preloader"></div>
@@ -198,7 +198,7 @@
     <div class="geofairSlide swiper geofair7">
       <div class="swiper-wrapper">
         
-        @for($i=1; $i <= 13; $i++)
+        @for($i=1; $i <= 4; $i++)
         <div class="swiper-slide">
           <img class="swiper-lazy" src="{{asset('images/geofair/7Chaiyaphum/'.$i.'.jpg')}}" alt="">
           <div class="swiper-lazy-preloader"></div>
@@ -227,7 +227,7 @@
     <div class="geofairSlide swiper geofair8">
       <div class="swiper-wrapper">
         
-        @for($i=1; $i <= 1; $i++)
+        @for($i=1; $i <= 4; $i++)
         <div class="swiper-slide">
           <img class="swiper-lazy" src="{{asset('images/geofair/8PhuHangNak/'.$i.'.jpg')}}" alt="">
           <div class="swiper-lazy-preloader"></div>
