@@ -25,6 +25,9 @@
     <!-- Font Awesome 5 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Light Gallery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.3/css/lightgallery.min.css" integrity="sha512-FULkU+3G6ZLtNKGdm9TGOLc7EgIzciwf3qlJghC5v7M694FhlGIlWzefg74V1MhJ1zXnPKN04iwFai7jkm5TNQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.3/css/lg-video.min.css" integrity="sha512-89gDQOHnYjji90NPJ7+M5tgA/0E+fjL4KuSFhi6tjH6sZ54yUEogPMmOAgbI599fW1CtCyrsJbch8k/QzuoXzw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -51,6 +54,12 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- LightGallery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.3/lightgallery.min.js" integrity="sha512-IZdEaswJctlFir3AHSz18/kp6KDqurZ/1HGygoqRiDLr9r/UQ8rLTDjb2CYZkdf3v5x2n5odiNDSl3uRwTe33A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.3/plugins/video/lg-video.min.js" integrity="sha512-+9rMJhklbU87GRMwXY1IPGjAmNRltF4ZSzLtm4XNgf7wLigObN5UMPYXAH5qpJufnhmzLlbEsnlQHvzvznlO/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    
 
     <script>
         const mobileLink = document.querySelector('.mobile-icon');

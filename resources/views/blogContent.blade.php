@@ -20,6 +20,8 @@
       จีโอพาร์คในไทย
       @elseif(Route::current()->getName() === 'geotrail')
       เส้นทางท่องเที่ยว
+      @elseif(Route::current()->getName() === 'gallery')
+      ห้องภาพ
       @endif
     </div>
     @yield('content')
