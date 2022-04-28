@@ -8,6 +8,7 @@ return [
     'schedules'                     => 'โปรแกรม',
     'banners'                       => 'ภาพประกอบ',
     'abstract_poster'               => 'บทความวิชาการ',
+    'galleries'                     => 'แกลลอรี่',
     'pages'                         => 'Pages',
     'account_settings'              => 'ACCOUNT SETTINGS',
     'home_page_settings'            => 'จัดการหน้าหลัก',

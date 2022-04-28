@@ -25,7 +25,6 @@
                                     {{-- <a href="{{ route('schedule.index') }}" class="btn btn-link">{{ __('app.reset') }}</a> --}}
                                 </div>
                             </div>
-
                         </form>
                     </div>
                 </div>

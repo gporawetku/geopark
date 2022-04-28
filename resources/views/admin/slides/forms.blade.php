@@ -52,29 +52,59 @@
 @if (Request::get('action') == 'edit' && $editableSlide)
     @can('update', $editableSlide)
         <div class="card">
-            <div class="card-body">
-                <form method="POST" action="{{ route('slides.update', $editableSlide) }}" accept-charset="UTF-8">
-                    {{ csrf_field() }} {{ method_field('patch') }}
-                    <div class="form-group">
-                        <label for="name" class="form-label">{{ __('slide.name') }} <span class="form-required">*</span></label>
-                        <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name', $editableSlide->name) }}" required>
-                        {!! $errors->first('name', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+            <div class="card-header">
+                <h3 class="card-title">{{ __('slide.list') }}</h3>
+            </div>
+            <form method="POST" action="{{ route('slides.update', $editableSlide) }}" accept-charset="UTF-8">
+                {{ csrf_field() }} {{ method_field('patch') }}
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="col-xl-9">
+                            <div class="form-group">
+                                <label for="name" class="form-label">{{ __('slide.name') }} <span class="form-required">*</span></label>
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name', $editableSlide->name) }}" required>
+                                {!! $errors->first('name', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="form-group">
+                                <label for="order" class="form-label">{{ __('slide.order') }}</label>
+                                <select id="order" class="form-control{{ $errors->has('order') ? ' is-invalid' : '' }}" name="order" required>
+                                    <option value="{{ old('fileImage' , $editableSlide->order) }}">{{ old('fileImage' , $editableSlide->order) }}</option>
+                                    @foreach ($orderList as $order)
+                                        <option>{{ $order }}</option>
+                                    @endforeach
+                                </select>
+                                {!! $errors->first('order', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="description" class="form-label">{{ __('slide.description') }}</label>
-                        <textarea id="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" rows="4">{{ old('description', $editableSlide->description) }}</textarea>
-                        {!! $errors->first('description', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="form-group">
+                                <label for="order" class="form-label">{{ __('slide.image') }}</label>
+                                <div class="custom-file">
+                                    <input id="fileImage" type="file" class="custom-file-input {{ $errors->has('fileImage') ? ' is-invalid' : '' }}" name="fileImage" value="{{ old('fileImage' , $editableSlide->image) }}"
+                                        required>
+                                    <label for="fileImage" class="custom-file-label">{{ old('fileImage' , $editableSlide->image) }}</label>
+                                    {!! $errors->first('fileImage', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <input name="page" value="{{ request('page') }}" type="hidden">
                     <input name="q" value="{{ request('q') }}" type="hidden">
-                    <input type="submit" value="{{ __('slide.update') }}" class="btn btn-success">
+                </div>
+                <div class="card-footer">
+                    <input type="submit" value="{{ __('slide.update') }}" class="btn btn-primary">
                     <a href="{{ route('slides.index', Request::only('q', 'page')) }}" class="btn btn-link">{{ __('app.cancel') }}</a>
                     @can('delete', $editableSlide)
                         <a href="{{ route('slides.index', ['action' => 'delete', 'id' => $editableSlide->id] + Request::only('page', 'q')) }}" id="del-slide-{{ $editableSlide->id }}"
                             class="btn btn-danger float-right">{{ __('app.delete') }}</a>
                     @endcan
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
     @endcan
 @endif

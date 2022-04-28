@@ -17,7 +17,7 @@ class BlogController extends Controller
         $editableBlog = null;
         $blogQuery = Blog::query();
         $blogQuery->where('name', 'like', '%'.request('q').'%');
-        $blogs = $blogQuery->paginate(25);
+        $blogs = $blogQuery->paginate(2);
 
         if (in_array(request('action'), ['edit', 'delete']) && request('id') != null) {
             $editableBlog = Blog::find(request('id'));

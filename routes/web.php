@@ -37,3 +37,8 @@ Route::resource('information', App\Http\Controllers\InformationController::class
 Route::resource('geoparks', App\Http\Controllers\GeoparkController::class);
 Route::resource('geopark_images', App\Http\Controllers\GeoparkImageController::class);
 Route::resource('abstract_posters', App\Http\Controllers\AbstractPosterController::class);
+
+/*
+ * Galleries Routes
+ */
+Route::resource('galleries', App\Http\Controllers\GalleryController::class);

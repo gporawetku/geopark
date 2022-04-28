@@ -304,24 +304,19 @@ return [
             'icon' => 'fas fa-fw fa-images',
         ],
         [
-            'text' => 'blogs',
-            'url'  => 'blogs',
-            'icon' => 'fas fa-fw fa-th-large',
-        ],
-        [
             'text' => 'schedules',
             'url'  => 'schedules',
             'icon' => 'fas fa-fw fa-calendar',
         ],
         [
-            'text' => 'banners',
-            'url'  => 'banners',
-            'icon' => 'fas fa-fw fa-clone',
-        ],
-        [
             'text' => 'abstract_poster',
             'url'  => 'abstract_posters',
-            'icon' => 'fas fa-fw fa-file-alt',
+            'icon' => 'fas fa-fw fa-file-alt'
+        ],
+        [
+            'text' => 'galleries',
+            'url'  => 'galleries',
+            'icon' => 'fas fa-fw fa-photo-video',
         ],
         // ['header' => 'labels'],
         // [

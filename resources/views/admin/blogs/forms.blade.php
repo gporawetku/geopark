@@ -14,7 +14,8 @@
         </div>
         <div class="form-group">
             <label for="content" class="form-label">{{ __('blog.content') }}</label>
-            <textarea id="content" class="form-control{{ $errors->has('content') ? ' is-invalid' : '' }} mytextarea" name="content" rows="4">{{ old('content') }}</textarea>
+            <div id="summernote"></div>
+            {{-- <textarea id="content" class="form-control{{ $errors->has('content') ? ' is-invalid' : '' }} mytextarea" name="content" rows="4">{{ old('content') }}</textarea> --}}
             {!! $errors->first('content', '<span class="invalid-feedback" role="alert">:message</span>') !!}
         </div>
         <input type="submit" value="{{ __('blog.create') }}" class="btn btn-success">

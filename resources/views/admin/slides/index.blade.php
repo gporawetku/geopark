@@ -35,10 +35,10 @@
                             @foreach ($slides as $key => $slide)
                                 <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column mb-2">
                                     @can('update', $slide)
-                                        <a class="text-white" href="{{ route('slides.index', ['action' => 'edit', 'id' => $slide->id] + Request::only('page', 'q')) }}"
+                                        <a class="text-white " href="{{ route('slides.index', ['action' => 'edit', 'id' => $slide->id] + Request::only('page', 'q')) }}"
                                             id="edit-slide-{{ $slide->id }}">
                                             <div class="position-relative">
-                                                <img src="{{ asset($slide->image) }}" alt="Photo 2" class="img-fluid ">
+                                                <img src="{{ asset($slide->image) }}" alt="Photo 2" class="img-fluid">
                                                 <div class="ribbon-wrapper w-100 h-100 d-flex flex-column justify-content-center align-items-center bg-gradiant ">
                                                     <b>{{ $slide->order }}</b>
                                                     <small>{{ $slide->name }}</small>
@@ -77,10 +77,17 @@
     </div>
 
     <style>
+        .img-fluid{
+            width: 33rem!important;
+            height: 12rem!important;
+        }
         .bg-gradiant {
             background-color: rgba(0, 0, 0, 0.4);
             right: 0px !important;
             top: 0px !important;
+        }
+        .photo-wh-default{
+            height: 5rem
         }
 
     </style>

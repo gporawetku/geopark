@@ -19,7 +19,7 @@ return [
     'created'        => 'A new Slide has been created.',
     'show'           => 'View Slide Detail',
     'edit'           => 'Edit Slide',
-    'update'         => 'Update Slide',
+    'update'         => 'แก้ไขสไลด์',
     'updated'        => 'Slide data has been updated.',
     'delete'         => 'Delete Slide',
     'delete_confirm' => 'Are you sure to delete this Slide?',

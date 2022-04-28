@@ -26,7 +26,7 @@ class SlideController extends Controller
 
         if (in_array(request('action'), ['edit', 'delete']) && request('id') != null) {
             $editableSlide = Slide::find(request('id'));
-        }
+    }
 
         // Show Oreder List
         $orderCurrent   = Slide::pluck('order')->toArray();

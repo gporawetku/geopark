@@ -2,17 +2,17 @@
 
 return [
     // Labels
-    'table_no'          => '#',
-    'total'             => 'Total',
+    'table_no'          => 'ลำดับ',
+    'total'             => 'รวม',
     'action'            => 'จัดการ',
     'show_detail_title' => 'View :name :type detail',
 
     // Actions
-    'show'           => 'View Detail',
-    'edit'           => 'Edit',
-    'delete'         => 'Delete',
-    'cancel'         => 'Cancel',
-    'reset'          => 'Reset',
-    'delete_confirm' => 'Are you sure to delete this?',
-    'delete_confirm_button' => 'YES, delete it!',
+    'show'           => 'ดูรายละเอียด',
+    'edit'           => 'แก้ไข',
+    'delete'         => 'ลบ',
+    'cancel'         => 'ยกเลิก',
+    'reset'          => 'รัเซ็ท',
+    'delete_confirm' => 'คุณแน่ใจหรือว่าลบสิ่งนี้?',
+    'delete_confirm_button' => 'ใช่ ลบออก!',
 ];

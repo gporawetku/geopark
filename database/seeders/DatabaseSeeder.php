@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->call(GeoparkSeeder::class);
         $this->call(ScheduleSeeder::class);
         $this->call(AbstractPosterSeeder::class);
+        $this->call(GallerySeeder::class);
     }
 }
 
