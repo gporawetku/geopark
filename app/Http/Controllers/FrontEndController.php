@@ -8,6 +8,7 @@ use App\Models\Schedule;
 
 use Illuminate\Http\Request;
 use App\Models\AbstractPoster;
+use App\Models\Gallery;
 use Illuminate\Support\Carbon;
 use SebastianBergmann\Environment\Console;
 
@@ -21,11 +22,17 @@ class FrontEndController extends Controller
         $scheduleList       = $schedule->sortBy(['id', 'asc'])->toArray();
         $blogList           = Blog::orderBy('created_at', 'desc')->take(3)->get()->toArray();
         $blogs              = Blog::whereNotNull('image')->orderBy('created_at', 'desc')->take(3)->get()->toArray();
+        $gallery            =   [
+                                    Gallery::where('type', '=', '1')->orderBy('created_at', 'desc')->first()->getAttributes(),
+                                    Gallery::where('type', '=', '2')->orderBy('created_at', 'desc')->first()->getAttributes(),
+                                    Gallery::where('type', '=', '3')->orderBy('created_at', 'desc')->first()->getAttributes(),
+                                ];
         $data               = [
             'slideList'     => $slideList,
             'scheduleList'  => $scheduleList,
             'blogList'      => $blogList,
             'blogs'         => $blogs,
+            'gallery'       => $gallery,
             'statusPage'    => 0,
         ];
 
@@ -117,7 +124,14 @@ class FrontEndController extends Controller
 
     public function gallery()
     {
+        $gallery               = [
+            'type_1'          => Gallery::where('type','=','1')->orderBy('created_at', 'desc')->get()->toArray(),
+            'type_2'          => Gallery::where('type','=','2')->orderBy('created_at', 'desc')->get()->toArray(),
+            'type_3'          => Gallery::where('type','=','3')->orderBy('created_at', 'desc')->get()->toArray(),
+        ];
+        dd($gallery);
         $data               = [
+            'gallery'       => $gallery,
             'statusPage'    => 0,
         ];
 

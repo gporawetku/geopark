@@ -20,7 +20,7 @@
                                 <label for="order" class="form-label">{{ __('slide.order') }}</label>
                                 <select id="order" class="form-control{{ $errors->has('order') ? ' is-invalid' : '' }}" name="order" required>
                                     @foreach ($orderList as $order)
-                                        <option>{{ $order }}</option>
+                                        <option value="{{ $order }}">{{ $order }}</option>
                                     @endforeach
                                 </select>
                                 {!! $errors->first('order', '<span class="invalid-feedback" role="alert">:message</span>') !!}
@@ -73,7 +73,7 @@
                                 <select id="order" class="form-control{{ $errors->has('order') ? ' is-invalid' : '' }}" name="order" required>
                                     <option value="{{ old('fileImage' , $editableSlide->order) }}">{{ old('fileImage' , $editableSlide->order) }}</option>
                                     @foreach ($orderList as $order)
-                                        <option>{{ $order }}</option>
+                                        <option value="{{ $order }}">{{ $order }}</option>
                                     @endforeach
                                 </select>
                                 {!! $errors->first('order', '<span class="invalid-feedback" role="alert">:message</span>') !!}

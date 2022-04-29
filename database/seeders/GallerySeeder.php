@@ -38,7 +38,7 @@ class GallerySeeder extends Seeder
             [
                 "name" => "วิดีโอ 3",
                 "description" => "วิดีโอ 3",
-                "link" => "1.jpg",
+                "link" => "cX58ulOVo2g",
                 "type" => "3",
                 "creator_id" => 1,
                 'created_at'    => $date,

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
+
 
 class GalleryController extends Controller
 {
@@ -16,14 +18,14 @@ class GalleryController extends Controller
     {
         $editableGallery = null;
         $galleryQuery = Gallery::query();
-        $galleryQuery->where('name', 'like', '%'.request('q').'%');
+        $galleryQuery->where('name', 'like', '%' . request('q') . '%');
         $galleries = $galleryQuery->paginate(10);
 
         if (in_array(request('action'), ['edit', 'delete']) && request('id') != null) {
             $editableGallery = Gallery::find(request('id'));
         }
 
-        return view('admin.galleries.index', compact('galleries', 'editableGallery'));
+        return view('admin.galleries.index', compact('galleries', 'editableGallery' ));
     }
 
     /**
@@ -39,8 +41,23 @@ class GalleryController extends Controller
         $newGallery = $request->validate([
             'name'        => 'required|max:60',
             'description' => 'nullable|max:255',
+            'type'        => 'required',
+            'link_image'  => 'nullable',
+            'link_video'  => 'nullable',
         ]);
         $newGallery['creator_id'] = auth()->id();
+        if ($request->type == 3) {
+            $newGallery['link']   = $request->link_video;
+        }else{
+            if ($file = $request->hasFile('link_image')) {
+                $file = $request->file('link_image');
+                $fileName = time().$file->getClientOriginalName();
+                $resize = Image::make($file);
+                $path = "images/galleries/{$fileName}";
+                $resize->save(public_path($path),80);
+                $newGallery['link']= $fileName;
+            }
+        }
 
         Gallery::create($newGallery);
 

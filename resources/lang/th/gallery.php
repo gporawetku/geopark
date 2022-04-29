@@ -3,7 +3,7 @@
 return [
     // Labels
     'gallery'        => 'แกลลอรี่',
-    'list'           => 'Gallery List',
+    'list'           => 'แกลลอรี่',
     'search'         => 'Search Gallery',
     'search_text'    => 'Name ...',
     'all'            => 'All Gallery',
@@ -15,19 +15,24 @@ return [
     'back_to_index'  => 'Back to Gallery List',
 
     // Actions
-    'create'         => 'Create new Gallery',
+    'create'         => 'เพิ่มแกลลอรี่',
     'created'        => 'A new Gallery has been created.',
     'show'           => 'View Gallery Detail',
-    'edit'           => 'Edit Gallery',
-    'update'         => 'Update Gallery',
+    'edit'           => 'แก้ไขแกลเลอรี',
+    'update'         => 'เพิ่มแกลเลอรี',
     'updated'        => 'Gallery data has been updated.',
-    'delete'         => 'Delete Gallery',
-    'delete_confirm' => 'Are you sure to delete this Gallery?',
+    'delete'         => 'ลบแกลเลอรี',
+    'delete_confirm' => 'คุณแน่ใจหรือว่าจะลบแกลเลอรีนี้?',
     'deleted'        => 'Gallery has been deleted.',
     'undeleted'      => 'Gallery not deleted.',
     'undeleteable'   => 'Gallery data cannot be deleted.',
 
     // Attributes
-    'name'           => 'Gallery Name',
-    'description'    => 'Gallery Description',
+    'name'           => 'ชื่อ',
+    'description'    => 'คำอธิบาย',
+    'link'           => 'ภาพประกอบ',
+    'link_image'     => 'รูปภาพ',
+    'link_video'     => 'วิดีโอ',
+    'type'           => 'ประเภท',
+    'image'          => 'รูปภาพ',
 ];
