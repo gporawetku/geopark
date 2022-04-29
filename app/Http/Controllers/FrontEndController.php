@@ -129,7 +129,6 @@ class FrontEndController extends Controller
             'type_2'          => Gallery::where('type','=','2')->orderBy('created_at', 'desc')->get()->toArray(),
             'type_3'          => Gallery::where('type','=','3')->orderBy('created_at', 'desc')->get()->toArray(),
         ];
-        dd($gallery);
         $data               = [
             'gallery'       => $gallery,
             'statusPage'    => 0,
