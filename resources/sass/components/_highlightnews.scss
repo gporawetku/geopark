@@ -1,3 +1,39 @@
+.highlight-news-section {
+  .title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+    .camera-icon {
+      padding-right: 8px;
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $base-color;
+        left: 30%;
+        bottom: -10px;
+        height: 2px;
+        width: 40%;
+      }
+      i {
+        color: $base-color;
+        font-size: 18px;
+      }
+    }
+    .title {
+      font-size: 16px;
+    }
+    .more-link {
+      font-size: 14px;
+      color: $base-color;
+      padding-left: 10px;
+    }
+  }
+}
+
 .highlight-news-container {
   margin-top: 30px;
 }
@@ -5,6 +41,7 @@
   background-color: #fff;
   height: 200px;
   padding: 0px 60px !important;
+  
 
   .news-group {
     .news-item {
@@ -38,6 +75,32 @@
 }
 
 @include md-screen {
+  .highlight-news-section {
+    .title-wrapper {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      .camera-icon {
+        padding-right: 8px;
+        &::after {
+          left: 40%;
+          bottom: -10px;
+          height: 3px;
+          width: 20%;
+        }
+        i {
+          font-size: 22px;
+        }
+      }
+      .title {
+        font-size: 20px;
+      }
+      .more-link {
+        font-size: 16px;
+        color: $base-color;
+        padding-left: 10px;
+      }
+    }
+  }
   .highlight-news-container {
     height: 300px;
     margin-top: 20px;
@@ -62,6 +125,30 @@
 @include lg-screen {
   .highlight-news-section {
     padding: 0px 30px;
+    .title-wrapper {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      .camera-icon {
+        padding-right: 12px;
+        &::after {
+          left: 40%;
+          bottom: -10px;
+          height: 3px;
+          width: 20%;
+        }
+        i {
+          font-size: 24px;
+        }
+      }
+      .title {
+        font-size: 22px;
+      }
+      .more-link {
+        font-size: 18px;
+        color: $base-color;
+        padding-left: 10px;
+      }
+    }
   }
   .highlight-news-container {
     height: 240px;
@@ -87,6 +174,31 @@
   .highlight-news-section {
     padding: 0px 100px;
     margin-top: 60px;
+    .title-wrapper {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      .camera-icon {
+        padding-right: 12px;
+        &::after {
+          left: 40%;
+          bottom: -14px;
+          height: 4px;
+          width: 20%;
+        }
+        i {
+          font-size: 22px;
+        }
+      }
+      .title {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .more-link {
+        font-size: 16px;
+        color: $base-color;
+        padding-left: 10px;
+      }
+    }
   }
   .highlight-news-container {
     height: 240px;

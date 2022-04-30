@@ -86,32 +86,25 @@
 
 <!-- Gallery Preview (old highlight blog) -->
 <div class="highlight-news-section">
+    <div class="title-wrapper">
+        <span class="camera-icon">
+            <i class="fa fa-camera-retro"></i>
+        </span>
+        <div class="title">
+            ห้องภาพ
+        </div>
+        <a class="more-link" href="{{route('gallery')}}"><span class="fa fa-angle-double-right"></span></a>
+    </div>
     <div class="highlight-news-container swiper highlightNewsSwiper">
         <div class="news-group swiper-wrapper galleryPreview">
-            <!-- Gallery 1 -->
+            <!-- Gallery  -->
+            @foreach ($data['gallery'] as $galleryItem)
             <div class="news-item swiper-slide news-item-i1" 
-            href="{{asset($data['path_gallery_image_type_1'].$data['gallery'][0]['link'])}}"
-            style="background-image: url('{{asset($data['path_gallery_image_type_1'].$data['gallery'][0]['link'])}}');">
-                <div class="description">
-                    ภาพจากการประกวด
-                </div>
+            href="{{asset($data['path_gallery_image_type_2'].$galleryItem['link'])}}"
+            style="background-image: url('{{asset($data['path_gallery_image_type_2'].$galleryItem['link'])}}');">
             </div>
-            <!-- Gallery 2 -->
-            <div class="news-item swiper-slide news-item-i2" 
-            href="{{asset($data['path_gallery_image_type_2'].$data['gallery'][1]['link'])}}"
-            style="background-image: url('{{asset($data['path_gallery_image_type_2'].$data['gallery'][1]['link'])}}');">
-                <div class="description">
-                    ภาพจากงาน
-                </div>
-            </div>
-            <!-- Gallery 3 -->
-            <div class="news-item swiper-slide news-item-i3" 
-            href="https://youtu.be/{{$data['gallery'][2]['link']}}"
-            style="background-image: url('http://img.youtube.com/vi/{{$data['gallery'][2]['link']}}/0.jpg');">
-                <div class="description">
-                    วีดีโอ
-                </div>
-            </div>
+            @endforeach
+
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
