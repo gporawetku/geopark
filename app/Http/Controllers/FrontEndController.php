@@ -105,6 +105,7 @@ class FrontEndController extends Controller
         $abstract           = AbstractPoster::orderBy('created_at', 'desc')->get()->toArray();
         $data               = [
             'abstract'      => $abstract,
+            'path_image'    => 'images/abstracts/',
             'statusPage'    => 0,
         ];
 
@@ -130,8 +131,10 @@ class FrontEndController extends Controller
             'type_3'          => Gallery::where('type','=','3')->orderBy('created_at', 'desc')->get()->toArray(),
         ];
         $data               = [
-            'gallery'       => $gallery,
-            'statusPage'    => 0,
+            'gallery'           => $gallery,
+            'path_image_type_1'  => 'images/galleries/activity/',
+            'path_image_type_2'  => 'images/galleries/contest/',
+            'statusPage'        => 0,
         ];
 
         return view('pages.gallery', compact('data'));

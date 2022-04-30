@@ -2,7 +2,7 @@
 
 return [
     // Labels
-    'table_no'          => 'ลำดับ',
+    'table_no'          => '#',
     'total'             => 'รวม',
     'action'            => 'จัดการ',
     'show_detail_title' => 'View :name :type detail',

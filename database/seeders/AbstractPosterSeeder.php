@@ -20,7 +20,7 @@ class AbstractPosterSeeder extends Seeder
             [
                 'name'          => 'ก้าวแรก...อุทยานธรณีไทยร่วมใจไปด้วยกัน',
                 'description'   => '20 เม.ย. 2022',
-                'image'         => 'images/abstracts/abstract-1.jpg',
+                'image'         => 'abstract-1.jpg',
                 'author'        => 'บทความวิชาการ',
                 'link'          => 'https://drive.google.com/drive/folders/1I3MewfoZKrvatJhCjAnfyJONr22lo5tt?usp=sharing',
                 'creator_id'    => 1,
