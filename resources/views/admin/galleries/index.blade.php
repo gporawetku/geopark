@@ -45,6 +45,7 @@
                                 <th>{{ __('gallery.name') }}</th>
                                 <th>{{ __('gallery.link') }}</th>
                                 <th>{{ __('gallery.type') }}</th>
+                                <th>{{ __('gallery.show') }}</th>
                                 <th class="text-center">{{ __('app.action') }}</th>
                             </tr>
                         </thead>
@@ -69,6 +70,13 @@
                                             {{ $gallery->type == 2 ? 'รูปภาพประกวด' : '' }}
                                             {{ $gallery->type == 3 ? 'วิดีโอ' : '' }}
                                         </span>
+                                    </td>
+                                    <td>
+                                        @if ($gallery->order)
+                                            <span class="badge bg-warning">หน้าหลัก</span>
+                                        @else
+                                            <span class="badge bg-primary">หน้าห้องภาพ</span>
+                                        @endif
                                     </td>
                                     <td class="text-center">
                                         @can('update', $gallery)

@@ -19,9 +19,9 @@ class CreateGalleriesTable extends Migration
             $table->string('description')->nullable();
             $table->string('link')->nullable();
             $table->string('type')->nullable(); //1 = รูปภาพจากงาน , 2 = รูปภาพประกวด, 3 = วิดีโอ
+            $table->string('order')->nullable();
             $table->unsignedBigInteger('creator_id');
             $table->timestamps();
-
             $table->foreign('creator_id')->references('id')->on('users')->onDelete('restrict');
         });
     }

@@ -34,7 +34,7 @@
                                 <div class="custom-file">
                                     <input id="fileImage" type="file" class="custom-file-input {{ $errors->has('fileImage') ? ' is-invalid' : '' }}" name="fileImage" value="{{ old('fileImage') }}"
                                         required>
-                                    <label for="fileImage" class="custom-file-label">Choose file</label>
+                                    <label for="fileImage" class="custom-file-label">เลือกไฟล์</label>
                                     {!! $errors->first('fileImage', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                                 </div>
                             </div>
@@ -71,7 +71,7 @@
                             <div class="form-group">
                                 <label for="order" class="form-label">{{ __('slide.order') }}</label>
                                 <select id="order" class="form-control{{ $errors->has('order') ? ' is-invalid' : '' }}" name="order" required>
-                                    <option value="{{ old('fileImage' , $editableSlide->order) }}">{{ old('fileImage' , $editableSlide->order) }}</option>
+                                    <option value="{{ old('order' , $editableSlide->order) }}">{{ old('order' , $editableSlide->order) }}</option>
                                     @foreach ($orderList as $order)
                                         <option value="{{ $order }}">{{ $order }}</option>
                                     @endforeach
@@ -84,9 +84,9 @@
                         <div class="col-xl-12">
                             <div class="form-group">
                                 <label for="order" class="form-label">{{ __('slide.image') }}</label>
+                                <input id="oldFileImage" type="hidden" name="oldFileImage" value="{{ old('fileImage' , $editableSlide->image) }}">
                                 <div class="custom-file">
-                                    <input id="fileImage" type="file" class="custom-file-input {{ $errors->has('fileImage') ? ' is-invalid' : '' }}" name="fileImage" value="{{ old('fileImage' , $editableSlide->image) }}"
-                                        required>
+                                    <input id="fileImage" type="file" class="custom-file-input {{ $errors->has('fileImage') ? ' is-invalid' : '' }}" name="fileImage" value="{{ old('fileImage' , $editableSlide->image) }}">
                                     <label for="fileImage" class="custom-file-label">{{ old('fileImage' , $editableSlide->image) }}</label>
                                     {!! $errors->first('fileImage', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                                 </div>

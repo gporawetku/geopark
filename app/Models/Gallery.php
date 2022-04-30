@@ -10,7 +10,7 @@ class Gallery extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'link', 'type', 'creator_id'];
+    protected $fillable = ['name', 'description', 'link', 'type', 'order', 'creator_id'];
 
     public function getNameLinkAttribute()
     {
