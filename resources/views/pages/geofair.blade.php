@@ -45,6 +45,9 @@
         อุธยานธรณีโคราช
       </div>
       <div class="link-group">
+        <a href="https://youtu.be/qny8TuFPs8g" target="_blank">
+          <span class="fab fa-youtube"></span>
+        </a>
         <a href="https://khoratgeopark.com/" target="_blank">
           <span class="fas fa-external-link-alt"></span>
         </a>
@@ -131,6 +134,9 @@
         อุทยานธรณีขอนแก่น
       </div>
       <div class="link-group">
+        <a href="https://youtu.be/sHbde6zJYug" target="_blank">
+          <span class="fab fa-youtube"></span>
+        </a>
         <a href="https://www.khonkaen-geopark.com/" target="_blank">
           <span class="fas fa-external-link-alt"></span>
         </a>
