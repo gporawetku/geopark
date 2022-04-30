@@ -31,9 +31,8 @@
 <!-- Underhero (News, Schedule) -->
 <div class="section-container">
     <div class="underhero-container" id="underhero-section">
-
-        <!-- Latest News -->
-        <div class="news-container">
+        <!-- (OLD) Latest News -->
+        <!-- <div class="news-container">
             <div class="title">
                 <span class="news-icon">
                     <i class="fa fa-bullhorn"></i>
@@ -53,28 +52,41 @@
                         </div>
                     </div>
                     @endforeach
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Video -->
+        <div class="video-container">
+            <div class="title">
+                <span class="video-icon">
+                    <i class="fab fa-youtube"></i>
+                </span>
+                วีดีโอ
+            </div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/{{$data['video']['link']}}" title="TGN2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
-    </div>
 
-    <!-- Schedule -->
-    <div class="schedule-container">
-        <div class="title">
-            <span class="schedule-icon">
-                <i class="fa fa-calendar"></i>
-            </span>
-            กำหนดการ
+        <!-- Schedule -->
+        <div class="schedule-container">
+            <div class="title">
+                <span class="schedule-icon">
+                    <i class="fa fa-calendar"></i>
+                </span>
+                กำหนดการ
+            </div>
+            <table class="schedule-table">
+                @foreach ($data['scheduleList'] as $scheduleItem)
+                <tr>
+                    <td>{{$scheduleItem['name']}}</td>
+                    <td>{{$scheduleItem['description']}}</td>
+                </tr>
+                @endforeach
+            </table>
         </div>
-        <table class="schedule-table">
-            @foreach ($data['scheduleList'] as $scheduleItem)
-            <tr>
-                <td>{{$scheduleItem['name']}}</td>
-                <td>{{$scheduleItem['description']}}</td>
-            </tr>
-            @endforeach
-        </table>
     </div>
-</div>
 </div>
 
 <!-- Fixed Image -->
