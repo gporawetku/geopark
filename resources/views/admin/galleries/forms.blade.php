@@ -21,26 +21,42 @@
                         <label for="link_image" class="form-label">{{ __('gallery.link_image') }}</label>
                         <div class="custom-file">
                             <input id="link_image" type="file" class="custom-file-input {{ $errors->has('link_image') ? ' is-invalid' : '' }}" name="link_image" value="{{ old('link_image') }}">
-                            <label for="link_image" class="custom-file-label">Choose file</label>
+                            <label for="link_image" class="custom-file-label">เลือกไฟล์</label>
                             {!! $errors->first('link_image', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                         </div>
                     </div>
                     <div class="form-group" id="input-video">
                         <label for="link_video" class="form-label">{{ __('gallery.link_video') }}</label>
-                        <div class="d-flex align-items-center">
-                            https://youtu.be/
+                        <div class="d-flex align-items-center bg-primary" style="border-radius: 0.25rem;">
+                            &nbsp;&nbsp;https://youtu.be/&nbsp;&nbsp;
                             <input id="link_video" type="text" class="form-control {{ $errors->has('link_video') ? ' is-invalid' : '' }}" name="link_video" value="{{ old('link_video') }}">
                         </div>
                         {!! $errors->first('link_video', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
-                    <div class="form-group selected-gallery">
-                        <label for="type" class="form-label">{{ __('gallery.type') }}</label>
-                        <select id="type" class="form-control{{ $errors->has('type') ? ' is-invalid' : '' }}" name="type" required>
-                                <option value="1">รูปภาพจากงาน</option>
-                                <option value="2">รูปภาพประกวด</option>
-                                <option value="3">วิดีโอ</option>
-                        </select>
-                        {!! $errors->first('type', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group selected-gallery">
+                                <label for="type" class="form-label">{{ __('gallery.type') }}</label>
+                                <select id="type" class="form-control{{ $errors->has('type') ? ' is-invalid' : '' }}" name="type" required>
+                                    <option value="1">รูปภาพจากงาน</option>
+                                    <option value="2">รูปภาพประกวด</option>
+                                    <option value="3">วิดีโอ</option>
+                                </select>
+                                {!! $errors->first('type', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group selected-gallery">
+                                <label for="order" class="form-label">{{ __('gallery.order') }}</label>
+                                <select id="order" class="form-control{{ $errors->has('order') ? ' is-invalid' : '' }}" name="order" required>
+                                    <option value="">ไม่แสดงหน้าหลัก</option>
+                                    <option value="1">แสดงหน้าหลัก 1</option>
+                                    <option value="2">แสดงหน้าหลัก 2</option>
+                                    <option value="3">แสดงหน้าหลัก 3</option>
+                                </select>
+                                {!! $errors->first('order', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                            </div>
+                        </div>
                     </div>
                     <input type="submit" value="{{ __('gallery.create') }}" class="btn btn-primary">
                     <a href="{{ route('galleries.index') }}" class="btn btn-link">{{ __('app.cancel') }}</a>
@@ -73,27 +89,45 @@
                     <div class="form-group" id="input-image">
                         <label for="link_image" class="form-label">{{ __('gallery.link_image') }}</label>
                         <div class="custom-file">
-                            <input id="link_image" type="file" class="custom-file-input {{ $errors->has('link_image') ? ' is-invalid' : '' }}" name="link_image" value="{{ old('link_image', $editableGallery->link) }}">
+                            <input id="link_image" type="file" class="custom-file-input {{ $errors->has('link_image') ? ' is-invalid' : '' }}" name="link_image"
+                                value="{{ old('link_image', $editableGallery->link) }}">
                             <label for="link_image" class="custom-file-label">{{ old('link_image', $editableGallery->link) }}</label>
                             {!! $errors->first('link_image', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                         </div>
                     </div>
                     <div class="form-group" id="input-video">
                         <label for="link_video" class="form-label">{{ __('gallery.link_video') }}</label>
-                        <div class="d-flex align-items-center">
-                            https://youtu.be/
-                            <input id="link_video" type="text" class="form-control {{ $errors->has('link_video') ? ' is-invalid' : '' }}" name="link_video" value="{{ old('link_video', $editableGallery->link) }}">
+                        <div class="d-flex align-items-center bg-primary" style="border-radius: 0.25rem;">
+                            &nbsp;&nbsp;https://youtu.be/&nbsp;&nbsp;
+                            <input id="link_video" type="text" class="form-control {{ $errors->has('link_video') ? ' is-invalid' : '' }}" name="link_video"
+                                value="{{ old('link_video', $editableGallery->link) }}">
                         </div>
                         {!! $errors->first('link_video', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
-                    <div class="form-group selected-gallery">
-                        <label for="type" class="form-label">{{ __('gallery.type') }}</label>
-                        <select id="type" class="form-control{{ $errors->has('type') ? ' is-invalid' : '' }}" name="type" required>
-                                <option value="1" {{ old('type', $editableGallery->type) == 1 ? 'selected':''  }}>รูปภาพจากงาน</option>
-                                <option value="2" {{ old('type', $editableGallery->type) == 2 ? 'selected':''  }}>รูปภาพประกวด</option>
-                                <option value="3" {{ old('type', $editableGallery->type) == 3 ? 'selected':''  }}>วิดีโอ</option>
-                        </select>
-                        {!! $errors->first('type', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group selected-gallery">
+                                <label for="type" class="form-label">{{ __('gallery.type') }}</label>
+                                <select id="type" class="form-control{{ $errors->has('type') ? ' is-invalid' : '' }}" name="type" required>
+                                    <option value="1" {{ old('type', $editableGallery->type) == 1 ? 'selected' : '' }}>รูปภาพจากงาน</option>
+                                    <option value="2" {{ old('type', $editableGallery->type) == 2 ? 'selected' : '' }}>รูปภาพประกวด</option>
+                                    <option value="3" {{ old('type', $editableGallery->type) == 3 ? 'selected' : '' }}>วิดีโอ</option>
+                                </select>
+                                {!! $errors->first('type', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group selected-gallery">
+                                <label for="order" class="form-label">{{ __('gallery.order') }}</label>
+                                <select id="order" class="form-control{{ $errors->has('order') ? ' is-invalid' : '' }}" name="order" required>
+                                    <option value="" {{ old('order', $editableGallery->order) == 1 ? 'selected' : '' }}>ไม่แสดงหน้าหลัก</option>
+                                    <option value="1" {{ old('order', $editableGallery->order) == 1 ? 'selected' : '' }}>แสดงหน้าหลัก 1</option>
+                                    <option value="2" {{ old('order', $editableGallery->order) == 1 ? 'selected' : '' }}>แสดงหน้าหลัก 2</option>
+                                    <option value="3" {{ old('order', $editableGallery->order) == 1 ? 'selected' : '' }}>แสดงหน้าหลัก 3</option>
+                                </select>
+                                {!! $errors->first('order', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                            </div>
+                        </div>
                     </div>
                     <input name="page" value="{{ request('page') }}" type="hidden">
                     <input name="q" value="{{ request('q') }}" type="hidden">

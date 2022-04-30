@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Attribute;
 use App\Models\Slide;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
 use Illuminate\Database\Eloquent\Casts\Attribute as CastsAttribute;
 
@@ -26,7 +27,7 @@ class SlideController extends Controller
 
         if (in_array(request('action'), ['edit', 'delete']) && request('id') != null) {
             $editableSlide = Slide::find(request('id'));
-    }
+        }
 
         // Show Oreder List
         $orderCurrent   = Slide::pluck('order')->toArray();
@@ -53,11 +54,11 @@ class SlideController extends Controller
         $newSlide['creator_id'] = auth()->id();
         if ($file = $request->hasFile('fileImage')) {
             $file = $request->file('fileImage');
-            $fileName = $file->getClientOriginalName();
+            $fileName = time() . $file->getClientOriginalName();
             $resize = Image::make($file);
             $path = "images/slides/{$fileName}";
-            $resize->save(public_path($path),80);
-            $newSlide['image']= $path;
+            $resize->save(public_path($path), 80);
+            $newSlide['image'] = $fileName;
         }
         Slide::create($newSlide);
 
@@ -74,11 +75,29 @@ class SlideController extends Controller
     public function update(Request $request, Slide $slide)
     {
         $this->authorize('update', $slide);
-
-        $slideData = $request->validate([
-            'name'        => 'required|max:60',
-            'description' => 'nullable|max:255',
-        ]);
+        if (!$request->fileImage) {
+            $slideData = $request->validate([
+                'name'        => 'required|max:60',
+                'order'       => 'required',
+            ]);
+        } else {
+            $slideData = $request->validate([
+                'name'         => 'required|max:60',
+                'fileImage'    => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'order'        => 'required',
+                'oldFileImage' => 'nullable',
+            ]);
+            if ($file = $request->hasFile('fileImage')) {
+                $image_path = 'images/slides/'.$request->oldFileImage;
+                File::delete($image_path);
+                $file = $request->file('fileImage');
+                $fileName = time() . $file->getClientOriginalName();
+                $resize = Image::make($file);
+                $path = "images/slides/{$fileName}";
+                $resize->save(public_path($path), 80);
+                $slideData['image'] = $fileName;
+            }
+        };
         $slide->update($slideData);
 
         $routeParam = request()->only('page', 'q');
@@ -101,7 +120,8 @@ class SlideController extends Controller
 
         if ($request->get('slide_id') == $slide->id && $slide->delete()) {
             $routeParam = request()->only('page', 'q');
-
+            $image_path = 'images/slides/'.$slide->image;
+            File::delete($image_path);
             return redirect()->route('slides.index', $routeParam);
         }
 
