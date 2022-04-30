@@ -24,9 +24,9 @@
                         <div class="date">
                             {{ $abstractItem['description'] }}
                         </div>
-                        <div class="download-btn">
-                            <i class="fa fa-download muted"></i>
-                        </div>
+                        <a href="{{$abstractItem['link'] === null?'#':$abstractItem['link']}}" target="_blank" class="download-btn">
+                            <i class="fa fa-download {{$abstractItem['link'] === null?'mute':''}}"></i>
+                        </a>
                     </div>
                 </div>
             </div>
