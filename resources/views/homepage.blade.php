@@ -111,7 +111,7 @@
         <div class="news-group swiper-wrapper galleryPreview">
             <!-- Gallery  -->
             @foreach ($data['gallery'] as $galleryItem)
-            <div class="news-item swiper-slide news-item-i1" 
+            <div class="news-item swiper-slide" 
             href="{{asset($data['path_gallery_image_type_2'].$galleryItem['link'])}}"
             style="background-image: url('{{asset($data['path_gallery_image_type_2'].$galleryItem['link'])}}');">
             </div>
@@ -127,7 +127,7 @@
     <div class="highlight-news-container swiper highlightNewsSwiper">
         <div class="news-group swiper-wrapper">
             @foreach ($data['blogs'] as $blogItem)
-            <div class="news-item swiper-slide news-item-i{{$loop->index+1}}"
+            <div class="news-item swiper-slide"
             style="background-image: url(' {{asset($blogItem['image'])}} ');">
                 <div class="title">
                     {{$blogItem['name']}}
@@ -293,12 +293,12 @@
 
     gsap.timeline({
         scrollTrigger: {
-            trigger: '.news-container',
+            trigger: '.video-container',
             start: "top 90%",
         }
-    })  .from('.news-container .title',
+    })  .from('.video-container .title',
         {duration: .2, y: -50, opacity: 0,})
-        .from('.news-container .swiper',
+        .from('.video-container .video-wrapper',
         {duration: .5, y: -50, opacity: 0,})
         .from('.schedule-container .title',
         {duration: .3, y: -50, opacity: 0,})
@@ -321,18 +321,13 @@
         }
     });
 
-    gsap.timeline({
+    gsap.from('.galleryPreview',{
         scrollTrigger: {
             trigger: '.highlight-news-section',
             start: "top 90%",
-        }
+        },
+        duration: 2, y: -20, opacity: 0,
     })
-    .from('.highlight-news-container .news-group .news-item-i1',
-        {duration: .5, y: -20, opacity: 0})
-    .from('.highlight-news-container .news-group .news-item-i2',
-        {duration: .5, y: -20, opacity: 0})
-    .from('.highlight-news-container .news-group .news-item-i3',
-        {duration: .5, y: -20, opacity: 0});
 
 
 
