@@ -30,7 +30,7 @@ return [
     // Attributes
     'name'           => 'ชื่อ',
     'description'    => 'คำอธิบาย',
-    'link'           => 'ภาพประกอบ',
+    'link'           => 'ลิงค์',
     'link_image'     => 'รูปภาพ',
     'link_video'     => 'วิดีโอ',
     'type'           => 'ประเภท',

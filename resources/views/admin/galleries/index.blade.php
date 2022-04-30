@@ -13,14 +13,15 @@
     </div>
     @if (!Request::has('action'))
         <div class="my-3">
+
             @can('create', new App\Models\Gallery())
                 <a href="{{ route('galleries.index', ['action' => 'create']) }}" class="btn btn-success">{{ __('gallery.create') }}</a>
             @endcan
         </div>
-
-        <div class="row d-flex justify-content-center">
-
-            <div class="col-md-8">
+    @endif
+    <div class="row d-flex justify-content-center">
+        @if (!Request::has('action'))
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">{{ __('gallery.list') }}</h3>
@@ -37,11 +38,12 @@
                         </div>
                     </div>
 
-                    <table class="table table-sm table-responsive-sm table-hover projects" >
+                    <table class="table table-sm table-responsive-sm table-hover projects">
                         <thead>
                             <tr>
                                 <th class="text-center">{{ __('app.table_no') }}</th>
                                 <th>{{ __('gallery.image') }}</th>
+                                <th>{{ __('gallery.name') }}</th>
                                 <th>{{ __('gallery.link') }}</th>
                                 <th>{{ __('gallery.type') }}</th>
                                 <th class="text-center">{{ __('app.action') }}</th>
@@ -52,9 +54,16 @@
                                 <tr>
                                     <td class="text-center">{{ $galleries->firstItem() + $key }}</td>
                                     <td>
-                                        <img src="{{ $gallery->type == 3 ? 'http://img.youtube.com/vi/' . $gallery->link . '/0.jpg':'images/galleries/'.$gallery->link  }}">
+                                        @if ($gallery->type == 1)
+                                            <img src="{{ 'images/galleries/activity/' . $gallery->link }}" alt="" style="height: 5rem">
+                                        @elseif ($gallery->type == 2)
+                                            <img src="{{ 'images/galleries/contest/' . $gallery->link }}" alt="" style="height: 5rem">
+                                        @elseif ($gallery->type == 3)
+                                            <img src="{{ 'http://img.youtube.com/vi/' . $gallery->link . '/0.jpg' }}" style="height: 5rem">
+                                        @endif
                                     </td>
-                                    <td>{{ $gallery->link }}</td>
+                                    <td>{{ $gallery->name }}</td>
+                                    <td>{{ $gallery->type == 3 ? 'https://youtu.be/' . $gallery->link : $gallery->link }}</td>
                                     <td>
                                         <span class="badge bg-success">
                                             {{ $gallery->type == 1 ? 'รูปภาพจากงาน' : '' }}
@@ -81,19 +90,13 @@
                     </div>
                 </div>
             </div>
-    @endif
-
-    <div class="col-md-4">
-        @if (Request::has('action'))
-            @include('admin.galleries.forms')
         @endif
-    </div>
+        <div class="col-md-4">
+            @if (Request::has('action'))
+                @include('admin.galleries.forms')
+            @endif
+        </div>
     </div>
 
-    <style>
-        img{
-            height: 5rem;
-        }
-    </style>
 
 @endsection

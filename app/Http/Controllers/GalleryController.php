@@ -53,7 +53,11 @@ class GalleryController extends Controller
                 $file = $request->file('link_image');
                 $fileName = time().$file->getClientOriginalName();
                 $resize = Image::make($file);
-                $path = "images/galleries/{$fileName}";
+                if($request->type == 1){
+                    $path = "images/galleries/activity/{$fileName}";
+                }else if($request->type == 2){
+                    $path = "images/galleries/contest/{$fileName}";
+                }
                 $resize->save(public_path($path),80);
                 $newGallery['link']= $fileName;
             }
