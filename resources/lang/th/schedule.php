@@ -2,8 +2,8 @@
 
 return [
     // Labels
-    'schedule'       => 'โปรแกรม',
-    'list'           => 'โปรแกรม',
+    'schedule'       => 'กำหนดการ',
+    'list'           => 'กำหนดการ',
     'search'         => 'Search Schedule',
     'search_text'    => 'Name ...',
     'all'            => 'All Schedule',
@@ -15,14 +15,14 @@ return [
     'back_to_index'  => 'Back to Schedule List',
 
     // Actions
-    'create'         => 'เพิ่มโปรแกรม',
+    'create'         => 'เพิ่มกำหนดการ',
     'created'        => 'A new Schedule has been created.',
     'show'           => 'View Schedule Detail',
-    'edit'           => 'Edit Schedule',
-    'update'         => 'Update Schedule',
+    'edit'           => 'แก้ไขกำหนดการ',
+    'update'         => 'แก้ไข',
     'updated'        => 'Schedule data has been updated.',
-    'delete'         => 'Delete Schedule',
-    'delete_confirm' => 'Are you sure to delete this Schedule?',
+    'delete'         => 'ลบกำหนดการ',
+    'delete_confirm' => 'คุณแน่ใจหรือว่าต้องการลบกำหนดการนี้?',
     'deleted'        => 'Schedule has been deleted.',
     'undeleted'      => 'Schedule not deleted.',
     'undeleteable'   => 'Schedule data cannot be deleted.',

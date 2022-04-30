@@ -10,7 +10,7 @@
         <!-- Slides -->
         @foreach($data['slideList'] as $slide)
         <div class="swiper-slide">
-                <img style="width:100%;" src="{{asset($slide['image'])}}" alt="">
+                <img style="width:100%;" src="{{asset($data['path_slide_image'].$slide['image'])}}" alt="">
             </div>
         @endforeach
 
@@ -239,14 +239,14 @@
 
     // GSAP ANIMATION
     gsap.registerPlugin(ScrollTrigger);
-    gsap.from(".swiper.slider .swiper-slide img", 
+    gsap.from(".swiper.slider .swiper-slide img",
         {duration: 4, scale: 1.2, delay: 1})
     gsap.timeline()
-        .from(".hero-text .title", 
+        .from(".hero-text .title",
         {duration: 1.5, y: -100, opacity: 0, delay: 1,})
-        .from(".hero-text .description", 
+        .from(".hero-text .description",
         {duration: .5, y: -20, opacity: 0,})
-        .from(".hero-text .scroll-down-btn", 
+        .from(".hero-text .scroll-down-btn",
         {duration: .5, y: -50, opacity: 0, rotation: 90,});
 
     gsap.timeline({
@@ -285,11 +285,11 @@
             start: "top 90%",
         }
     })
-    .from('.highlight-news-container .news-group .news-item-i1', 
+    .from('.highlight-news-container .news-group .news-item-i1',
         {duration: .5, y: -20, opacity: 0})
-    .from('.highlight-news-container .news-group .news-item-i2', 
+    .from('.highlight-news-container .news-group .news-item-i2',
         {duration: .5, y: -20, opacity: 0})
-    .from('.highlight-news-container .news-group .news-item-i3', 
+    .from('.highlight-news-container .news-group .news-item-i3',
         {duration: .5, y: -20, opacity: 0});
 
 

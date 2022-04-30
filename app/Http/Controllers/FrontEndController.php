@@ -23,17 +23,20 @@ class FrontEndController extends Controller
         $blogList           = Blog::orderBy('created_at', 'desc')->take(3)->get()->toArray();
         $blogs              = Blog::whereNotNull('image')->orderBy('created_at', 'desc')->take(3)->get()->toArray();
         $gallery            =   [
-                                    Gallery::where('type', '=', '1')->orderBy('created_at', 'desc')->first()->getAttributes(),
-                                    Gallery::where('type', '=', '2')->orderBy('created_at', 'desc')->first()->getAttributes(),
-                                    Gallery::where('type', '=', '3')->orderBy('created_at', 'desc')->first()->getAttributes(),
-                                ];
+            Gallery::where('type', '=', '1')->orderBy('created_at', 'desc')->first()->getAttributes(),
+            Gallery::where('type', '=', '2')->orderBy('created_at', 'desc')->first()->getAttributes(),
+            Gallery::where('type', '=', '3')->orderBy('created_at', 'desc')->first()->getAttributes(),
+        ];
         $data               = [
-            'slideList'     => $slideList,
-            'scheduleList'  => $scheduleList,
-            'blogList'      => $blogList,
-            'blogs'         => $blogs,
-            'gallery'       => $gallery,
-            'statusPage'    => 0,
+            'slideList'             => $slideList,
+            'scheduleList'          => $scheduleList,
+            'blogList'              => $blogList,
+            'blogs'                 => $blogs,
+            'gallery'               => $gallery,
+            'path_slide_image'           => 'images/slides/',
+            'path_gallery_image_type_1'  => 'images/galleries/activity/',
+            'path_gallery_image_type_2'  => 'images/galleries/contest/',
+            'statusPage'            => 0,
         ];
 
         return view('homepage', compact('data'));
@@ -126,9 +129,9 @@ class FrontEndController extends Controller
     public function gallery()
     {
         $gallery               = [
-            'type_1'          => Gallery::where('type','=','1')->orderBy('created_at', 'desc')->get()->toArray(),
-            'type_2'          => Gallery::where('type','=','2')->orderBy('created_at', 'desc')->get()->toArray(),
-            'type_3'          => Gallery::where('type','=','3')->orderBy('created_at', 'desc')->get()->toArray(),
+            'type_1'          => Gallery::where('type', '=', '1')->orderBy('created_at', 'desc')->get()->toArray(),
+            'type_2'          => Gallery::where('type', '=', '2')->orderBy('created_at', 'desc')->get()->toArray(),
+            'type_3'          => Gallery::where('type', '=', '3')->orderBy('created_at', 'desc')->get()->toArray(),
         ];
         $data               = [
             'gallery'           => $gallery,

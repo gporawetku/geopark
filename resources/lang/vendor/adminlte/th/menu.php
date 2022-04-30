@@ -5,7 +5,7 @@ return [
     'main_navigation'               => 'MAIN NAVIGATION',
     'blogs'                         => 'ข่าวสาร',
     'slides'                        => 'สไลด์',
-    'schedules'                     => 'โปรแกรม',
+    'schedules'                     => 'กำหนดการ',
     'banners'                       => 'ภาพประกอบ',
     'abstract_poster'               => 'บทความวิชาการ',
     'galleries'                     => 'แกลลอรี่',

@@ -7,7 +7,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb d-flex justify-content-end">
                 <li class="breadcrumb-item"><a href="{{ route('admin') }}"><span class="fa fa-home text-dark-color"></span> หน้าหลัก</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{ __('blog.list') }}</li>
+                <li class="breadcrumb-item active" aria-current="page">{{ __('abstract_poster.list') }}</li>
             </ol>
         </nav>
     </div>
@@ -15,7 +15,7 @@
     @if (!Request::has('action'))
         <div class="my-3">
             @can('create', new App\Models\AbstractPoster())
-                <a href="{{ route('abstract_posters.index', ['action' => 'create']) }}" class="btn btn-success"><i class="fas fa-plus-circle"></i> {{ __('abstract_poster.create') }}</a>
+                <a href="{{ route('abstract_posters.index', ['action' => 'create']) }}" class="btn btn-success"><i class="fas fa-plus-circle"></i> {{ __('abstract_poster.title_create') }}</a>
             @endcan
 
         </div>
@@ -26,7 +26,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">สไลด์</h3>
+                        <h3 class="card-title">{{ __('abstract_poster.list') }}</h3>
                         <div class="card-tools">
                             <form method="GET" action="" accept-charset="UTF-8" class="form-inline">
                                 <div class="input-group input-group-sm" style="width: 150px;">
@@ -45,7 +45,8 @@
                                 <th class="text-center">{{ __('app.table_no') }}</th>
                                 <th>{{ __('abstract_poster.image') }}</th>
                                 <th>{{ __('abstract_poster.name') }}</th>
-                                <th>{{ __('abstract_poster.description') }}</th>
+                                <th>{{ __('abstract_poster.link') }}</th>
+                                <th>{{ __('abstract_poster.author') }}</th>
                                 <th class="text-center">{{ __('app.action') }}</th>
                             </tr>
                         </thead>
@@ -57,7 +58,8 @@
                                         <img src="{{ 'images/abstracts/' . $abstractPoster->image }}" alt="" style="height: 5rem">
                                     </td>
                                     <td>{{ $abstractPoster->name }}</td>
-                                    <td>{{ $abstractPoster->description }}</td>
+                                    <td>{{ $abstractPoster->link }}</td>
+                                    <td>{{ $abstractPoster->author }}</td>
                                     <td class="text-center">
                                         @can('update', $abstractPoster)
                                             <a href="{{ route('abstract_posters.index',['action' => 'edit', 'id' => $abstractPoster->id] + Request::only('page', 'q')) }}"

@@ -18,7 +18,7 @@ class SlideSeeder extends Seeder
         for ($i = 1; $i < 8; $i++){
             Slide::create([
                 'name' => 'slide-'.$i,
-                'image' => 'images/slides/slide-'.$i.'.jpg',
+                'image' => 'slide-'.$i.'.jpg',
                 'order' => $i,
                 'creator_id' => 1,
             ]);

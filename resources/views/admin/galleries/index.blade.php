@@ -13,9 +13,8 @@
     </div>
     @if (!Request::has('action'))
         <div class="my-3">
-
             @can('create', new App\Models\Gallery())
-                <a href="{{ route('galleries.index', ['action' => 'create']) }}" class="btn btn-success"><i class="fas fa-plus-circle"></i> {{ __('gallery.create') }}</a>
+                <a href="{{ route('galleries.index', ['action' => 'create']) }}" class="btn btn-success"><i class="fas fa-plus-circle"></i> {{ __('gallery.title_create') }}</a>
             @endcan
         </div>
     @endif

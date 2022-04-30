@@ -15,11 +15,12 @@ return [
     'back_to_index'  => 'Back to Gallery List',
 
     // Actions
-    'create'         => 'เพิ่มแกลลอรี่',
+    'title_create'   => 'เพิ่มแกลลอรี่',
+    'create'         => 'เพิ่ม',
     'created'        => 'A new Gallery has been created.',
     'show'           => 'View Gallery Detail',
     'edit'           => 'แก้ไขแกลเลอรี',
-    'update'         => 'เพิ่มแกลเลอรี',
+    'update'         => 'แก้ไข',
     'updated'        => 'Gallery data has been updated.',
     'delete'         => 'ลบแกลเลอรี',
     'delete_confirm' => 'คุณแน่ใจหรือว่าจะลบแกลเลอรีนี้?',

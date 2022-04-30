@@ -2,7 +2,7 @@
     @can('create', new App\Models\Slide())
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{ __('slide.list') }}</h3>
+                <h3 class="card-title">{{ __('slide.title_create') }}</h3>
             </div>
             <form method="POST" action="{{ route('slides.store') }}" accept-charset="UTF-8" enctype="multipart/form-data">
                 {{ csrf_field() }}
@@ -53,9 +53,9 @@
     @can('update', $editableSlide)
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{ __('slide.list') }}</h3>
+                <h3 class="card-title">{{ __('slide.edit') }}</h3>
             </div>
-            <form method="POST" action="{{ route('slides.update', $editableSlide) }}" accept-charset="UTF-8">
+            <form method="POST" action="{{ route('slides.update', $editableSlide) }}" accept-charset="UTF-8" enctype="multipart/form-data">
                 {{ csrf_field() }} {{ method_field('patch') }}
                 <div class="card-body">
 
@@ -115,8 +115,6 @@
             <div class="card-body">
                 <label class="form-label text-primary">{{ __('slide.name') }}</label>
                 <p>{{ $editableSlide->name }}</p>
-                <label class="form-label text-primary">{{ __('slide.description') }}</label>
-                <p>{{ $editableSlide->description }}</p>
                 {!! $errors->first('slide_id', '<span class="invalid-feedback" role="alert">:message</span>') !!}
             </div>
             <hr style="margin:0">

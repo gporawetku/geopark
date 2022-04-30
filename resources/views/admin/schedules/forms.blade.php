@@ -2,7 +2,7 @@
     @can('create', new App\Models\Schedule())
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">เพิ่มโปรแกรม</h3>
+                <h3 class="card-title">{{ __('schedule.edit') }}</h3>
             </div>
             <form method="POST" action="{{ route('schedules.store') }}" accept-charset="UTF-8">
                 {{ csrf_field() }}
@@ -25,9 +25,9 @@
                                     <i class="far fa-calendar-alt"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control float-right {{ $errors->has('startDate') ? ' is-invalid' : '' }}" name="daterange"/>
-                            <input type="hidden" class="form-control float-right" name="startDate"/>
-                            <input type="hidden" class="form-control float-right" name="endDate"/>
+                            <input type="text" class="form-control float-right {{ $errors->has('startDate') ? ' is-invalid' : '' }}" name="daterange" />
+                            <input type="hidden" class="form-control float-right" name="startDate" />
+                            <input type="hidden" class="form-control float-right" name="endDate" />
                         </div>
                         {!! $errors->first('startDate', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
@@ -40,28 +40,35 @@
 @endif
 @if (Request::get('action') == 'edit' && $editableSchedule)
     @can('update', $editableSchedule)
-        <form method="POST" action="{{ route('schedules.update', $editableSchedule) }}" accept-charset="UTF-8">
-            {{ csrf_field() }} {{ method_field('patch') }}
-            <div class="form-group">
-                <label for="name" class="form-label">{{ __('schedule.name') }} <span class="form-required">*</span></label>
-                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name', $editableSchedule->name) }}" required>
-                {!! $errors->first('name', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">{{ __('schedule.edit') }}</h3>
             </div>
-            <div class="form-group">
-                <label for="description" class="form-label">{{ __('schedule.description') }}</label>
-                <textarea id="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description"
-                    rows="4">{{ old('description', $editableSchedule->description) }}</textarea>
-                {!! $errors->first('description', '<span class="invalid-feedback" role="alert">:message</span>') !!}
-            </div>
-            <input name="page" value="{{ request('page') }}" type="hidden">
-            <input name="q" value="{{ request('q') }}" type="hidden">
-            <input type="submit" value="{{ __('schedule.update') }}" class="btn btn-success">
-            <a href="{{ route('schedules.index', Request::only('q', 'page')) }}" class="btn btn-link">{{ __('app.cancel') }}</a>
-            @can('delete', $editableSchedule)
-                <a href="{{ route('schedules.index', ['action' => 'delete', 'id' => $editableSchedule->id] + Request::only('page', 'q')) }}" id="del-schedule-{{ $editableSchedule->id }}"
-                    class="btn btn-danger float-right">{{ __('app.delete') }}</a>
-            @endcan
-        </form>
+            <form method="POST" action="{{ route('schedules.update', $editableSchedule) }}" accept-charset="UTF-8">
+                {{ csrf_field() }} {{ method_field('patch') }}
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="name" class="form-label">{{ __('schedule.name') }} <span class="form-required">*</span></label>
+                        <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name', $editableSchedule->name) }}" required>
+                        {!! $errors->first('name', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                    </div>
+                    <div class="form-group">
+                        <label for="description" class="form-label">{{ __('schedule.description') }}</label>
+                        <textarea id="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description"
+                            rows="1">{{ old('description', $editableSchedule->description) }}</textarea>
+                        {!! $errors->first('description', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                    </div>
+                    <input name="page" value="{{ request('page') }}" type="hidden">
+                    <input name="q" value="{{ request('q') }}" type="hidden">
+                    <input type="submit" value="{{ __('schedule.update') }}" class="btn btn-primary">
+                    <a href="{{ route('schedules.index', Request::only('q', 'page')) }}" class="btn btn-link">{{ __('app.cancel') }}</a>
+                    @can('delete', $editableSchedule)
+                        <a href="{{ route('schedules.index', ['action' => 'delete', 'id' => $editableSchedule->id] + Request::only('page', 'q')) }}" id="del-schedule-{{ $editableSchedule->id }}"
+                            class="btn btn-danger float-right">{{ __('app.delete') }}</a>
+                    @endcan
+                </div>
+            </form>
+        </div>
     @endcan
 @endif
 @if (Request::get('action') == 'delete' && $editableSchedule)
@@ -91,4 +98,3 @@
         </div>
     @endcan
 @endif
-

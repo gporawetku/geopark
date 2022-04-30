@@ -2,7 +2,7 @@
     @can('create', new App\Models\Gallery())
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{ __('gallery.create') }}</h3>
+                <h3 class="card-title">{{ __('gallery.title_create') }}</h3>
             </div>
             <form method="POST" action="{{ route('galleries.store') }}" accept-charset="UTF-8" enctype="multipart/form-data">
                 {{ csrf_field() }}
@@ -14,7 +14,7 @@
                     </div>
                     <div class="form-group">
                         <label for="description" class="form-label">{{ __('gallery.description') }}</label>
-                        <textarea id="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" rows="2">{{ old('description') }}</textarea>
+                        <textarea id="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" rows="1">{{ old('description') }}</textarea>
                         {!! $errors->first('description', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
                     <div class="form-group" id="input-image">
@@ -55,7 +55,7 @@
             <div class="card-header">
                 <h3 class="card-title">{{ __('gallery.edit') }}</h3>
             </div>
-            <form method="POST" action="{{ route('galleries.update', $editableGallery) }}" accept-charset="UTF-8">
+            <form method="POST" action="{{ route('galleries.update', $editableGallery) }}" accept-charset="UTF-8" enctype="multipart/form-data">
                 {{ csrf_field() }} {{ method_field('patch') }}
                 <div class="card-body">
 
@@ -67,14 +67,14 @@
                     <div class="form-group">
                         <label for="description" class="form-label">{{ __('gallery.description') }}</label>
                         <textarea id="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description"
-                            rows="4">{{ old('description', $editableGallery->description) }}</textarea>
+                            rows="1">{{ old('description', $editableGallery->description) }}</textarea>
                         {!! $errors->first('description', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
                     <div class="form-group" id="input-image">
                         <label for="link_image" class="form-label">{{ __('gallery.link_image') }}</label>
                         <div class="custom-file">
                             <input id="link_image" type="file" class="custom-file-input {{ $errors->has('link_image') ? ' is-invalid' : '' }}" name="link_image" value="{{ old('link_image', $editableGallery->link) }}">
-                            <label for="link_image" class="custom-file-label">Choose file</label>
+                            <label for="link_image" class="custom-file-label">{{ old('link_image', $editableGallery->link) }}</label>
                             {!! $errors->first('link_image', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                         </div>
                     </div>
@@ -97,7 +97,7 @@
                     </div>
                     <input name="page" value="{{ request('page') }}" type="hidden">
                     <input name="q" value="{{ request('q') }}" type="hidden">
-                    <input type="submit" value="{{ __('gallery.update') }}" class="btn btn-success">
+                    <input type="submit" value="{{ __('gallery.update') }}" class="btn btn-primary">
                     <a href="{{ route('galleries.index', Request::only('q', 'page')) }}" class="btn btn-link">{{ __('app.cancel') }}</a>
                     @can('delete', $editableGallery)
                         <a href="{{ route('galleries.index', ['action' => 'delete', 'id' => $editableGallery->id] + Request::only('page', 'q')) }}" id="del-gallery-{{ $editableGallery->id }}"
