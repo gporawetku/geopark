@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
 
 
@@ -25,7 +26,7 @@ class GalleryController extends Controller
             $editableGallery = Gallery::find(request('id'));
         }
 
-        return view('admin.galleries.index', compact('galleries', 'editableGallery' ));
+        return view('admin.galleries.index', compact('galleries', 'editableGallery'));
     }
 
     /**
@@ -48,18 +49,18 @@ class GalleryController extends Controller
         $newGallery['creator_id'] = auth()->id();
         if ($request->type == 3) {
             $newGallery['link']   = $request->link_video;
-        }else{
+        } else {
             if ($file = $request->hasFile('link_image')) {
                 $file = $request->file('link_image');
-                $fileName = time().$file->getClientOriginalName();
+                $fileName = time() . $file->getClientOriginalName();
                 $resize = Image::make($file);
-                if($request->type == 1){
+                if ($request->type == 1) {
                     $path = "images/galleries/activity/{$fileName}";
-                }else if($request->type == 2){
+                } else if ($request->type == 2) {
                     $path = "images/galleries/contest/{$fileName}";
                 }
-                $resize->save(public_path($path),80);
-                $newGallery['link']= $fileName;
+                $resize->save(public_path($path), 80);
+                $newGallery['link'] = $fileName;
             }
         }
 
@@ -78,11 +79,41 @@ class GalleryController extends Controller
     public function update(Request $request, Gallery $gallery)
     {
         $this->authorize('update', $gallery);
+        if (!$request->link_image) {
+            $galleryData = $request->validate([
+                'name'        => 'required|max:60',
+                'description' => 'nullable|max:255',
+                'type'        => 'required',
+                'link_image'  => 'nullable',
+                'link_video'  => 'nullable',
+            ]);
+        } else {
+            $galleryData = $request->validate([
+                'name'         => 'required|max:60',
+                'description'  => 'nullable|max:255',
+                'type'         => 'required',
+                'link_image'   => 'nullable',
+                'link_video'   => 'nullable',
+                'oldLinkImage' => 'nullable',
+            ]);
+            if ($file = $request->hasFile('link_image')) {
+                $file = $request->file('link_image');
+                $fileName = time() . $file->getClientOriginalName();
+                $resize = Image::make($file);
+                if ($request->type == 1) {
+                    $image_path = 'images/galleries/activity/' . $request->oldFileImage;
+                    File::delete($image_path);
+                    $path = "images/galleries/activity/{$fileName}";
+                } else if ($request->type == 2) {
+                    $image_path = 'images/galleries/contest/' . $request->oldFileImage;
+                    File::delete($image_path);
+                    $path = "images/galleries/contest/{$fileName}";
+                }
+                $resize->save(public_path($path), 80);
+                $galleryData['link'] = $fileName;
+            }
+        }
 
-        $galleryData = $request->validate([
-            'name'        => 'required|max:60',
-            'description' => 'nullable|max:255',
-        ]);
         $gallery->update($galleryData);
 
         $routeParam = request()->only('page', 'q');

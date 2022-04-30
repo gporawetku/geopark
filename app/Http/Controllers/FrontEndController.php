@@ -22,7 +22,7 @@ class FrontEndController extends Controller
         $scheduleList       = $schedule->sortBy(['id', 'asc'])->toArray();
         $blogList           = Blog::orderBy('created_at', 'desc')->take(3)->get()->toArray();
         $blogs              = Blog::whereNotNull('image')->orderBy('created_at', 'desc')->take(3)->get()->toArray();
-        $gallery            = Gallery::where('type', '=', '2')->orderBy('created_at', 'desc')->take(3)->get()->toArray();
+        $gallery            = Gallery::whereNotNull('order')->orderBy('order', 'asc')->take(3)->get()->toArray();
         $video              = Gallery::where('type', '=', '3')->orderBy('created_at', 'desc')->first()->getAttributes();
         $data               = [
             'slideList'             => $slideList,

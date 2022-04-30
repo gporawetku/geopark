@@ -49,7 +49,7 @@ class SlideController extends Controller
         $newSlide = $request->validate([
             'name'        => 'required|max:60',
             'fileImage'   => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'order'       => 'required',
+            'order'       => 'nullable',
         ]);
         $newSlide['creator_id'] = auth()->id();
         if ($file = $request->hasFile('fileImage')) {
@@ -78,13 +78,14 @@ class SlideController extends Controller
         if (!$request->fileImage) {
             $slideData = $request->validate([
                 'name'        => 'required|max:60',
-                'order'       => 'required',
+                'order'       => 'nullable',
+                'fileImage'   => 'nullable',
             ]);
         } else {
             $slideData = $request->validate([
                 'name'         => 'required|max:60',
                 'fileImage'    => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-                'order'        => 'required',
+                'order'        => 'nullable',
                 'oldFileImage' => 'nullable',
             ]);
             if ($file = $request->hasFile('fileImage')) {
