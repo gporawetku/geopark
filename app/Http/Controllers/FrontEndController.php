@@ -22,17 +22,15 @@ class FrontEndController extends Controller
         $scheduleList       = $schedule->sortBy(['id', 'asc'])->toArray();
         $blogList           = Blog::orderBy('created_at', 'desc')->take(3)->get()->toArray();
         $blogs              = Blog::whereNotNull('image')->orderBy('created_at', 'desc')->take(3)->get()->toArray();
-        $gallery            =   [
-            Gallery::where('type', '=', '1')->orderBy('created_at', 'desc')->first()->getAttributes(),
-            Gallery::where('type', '=', '2')->orderBy('created_at', 'desc')->first()->getAttributes(),
-            Gallery::where('type', '=', '3')->orderBy('created_at', 'desc')->first()->getAttributes(),
-        ];
+        $gallery            = Gallery::where('type', '=', '2')->orderBy('created_at', 'desc')->take(3)->get()->toArray();
+        $video              = Gallery::where('type', '=', '3')->orderBy('created_at', 'desc')->first()->getAttributes();
         $data               = [
             'slideList'             => $slideList,
             'scheduleList'          => $scheduleList,
             'blogList'              => $blogList,
             'blogs'                 => $blogs,
             'gallery'               => $gallery,
+            'video'                 => $video,
             'path_slide_image'           => 'images/slides/',
             'path_gallery_image_type_1'  => 'images/galleries/activity/',
             'path_gallery_image_type_2'  => 'images/galleries/contest/',
