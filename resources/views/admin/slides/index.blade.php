@@ -37,7 +37,7 @@
                                         <a class="text-white " href="{{ route('slides.index', ['action' => 'edit', 'id' => $slide->id] + Request::only('page', 'q')) }}"
                                             id="edit-slide-{{ $slide->id }}">
                                             <div class="position-relative">
-                                                <img src="{{ asset($slide->image) }}" alt="Photo 2" class="img-fluid">
+                                                <img src="{{ asset("images/slides/".$slide->image) }}" alt="Photo 2" class="img-fluid">
                                                 <div class="ribbon-wrapper w-100 h-100 d-flex flex-column justify-content-center align-items-center bg-gradiant ">
                                                     <b>{{ $slide->order }}</b>
                                                     <small>{{ $slide->name }}</small>
