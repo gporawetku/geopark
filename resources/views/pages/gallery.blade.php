@@ -9,8 +9,8 @@
 
 <div class="gallery-container">
   <ul>
-    <li class="filter active" data-filter="1">ภาพจากการประกวด</li>
-    <li class="filter " data-filter="2">ภาพจากงาน</li>
+    <li class="filter active" data-filter="1">ภาพจากงาน</li>
+    <li class="filter " data-filter="2">ภาพจากการประกวด</li>
     <li class="filter " data-filter="3">วีดีโอ</li>
     
   </ul>
