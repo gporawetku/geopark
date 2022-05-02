@@ -187,9 +187,17 @@
 @endif
 @section('js')
     <script>
-        let optionValue = $('#type').val();
-        $(".input-image").show();
-        $(".input-video").hide();
+        $(function() {
+            let optionValue = $('#type').val();
+            if (optionValue == 3) {
+                $(".input-image").hide();
+                $(".input-video").show();
+            } else {
+                $(".input-image").show();
+                $(".input-video").hide();
+            }
+        });
+
         $("#type").change(function() {
             let optionValue = $('#type').val();
             if (optionValue == 3) {
