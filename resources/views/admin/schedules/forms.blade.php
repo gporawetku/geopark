@@ -25,11 +25,11 @@
                                     <i class="far fa-calendar-alt"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control float-right {{ $errors->has('startDate') ? ' is-invalid' : '' }}" name="daterange" />
-                            <input type="hidden" class="form-control float-right" name="startDate" />
-                            <input type="hidden" class="form-control float-right" name="endDate" />
+                            <input type="text" class="form-control float-right {{ $errors->has('start_date') ? ' is-invalid' : '' }}" name="daterange" />
+                            <input type="hidden" class="form-control float-right" name="start_date" />
+                            <input type="hidden" class="form-control float-right" name="end_date" />
                         </div>
-                        {!! $errors->first('startDate', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                        {!! $errors->first('start_date', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
                     <input type="submit" value="{{ __('schedule.create') }}" class="btn btn-primary">
                     <a href="{{ route('schedules.index') }}" class="btn btn-link">{{ __('app.cancel') }}</a>
@@ -98,3 +98,18 @@
         </div>
     @endcan
 @endif
+@section('js')
+    <script>
+        $(function() {
+            $('input[name="daterange"]').daterangepicker({
+                opens: 'left',
+                locale: {
+                    format: 'DD-MM-YYYY'
+                }
+            }, function(start, end, label) {
+                $('input[name="start_date"]').val(start.format('YYYY-MM-DD HH:MM:SS'));
+                $('input[name="end_date"]').val(end.format('YYYY-MM-DD HH:MM:SS'));
+            });
+        });
+    </script>
+@stop

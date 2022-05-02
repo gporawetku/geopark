@@ -102,14 +102,6 @@
             });
         </script>
         <script>
-            $(function() {
-                $('input[name="daterange"]').daterangepicker({
-                    opens: 'left'
-                }, function(start, end, label) {
-                    $('input[name="startDate"]').val(start.format('YYYY-MM-DD HH:MM:SS'));
-                    $('input[name="endDate"]').val(end.format('YYYY-MM-DD HH:MM:SS'));
-                });
-            });
 
             $('#summernote').summernote({
                 placeholder: 'Hello stand alone ui',

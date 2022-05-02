@@ -111,10 +111,17 @@
         <div class="news-group swiper-wrapper galleryPreview">
             <!-- Gallery  -->
             @foreach ($data['gallery'] as $galleryItem)
-            <div class="news-item swiper-slide" 
-            href="{{asset($data['path_gallery_image_type_2'].$galleryItem['link'])}}"
-            style="background-image: url('{{asset($data['path_gallery_image_type_2'].$galleryItem['link'])}}');">
-            </div>
+            @if($galleryItem['type'] == 1)
+                <div class="news-item swiper-slide"
+                href="{{asset($data['path_gallery_image_type_1'].$galleryItem['link'])}}"
+                style="background-image: url('{{asset($data['path_gallery_image_type_1'].$galleryItem['link'])}}');">
+                </div>
+            @elseif($galleryItem['type'] == 2)
+                <div class="news-item swiper-slide"
+                href="{{asset($data['path_gallery_image_type_2'].$galleryItem['link'])}}"
+                style="background-image: url('{{asset($data['path_gallery_image_type_2'].$galleryItem['link'])}}');">
+                </div>
+            @endif
             @endforeach
 
         </div>
