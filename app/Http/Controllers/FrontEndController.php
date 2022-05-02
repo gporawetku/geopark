@@ -23,7 +23,7 @@ class FrontEndController extends Controller
         $blogList           = Blog::orderBy('created_at', 'desc')->take(3)->get()->toArray();
         $blogs              = Blog::whereNotNull('image')->orderBy('created_at', 'desc')->take(3)->get()->toArray();
 
-        $checkTypeVideo     = Gallery::where('type', '=', '3')->where('order', '=', '4')->first()->getAttributes();
+        $checkTypeVideo     = Gallery::where('type', '=', '3')->where('order', '=', '4')->first();
         if ($checkTypeVideo) {
             $video          = $checkTypeVideo;
         } else {

@@ -272,7 +272,7 @@ class GallerySeeder extends Seeder
                 "description" => "วิดีโอ 1",
                 "link" => "2qcrJZK0AVs",
                 "type" => "3",
-                "order" => null,
+                "order" => 4,
                 "creator_id" => 1,
                 'created_at'    => $date,
                 'updated_at'    => $date,
