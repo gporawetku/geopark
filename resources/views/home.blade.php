@@ -3,11 +3,15 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+<div class="row d-flex justify-content-center align-items-center flex-column pt-5">
+    <img src="./images/geofair_logo/full-logo.png" alt="" style="width: 10rem">
+    <h1>Geopark Admin</h1>
+    <p>ระบบจัดการหลังบ้านสำหรับผู้ดูแลระบบ</p>
+</div>
 @stop
 
 @section('css')

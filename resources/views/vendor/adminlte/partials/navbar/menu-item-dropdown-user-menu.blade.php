@@ -34,7 +34,7 @@
                 {{ __('adminlte::menu.profile') }}
             </a>
         @endif
-        <span class="dropdown-item dropdown-header">Profile</span>
+        {{-- <span class="dropdown-item dropdown-header">Profile</span> --}}
         <div class="dropdown-divider"></div>
         <a class="dropdown-item dropdown-footer" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
             {{ __('adminlte::adminlte.log_out') }}
