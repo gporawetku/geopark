@@ -73,10 +73,11 @@
 @include xl-screen {
   .geotrail-container {
     padding: 4px;
+    margin: 0px 40px;
     .geotrail-tabs {
       width: 30%;
       .tab-item {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
         border-bottom: 4px solid #c5eeff;
         padding: 10px 0px;
@@ -94,6 +95,7 @@
 @include xxl-screen {
   .geotrail-container {
     padding: 8px;
+    margin: 0px 50px;
     .geotrail-tabs {
       width: 40%;
       .tab-item {
@@ -107,7 +109,7 @@
       }
     }
     .geotrail-items {
-      width: 80%;
+      width: 60%;
       border-left: 10px solid #d9f4ff;
     }
   }

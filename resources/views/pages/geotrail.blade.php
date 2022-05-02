@@ -20,9 +20,10 @@
   <div class="geotrail-items">
 
     @for($i=1; $i <= 7; $i++) 
-    <div class="geotrail-item {{$i === 1?'active':''}}" id="geotrail{{$i}}"  >
+    <a class="geotrail-item {{$i === 1?'active':''}}" id="geotrail{{$i}}"  
+      href="{{asset('images/geotrail/0'.$i.'.jpg')}}" target="_blank">
       <img src="{{asset('images/geotrail/0'.$i.'.jpg')}}" alt="">
-    </div>
+    </a>
     @endfor
     
   </div>
