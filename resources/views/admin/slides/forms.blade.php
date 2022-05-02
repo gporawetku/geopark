@@ -30,7 +30,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="form-group">
-                                <label for="order" class="form-label">{{ __('slide.image') }}</label>
+                                <label for="image" class="form-label">{{ __('slide.image') }}</label>
                                 <div class="custom-file">
                                     <input id="fileImage" type="file" class="custom-file-input {{ $errors->has('fileImage') ? ' is-invalid' : '' }}" name="fileImage" value="{{ old('fileImage') }}"
                                         required>

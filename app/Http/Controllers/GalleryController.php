@@ -165,6 +165,14 @@ class GalleryController extends Controller
         if ($request->get('gallery_id') == $gallery->id && $gallery->delete()) {
             $routeParam = request()->only('page', 'q');
 
+            if ($gallery->type == 1) {
+                $image_path = 'images/galleries/activity/' . $gallery->image;
+                File::delete($image_path);
+            } else if ($gallery->type == 2) {
+                $image_path = 'images/galleries/contest/' . $gallery->image;
+                File::delete($image_path);
+            }
+
             return redirect()->route('galleries.index', $routeParam);
         }
 

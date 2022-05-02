@@ -17,6 +17,31 @@
                         <textarea id="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" rows="1">{{ old('description') }}</textarea>
                         {!! $errors->first('description', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
+                    <div class="form-group">
+                        <label for="image" class="form-label">{{ __('abstract_poster.image') }}</label>
+                        <div class="custom-file">
+                            <input id="fileImage" type="file" class="custom-file-input {{ $errors->has('fileImage') ? ' is-invalid' : '' }}" name="fileImage" value="{{ old('fileImage') }}"
+                                required>
+                            <label for="fileImage" class="custom-file-label">เลือกไฟล์</label>
+                            {!! $errors->first('fileImage', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="link" class="form-label">{{ __('abstract_poster.link') }}</label>
+                                <input id="link" type="text" class="form-control{{ $errors->has('link') ? ' is-invalid' : '' }}" name="link" value="{{ old('link') }}">
+                                {!! $errors->first('link', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="author" class="form-label">{{ __('abstract_poster.author') }}</label>
+                                <input id="author" type="text" class="form-control{{ $errors->has('author') ? ' is-invalid' : '' }}" name="author" value="{{ old('author') }}" required>
+                                {!! $errors->first('author', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                            </div>
+                        </div>
+                    </div>
                     <input type="submit" value="{{ __('abstract_poster.create') }}" class="btn btn-primary">
                     <a href="{{ route('abstract_posters.index') }}" class="btn btn-link">{{ __('app.cancel') }}</a>
                 </div>
@@ -45,6 +70,32 @@
                             rows="1">{{ old('description', $editableAbstractPoster->description) }}</textarea>
                         {!! $errors->first('description', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
+                    <div class="form-group">
+                        <label for="order" class="form-label">{{ __('abstract_poster.image') }}</label>
+                        <input id="oldFileImage" type="hidden" name="oldFileImage" value="{{ old('fileImage' , $editableAbstractPoster->image) }}">
+                        <div class="custom-file">
+                            <input id="fileImage" type="file" class="custom-file-input {{ $errors->has('fileImage') ? ' is-invalid' : '' }}" name="fileImage" value="{{ old('fileImage' , $editableAbstractPoster->image) }}">
+                            <label for="fileImage" class="custom-file-label">{{ old('fileImage' , $editableAbstractPoster->image) }}</label>
+                            {!! $errors->first('fileImage', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="link" class="form-label">{{ __('abstract_poster.link') }}</label>
+                                <input id="link" type="text" class="form-control{{ $errors->has('link') ? ' is-invalid' : '' }}" name="link" value="{{ old('link', $editableAbstractPoster->link) }}">
+                                {!! $errors->first('link', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="author" class="form-label">{{ __('abstract_poster.author') }}</label>
+                                <input id="author" type="text" class="form-control{{ $errors->has('author') ? ' is-invalid' : '' }}" name="author" value="{{ old('author', $editableAbstractPoster->author) }}" required>
+                                {!! $errors->first('author', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                            </div>
+                        </div>
+                    </div>
+
                     <input name="page" value="{{ request('page') }}" type="hidden">
                     <input name="q" value="{{ request('q') }}" type="hidden">
                     <input type="submit" value="{{ __('abstract_poster.update') }}" class="btn btn-primary">
