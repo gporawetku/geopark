@@ -1,54 +1,114 @@
-.geotrail-tabs {
+.geotrail-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  .tab-item {
-    cursor: pointer;
-    background: $base-color;
-    border: 2px solid $base-color;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 30px;
-    transition: .25s;
-    box-shadow: 1px 1px 5px 0px rgba(0,0,0,.5);
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,.5);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,.5);
-    padding: 5px 10px;
-    margin: 5px;
-    &:hover {
-      background: #fff;
-      color: $base-color;
-    }
-  }
-}
+  justify-content: center;
+  align-items: flex-start;
 
-.geotrail-items {
-  position: relative;
-  border: 2px solid $base-color;
-  padding: 5px;
-  margin: 10px 0px;
-  .geotrail-item {
-    img {
-      width: 100%;
-    }
-  }
-}
+  background-color: #d9f4ff;
+  opacity: 1;
+  background-image: radial-gradient(circle at center center, #ffffff, #d9f4ff),
+    repeating-radial-gradient(circle at center center, #ffffff, #ffffff, 38px, transparent 76px, transparent 38px);
+  background-blend-mode: multiply;
 
+  padding: 2px;
 
-@include xl-screen {
-  .geotrail-items {
-    padding: 10px;
-    margin: 20px 30px;
-  }
-}
-@include xl-screen {
   .geotrail-tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
     .tab-item {
-      font-size: 16px;
+      font-size: 14px;
+      font-weight: 400;
+      width: 100%;
+      background: #fff;
+      border: none;
+      border-bottom: 2px solid #c5eeff;
+      padding: 5px 0px;
+      transition: 0.3s;
+      &.active,
+      &.active:hover {
+        background: $base-color;
+        color: #fff;
+      }
     }
   }
+
   .geotrail-items {
-    margin: 30px 140px;
+    position: relative;
+    width: 70%;
+    border-left: 3px solid #d9f4ff;
+    .geotrail-item {
+      display: none;
+      &.active {
+        display: block;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include md-screen {
+  .geotrail-container {
+    .geotrail-tabs {
+      width: 25%;
+      .tab-item {
+        font-size: 14px;
+        font-weight: 400;
+        padding: 14px 0px;
+      }
+    }
+    .geotrail-items {
+      width: 75%;
+    }
+  }
+}
+@include lg-screen {
+}
+@include xl-screen {
+  .geotrail-container {
+    padding: 4px;
+    .geotrail-tabs {
+      width: 30%;
+      .tab-item {
+        font-size: 16px;
+        font-weight: 400;
+        border-bottom: 4px solid #c5eeff;
+        padding: 10px 0px;
+        &:hover {
+          background: #effbff;
+        }
+      }
+    }
+    .geotrail-items {
+      width: 70%;
+      border-left: 6px solid #d9f4ff;
+    }
+  }
+}
+@include xxl-screen {
+  .geotrail-container {
+    padding: 8px;
+    .geotrail-tabs {
+      width: 40%;
+      .tab-item {
+        font-size: 16px;
+        font-weight: 400;
+        border-bottom: 8px solid #c5eeff;
+        padding: 16px 0px;
+        &:hover {
+          background: #effbff;
+        }
+      }
+    }
+    .geotrail-items {
+      width: 80%;
+      border-left: 10px solid #d9f4ff;
+    }
   }
 }
