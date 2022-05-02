@@ -39,7 +39,7 @@
                                             {{ $schedule->name }}
                                         </div>
                                         <div class="card-body">
-                                            <p class="card-text">{{ $schedule->description }}</p>
+                                            <p class="card-text text-dark">{{ $schedule->description }}</p>
                                             {{-- <p class="card-text text-dark">{{ date('d-m-Y', strtotime($schedule->start_date)) }} - {{ date('d-m-Y', strtotime($schedule->end_date)) }}</p> --}}
                                         </div>
                                     </div>

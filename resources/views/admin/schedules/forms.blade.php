@@ -58,6 +58,20 @@
                             rows="1">{{ old('description', $editableSchedule->description) }}</textarea>
                         {!! $errors->first('description', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
+                    <div class="form-group">
+                        <label>{{ __('schedule.se_date') }}</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="far fa-calendar-alt"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control float-right {{ $errors->has('start_date') ? ' is-invalid' : '' }}" name="daterange" />
+                            <input type="hidden" class="form-control float-right" name="start_date" value="{{ old('name', $editableSchedule->start_date) }}" />
+                            <input type="hidden" class="form-control float-right" name="end_date" value="{{ old('name', $editableSchedule->end_date) }}" />
+                        </div>
+                        {!! $errors->first('start_date', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                    </div>
                     <input name="page" value="{{ request('page') }}" type="hidden">
                     <input name="q" value="{{ request('q') }}" type="hidden">
                     <input type="submit" value="{{ __('schedule.update') }}" class="btn btn-primary">
@@ -101,15 +115,29 @@
 @section('js')
     <script>
         $(function() {
+            var today = moment().format('DD-MM-YYYY');
+            var endDate = moment().add(1, 'months').format('DD-MM-YYYY');
+
+            var start_date = $('input[name="start_date"]').val();
+            var end_date = $('input[name="end_date"]').val();
+            if(start_date || end_date){
+                var today = moment(start_date).format('DD-MM-YYYY');
+                var endDate = moment(end_date).format('DD-MM-YYYY');
+            }
+
             $('input[name="daterange"]').daterangepicker({
+                startDate: today, // after open picker you'll see this dates as picked
+                endDate: endDate,
                 opens: 'left',
                 locale: {
                     format: 'DD-MM-YYYY'
                 }
             }, function(start, end, label) {
-                $('input[name="start_date"]').val(start.format('YYYY-MM-DD HH:MM:SS'));
-                $('input[name="end_date"]').val(end.format('YYYY-MM-DD HH:MM:SS'));
-            });
+                $('input[name="start_date"]').val(start.format('YYYY-MM-DD HH:MM'));
+                $('input[name="end_date"]').val(end.format('YYYY-MM-DD HH:MM'));
+            })
+            .val(today + " - " + endDate)
+            ;
         });
     </script>
 @stop

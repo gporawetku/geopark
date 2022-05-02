@@ -44,7 +44,6 @@ class ScheduleController extends Controller
         $newSchedule['start_date'] = date('Y-m-d H:i:s', strtotime($request->start_date));
         $newSchedule['end_date']   = date('Y-m-d H:i:s', strtotime($request->end_date));
         $newSchedule['creator_id'] = auth()->id();
-        // dd($newSchedule);
         Schedule::create($newSchedule);
 
         return redirect()->route('schedules.index');
@@ -64,7 +63,11 @@ class ScheduleController extends Controller
         $scheduleData = $request->validate([
             'name'        => 'required|max:60',
             'description' => 'nullable|max:255',
+            'start_date'   => 'required',
+            'end_date'     => 'required',
         ]);
+        $newSchedule['start_date'] = date('Y-m-d H:i:s', strtotime($request->start_date));
+        $newSchedule['end_date']   = date('Y-m-d H:i:s', strtotime($request->end_date));
         $schedule->update($scheduleData);
 
         $routeParam = request()->only('page', 'q');
