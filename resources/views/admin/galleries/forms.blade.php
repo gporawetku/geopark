@@ -60,7 +60,7 @@
                                 <label for="orderVideo" class="form-label">{{ __('gallery.order') }}</label>
                                 <select id="orderVideo" class="form-control{{ $errors->has('order') ? ' is-invalid' : '' }}" name="orderVideo">
                                     <option value="">ไม่แสดงหน้าหลัก</option>
-                                    <option value="1">แสดงหน้าหลัก</option>
+                                    <option value="4">แสดงหน้าหลัก</option>
                                 </select>
                                 {!! $errors->first('order', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                             </div>
@@ -94,7 +94,7 @@
                             rows="1">{{ old('description', $editableGallery->description) }}</textarea>
                         {!! $errors->first('description', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
-                    <div class="form-group" id="input-image">
+                    <div class="form-group input-image">
                         <label for="link_image" class="form-label">{{ __('gallery.link_image') }}</label>
                         <div class="custom-file">
                             <input id="link_image" type="file" class="custom-file-input {{ $errors->has('link_image') ? ' is-invalid' : '' }}" name="link_image"
@@ -103,7 +103,7 @@
                             {!! $errors->first('link_image', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                         </div>
                     </div>
-                    <div class="form-group" id="input-video">
+                    <div class="form-group input-video">
                         <label for="link_video" class="form-label">{{ __('gallery.link_video') }}</label>
                         <div class="d-flex align-items-center bg-primary" style="border-radius: 0.25rem;">
                             &nbsp;&nbsp;https://youtu.be/&nbsp;&nbsp;
@@ -125,13 +125,21 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="form-group selected-gallery">
-                                <label for="order" class="form-label">{{ __('gallery.order') }}</label>
-                                <select id="order" class="form-control{{ $errors->has('order') ? ' is-invalid' : '' }}" name="order" required>
-                                    <option value="" {{ old('order', $editableGallery->order) == 1 ? 'selected' : '' }}>ไม่แสดงหน้าหลัก</option>
+                            <div class="form-group selected-gallery input-image">
+                                <label for="orderImage" class="form-label">{{ __('gallery.order') }}</label>
+                                <select id="orderImage" class="form-control{{ $errors->has('order') ? ' is-invalid' : '' }}" name="orderImage">
+                                    <option value="" {{ old('order', $editableGallery->order) == null ? 'selected' : '' }}>ไม่แสดงหน้าหลัก</option>
                                     <option value="1" {{ old('order', $editableGallery->order) == 1 ? 'selected' : '' }}>แสดงหน้าหลัก 1</option>
-                                    <option value="2" {{ old('order', $editableGallery->order) == 1 ? 'selected' : '' }}>แสดงหน้าหลัก 2</option>
-                                    <option value="3" {{ old('order', $editableGallery->order) == 1 ? 'selected' : '' }}>แสดงหน้าหลัก 3</option>
+                                    <option value="2" {{ old('order', $editableGallery->order) == 2 ? 'selected' : '' }}>แสดงหน้าหลัก 2</option>
+                                    <option value="3" {{ old('order', $editableGallery->order) == 3 ? 'selected' : '' }}>แสดงหน้าหลัก 3</option>
+                                </select>
+                                {!! $errors->first('order', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                            </div>
+                            <div class="form-group selected-gallery input-video">
+                                <label for="orderVideo" class="form-label">{{ __('gallery.order') }}</label>
+                                <select id="orderVideo" class="form-control{{ $errors->has('order') ? ' is-invalid' : '' }}" name="orderVideo">
+                                    <option value="" {{ old('order', $editableGallery->order) == null ? 'selected' : '' }}>ไม่แสดงหน้าหลัก</option>
+                                    <option value="4" {{ old('order', $editableGallery->order) == 4 ? 'selected' : '' }}>แสดงหน้าหลัก</option>
                                 </select>
                                 {!! $errors->first('order', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                             </div>

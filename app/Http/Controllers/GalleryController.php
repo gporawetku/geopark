@@ -45,7 +45,20 @@ class GalleryController extends Controller
             'type'        => 'required',
             'link_image'  => 'nullable',
             'link_video'  => 'nullable',
+            'orderImage'  => 'nullable',
+            'orderVideo'  => 'nullable',
         ]);
+        $newGallery['order'] = null;
+        if ($request->orderImage || $request->orderVideo) {
+            if ($request->orderImage) {
+                $order = $request->orderImage;
+            }
+            if ($request->orderVideo) {
+                $order = $request->orderVideo;
+            }
+            Gallery::where('order', '=', $order)->update(array('order' => null));
+            $newGallery['order'] = $order;
+        }
         $newGallery['creator_id'] = auth()->id();
         if ($request->type == 3) {
             $newGallery['link']   = $request->link_video;
@@ -86,6 +99,8 @@ class GalleryController extends Controller
                 'type'        => 'required',
                 'link_image'  => 'nullable',
                 'link_video'  => 'nullable',
+                'orderImage'  => 'nullable',
+                'orderVideo'  => 'nullable',
             ]);
         } else {
             $galleryData = $request->validate([
@@ -95,7 +110,10 @@ class GalleryController extends Controller
                 'link_image'   => 'nullable',
                 'link_video'   => 'nullable',
                 'oldLinkImage' => 'nullable',
+                'orderImage'   => 'nullable',
+                'orderVideo'   => 'nullable',
             ]);
+
             if ($file = $request->hasFile('link_image')) {
                 $file = $request->file('link_image');
                 $fileName = time() . $file->getClientOriginalName();
@@ -112,6 +130,16 @@ class GalleryController extends Controller
                 $resize->save(public_path($path), 80);
                 $galleryData['link'] = $fileName;
             }
+        }
+        if ($request->orderImage || $request->orderVideo) {
+            if ($request->orderImage) {
+                $order = $request->orderImage;
+            }
+            if ($request->orderVideo) {
+                $order = $request->orderVideo;
+            }
+            Gallery::where('order', '=', $order)->update(array('order' => null));
+            $galleryData['order'] = $order;
         }
 
         $gallery->update($galleryData);

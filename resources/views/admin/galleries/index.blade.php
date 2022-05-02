@@ -72,8 +72,10 @@
                                         </span>
                                     </td>
                                     <td>
-                                        @if ($gallery->order)
-                                            <span class="badge bg-warning">หน้าหลัก</span>
+                                        @if ($gallery->order && $gallery->type != 3)
+                                            <span class="badge bg-warning">รูปภาพหน้าหลัก {{ $gallery->order }}</span>
+                                        @elseif ($gallery->order && $gallery->type == 3)
+                                            <span class="badge bg-warning">วิดีโอหน้าหลัก</span>
                                         @else
                                             <span class="badge bg-primary">หน้าห้องภาพ</span>
                                         @endif
