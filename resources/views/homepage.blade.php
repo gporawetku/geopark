@@ -153,7 +153,7 @@
 
 <!-- Google Map -->
 <div class="map-section">
-    <iframe class="map-content" src="https://maps.google.com/maps?q=14.9874706,102.1179648&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    <iframe class="map-content" src="https://maps.google.com/maps?q=13.762937,100.527080&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 </div>
 
 

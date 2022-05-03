@@ -25,7 +25,7 @@
             </li>
             <li class="py-2">
                 <span class="fas fa-fw fa-file-alt text-base-color"></span>
-                คู่มือการใช้ Webinar <a href="https://docs.google.com/presentation/d/1dbZ7jeSanK1R3EWwUACByzP3EcDl3M4O/edit?usp=sharing&ouid=114431496716640511170&rtpof=true&sd=true" target="_blank">
+                คู่มือการใช้ Webinar <a href="https://drive.google.com/file/d/1jj6WzXVj-lsS-z9o82QnfydJSo9CGFfR/view?usp=sharing" target="_blank">
                     ลิงค์นี้ <span class="fas fa-external-link-alt"></span></a>
             </li>
         </ul>
