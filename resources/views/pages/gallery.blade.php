@@ -1,9 +1,9 @@
 @extends('../blogContent')
 
 @section('content')
-<h3 class="text-dark-color">
-  ห้องภาพ
-</h3>
+    <h3 class="text-dark-color">
+        ห้องภาพ
+    </h3>
 <hr class="text-base-color">
 
 
@@ -12,7 +12,10 @@
     <li class="filter active" data-filter="1">ภาพจากงาน</li>
     <li class="filter " data-filter="2">ภาพจากการประกวด</li>
     <li class="filter " data-filter="3">วีดีโอ</li>
-    
+    <li>
+        <a style="color:black;" href="https://drive.google.com/file/d/1jj6WzXVj-lsS-z9o82QnfydJSo9CGFfR/view?usp=sharing" target="_blank">รูปภาพเพิ่มเติม</a>
+    </li>
+
   </ul>
   <div class="gallery-box active" id="lightgallery1" data-box="1" >
       @foreach($data['gallery']['type_1'] as $galleryItem)
@@ -21,8 +24,8 @@
         </a>
       @endforeach
   </div>
-  
-  
+
+
   <div class="gallery-box" id="lightgallery2" data-box="2" >
     @foreach($data['gallery']['type_2'] as $galleryItem)
     <a href="{{asset($data['path_image_type_2'].$galleryItem['link'])}}" class="item">
@@ -30,7 +33,7 @@
     </a>
     @endforeach
   </div>
-  
+
   <div class="gallery-box" id="lightgallery3" data-box="3" >
     @foreach($data['gallery']['type_3'] as $galleryItem)
       <a href="https://youtu.be/{{$galleryItem['link']}}" class="item">
@@ -46,10 +49,10 @@
 
 @section('js')
 <script>
-  
+
   let filter = document.querySelectorAll('.filter');
   let galleryBox = document.querySelectorAll('.gallery-box');
-  
+
   // create lightGallery by type
   for(let i = 0; i < galleryBox.length; i++) {
     if(i !== 2){
@@ -57,11 +60,11 @@
     }else {
       lightGallery(galleryBox[i], {
         plugins: [lgVideo],
-      }); 
+      });
     }
-    
+
   }
-  
+
   // Filter Gallery
   for (let i = 0; i < filter.length; i++) {
     filter[i].addEventListener('click', function() {
