@@ -12,8 +12,8 @@
     <li class="filter active" data-filter="1">ภาพจากงาน</li>
     <li class="filter " data-filter="2">ภาพจากการประกวด</li>
     <li class="filter " data-filter="3">วีดีโอ</li>
-    <li>
-        <a style="color:black;" href="https://drive.google.com/file/d/1jj6WzXVj-lsS-z9o82QnfydJSo9CGFfR/view?usp=sharing" target="_blank">รูปภาพเพิ่มเติม</a>
+    <li style="cursor: default; pointer-events: none;">
+        <a style="color:rgb(153, 153, 153); " href="https://drive.google.com/file/d/1jj6WzXVj-lsS-z9o82QnfydJSo9CGFfR/view?usp=sharing" target="_blank">รูปภาพเพิ่มเติม</a>
     </li>
 
   </ul>
